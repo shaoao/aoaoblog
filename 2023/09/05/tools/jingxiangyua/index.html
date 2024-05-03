@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>开发包管理国内镜像源 - 奥奥の探索日记</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="生活,摇滚,记录,编程,学习,剪辑,设计,项目,音乐">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="referrer" content="no-referrer" />
+
+<!-- 51la统计 -->
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3HQkdjDrH5f6vdfQ",ck:"3HQkdjDrH5f6vdfQ"})</script>
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="使用包管理可以大大降低引用和管理第三方库的成本，但是很多源都在国外，通过包管理安装的时候，容易超时；我们可以通过修改为国内源，或者使用代理来解决这个问题。  提供Pip、Composer、NPM、Gem、Maven国内源地址。 Pip·    提供方 源地址     豆瓣 pip install -i https:&#x2F;&#x2F;pypi.doubanio.com&#x2F;simple&#x2F;   清华大学 pip in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发包管理国内镜像源">
+<meta property="og:url" content="https://sawr.gitee.io/2023/09/05/tools/jingxiangyua/index.html">
+<meta property="og:site_name" content="奥奥の探索日记">
+<meta property="og:description" content="使用包管理可以大大降低引用和管理第三方库的成本，但是很多源都在国外，通过包管理安装的时候，容易超时；我们可以通过修改为国内源，或者使用代理来解决这个问题。  提供Pip、Composer、NPM、Gem、Maven国内源地址。 Pip·    提供方 源地址     豆瓣 pip install -i https:&#x2F;&#x2F;pypi.doubanio.com&#x2F;simple&#x2F;   清华大学 pip in">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-05T10:00:00.000Z">
+<meta property="article:modified_time" content="2024-04-10T09:00:26.356Z">
+<meta property="article:author" content="ShaoAo">
+<meta property="article:tag" content="镜像源">
+<meta name="twitter:card" content="summary">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714719124747">
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4474869_y3x62ji5c4.css">
+
+<link rel="stylesheet" href="/css/style.css?v=1714719124747">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1714719124747">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1714719124747"></script>
+
+ 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-shiki-plugin@latest/lib/codeblock.css">
+<style>:root{--hl-color:#e1e4e8;--hl-bg:#24292e;--hltools-bg:#1f2428;--hltools-color:#c5c5c5;--hlnumber-bg:#24292e;--hlnumber-color:#444d56;--hlscrollbar-bg:#32383e;--hlexpand-bg:linear-gradient(180deg,rgba(36,41,46,0.1),rgba(36,41,46,0.9))}</style>
+    <style>
+    .code-expand-btn:not(.expand-done) ~ div.codeblock,
+    .code-expand-btn:not(.expand-done) ~ * div.codeblock {
+      overflow: hidden;
+      height: 360px;
+    }
+    </style>
+  <!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(https://tucdn.wpon.cn/2024/03/23/2247604107188.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer">奥奥の探索日记</div><a class="mdui-btn mdui-btn-icon" href="/" title="ShaoAo"><img src="https://cccimg.com/view.php/f8a4b6199c0c036da1f160b12d01f50d.jpg" alt="ShaoAo"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="ShaoAo">
+            <img src="https://cccimg.com/view.php/f8a4b6199c0c036da1f160b12d01f50d.jpg" alt="ShaoAo" alt="ShaoAo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>18</div>
+        <div><span>标签</span>19</div>
+        <div><span>分类</span>6</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="常看">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                常看
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索全站" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+
+
+	<script async src="/js/search.js?v=1714719124748"></script>
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/296465852"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/shaoao/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-githubic"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.travellings.cn/go.html"
+			target="_blank"
+			mdui-tooltip="{content: '开往'}"
+			style="
+				color: rgb(251,109,72);
+				background-color: rgba(251,109,72, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-ditiexiao"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.xiaohongshu.com/user/profile/60d9e8d7000000002002c59b"
+			target="_blank"
+			mdui-tooltip="{content: '小红书'}"
+			style="
+				color: rgb(255,46,77);
+				background-color: rgba(255,46,77, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-xiaohongshu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://steamcommunity.com/profiles/76561198846317988/"
+			target="_blank"
+			mdui-tooltip="{content: 'Steam'}"
+			style="
+				color: rgb(21,114,182);
+				background-color: rgba(21,114,182, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-steam"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/woaiwr"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.douyin.com/user/MS4wLjABAAAAbyj8R7eEae7UC9UMWpJKXAtr-vIBkvHzkY7iJT8dXJE?relation=0&vid=7354414206428499236"
+			target="_blank"
+			mdui-tooltip="{content: '抖音'}"
+			style="
+				color: rgb( 23, 11, 26);
+				background-color: rgba( 23, 11, 26, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-douyin"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/tools/">tools</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/前端/">前端</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/后端/">后端</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小技巧/">小技巧</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活随笔/">生活随笔</a>
+          <span class="category-list-count">6</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/英语/">英语</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/TypeScript/" style="font-size: 13.33px;">TypeScript</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/%E5%9B%BE%E5%BA%8A%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">图床配置</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">学习</a> <a href="/tags/%E5%B1%B1%E9%87%8E%E6%97%A5%E5%BF%97/" style="font-size: 10px;">山野日志</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">工具</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E6%9C%89%E7%94%A8%E5%88%86%E4%BA%AB/" style="font-size: 13.33px;">有用分享</a> <a href="/tags/%E7%88%AC%E5%B1%B1/" style="font-size: 10px;">爬山</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/" style="font-size: 10px;">英语单词</a> <a href="/tags/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/" style="font-size: 16.67px;">记录生活</a> <a href="/tags/%E8%BF%90%E5%8A%A8/" style="font-size: 10px;">运动</a> <a href="/tags/%E9%95%9C%E5%83%8F%E6%BA%90/" style="font-size: 10px;">镜像源</a> <a href="/tags/%E9%AA%91%E8%A1%8C/" style="font-size: 10px;">骑行</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(19);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+
+    
+        
+        
+        
+        
+   
+    <!-- <div class="nexmoe-copyright">
+        &copy; 2024 ShaoAo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+    </div> -->
+
+    <!-- 网站访问量侧边展示 -->
+    <!-- <div class="nexmoe-copyright">
+        <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3HQkdjDrH5f6vdfQ/quote.js?theme=0&f=12&display=0,0,0,1,0,0,0,1"></script>
+    </div> -->
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 37.5%;"> 
+            <img src="https://gitee.com/sawr/personalimage/raw/master/img/v2-fcd556027291ca02490769a417bf9c92_r.jpg" alt="开发包管理国内镜像源" loading="lazy">
+            <h1>开发包管理国内镜像源</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2023年09月05日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/tools/">tools</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <blockquote>
+<p>使用包管理可以大大降低引用和管理第三方库的成本，但是很多源都在国外，通过包管理安装的时候，容易超时；我们可以通过修改为国内源，或者使用代理来解决这个问题。</p>
+</blockquote>
+<p><strong>提供Pip、Composer、NPM、Gem、Maven国内源地址。</strong></p>
+<h2 id="Pip">Pip<a class="anchor" href="#Pip">·</a></h2>
+<table>
+<thead>
+<tr>
+<th>提供方</th>
+<th>源地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>豆瓣</strong></td>
+<td><strong><code>pip install -i https://pypi.doubanio.com/simple/</code></strong></td>
+</tr>
+<tr>
+<td><strong>清华大学</strong></td>
+<td><strong><code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple</code></strong></td>
+</tr>
+<tr>
+<td><strong>阿里云</strong></td>
+<td><strong><code>pip install -i https://mirrors.aliyun.com/pypi/simple/</code></strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Maven">Maven<a class="anchor" href="#Maven">·</a></h2>
+<p><strong>提供方：阿里云</strong></p>
+<figure class="shiki xml"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;?</span><span style="color: #85E89D">xml</span><span style="color: #B392F0"> version</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;1.0&quot;</span><span style="color: #B392F0"> encoding</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;UTF-8&quot;</span><span style="color: #E1E4E8">?&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">settings</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">xsi:schemaLocation</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">xmlns</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;http://maven.apache.org/SETTINGS/1.1.0&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">xmlns:xsi</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;</span><span style="color: #85E89D">mirrors</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">        &lt;</span><span style="color: #85E89D">mirror</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">          &lt;</span><span style="color: #85E89D">id</span><span style="color: #E1E4E8">&gt;alimaven&lt;/</span><span style="color: #85E89D">id</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">          &lt;</span><span style="color: #85E89D">name</span><span style="color: #E1E4E8">&gt;aliyun maven&lt;/</span><span style="color: #85E89D">name</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">url</span><span style="color: #E1E4E8">&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/</span><span style="color: #85E89D">url</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">          &lt;</span><span style="color: #85E89D">mirrorOf</span><span style="color: #E1E4E8">&gt;central&lt;/</span><span style="color: #85E89D">mirrorOf</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">        &lt;/</span><span style="color: #85E89D">mirror</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;/</span><span style="color: #85E89D">mirrors</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;</span><span style="color: #85E89D">profiles</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">        &lt;</span><span style="color: #85E89D">profile</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">            &lt;</span><span style="color: #85E89D">repositories</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">              &lt;</span><span style="color: #85E89D">repository</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">                &lt;</span><span style="color: #85E89D">id</span><span style="color: #E1E4E8">&gt;central&lt;/</span><span style="color: #85E89D">id</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">                &lt;</span><span style="color: #85E89D">name</span><span style="color: #E1E4E8">&gt;Maven Repository Switchboard&lt;/</span><span style="color: #85E89D">name</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">                &lt;</span><span style="color: #85E89D">layout</span><span style="color: #E1E4E8">&gt;default&lt;/</span><span style="color: #85E89D">layout</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">                &lt;</span><span style="color: #85E89D">url</span><span style="color: #E1E4E8">&gt;http://repo1.maven.org/maven2&lt;/</span><span style="color: #85E89D">url</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">                &lt;</span><span style="color: #85E89D">snapshots</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">                  &lt;</span><span style="color: #85E89D">enabled</span><span style="color: #E1E4E8">&gt;false&lt;/</span><span style="color: #85E89D">enabled</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">                &lt;/</span><span style="color: #85E89D">snapshots</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">              &lt;/</span><span style="color: #85E89D">repository</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">            &lt;/</span><span style="color: #85E89D">repositories</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">            &lt;</span><span style="color: #85E89D">id</span><span style="color: #E1E4E8">&gt;offical&lt;/</span><span style="color: #85E89D">id</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">        &lt;/</span><span style="color: #85E89D">profile</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;/</span><span style="color: #85E89D">profiles</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;</span><span style="color: #85E89D">activeProfiles</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">        &lt;</span><span style="color: #85E89D">activeProfile</span><span style="color: #E1E4E8">&gt;offical&lt;/</span><span style="color: #85E89D">activeProfile</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;/</span><span style="color: #85E89D">activeProfiles</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;/</span><span style="color: #85E89D">settings</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<hr>
+<h2 id="Composer">Composer<a class="anchor" href="#Composer">·</a></h2>
+<table>
+<thead>
+<tr>
+<th>提供方</th>
+<th>源地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>阿里云</strong></td>
+<td><strong><code>composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/</code></strong></td>
+</tr>
+<tr>
+<td><strong>华为云</strong></td>
+<td><strong><code>composer config -g repo.packagist composer https://mirrors.huaweicloud.com/repository/php/</code></strong></td>
+</tr>
+<tr>
+<td><strong>上海交通大学</strong></td>
+<td><strong><code>composer config -g repo.packagist composer https://packagist.mirrors.sjtug.sjtu.edu.cn</code></strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong><code>composer config -g repo.packagist composer https://packagist.jp</code></strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="NPM">NPM<a class="anchor" href="#NPM">·</a></h2>
+<table>
+<thead>
+<tr>
+<th>提供方</th>
+<th>源地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>淘宝</strong></td>
+<td><strong><code>npm config set registry https://registry.npmmirror.com</code></strong></td>
+</tr>
+<tr>
+<td><strong>淘宝</strong></td>
+<td><strong><code>pnpm config set registry https://registry.npmmirror.com</code></strong></td>
+</tr>
+<tr>
+<td><strong>淘宝</strong></td>
+<td><strong><code>yarn config set registry https://registry.npmmirror.com</code></strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong><code>npm config set registry http://r.cnpmjs.org/</code></strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong><code>pnpm config set registry http://r.cnpmjs.org/</code></strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong><code>yarn config set registry http://r.cnpmjs.org/</code></strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="Gem">Gem<a class="anchor" href="#Gem">·</a></h2>
+<table>
+<thead>
+<tr>
+<th>提供方</th>
+<th>源地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ruby China</strong></td>
+<td><strong><code>gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/</code></strong></td>
+</tr>
+<tr>
+<td><strong>清华大学</strong></td>
+<td><strong><code>gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/</code></strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="代理方式">代理方式<a class="anchor" href="#代理方式">·</a></h2>
+<table>
+<thead>
+<tr>
+<th>包管理器</th>
+<th>代理方式</th>
+<th>使用方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pip</td>
+<td>http/https</td>
+<td><code>https_proxy=http://ip:hort pip install</code></td>
+</tr>
+<tr>
+<td>composer</td>
+<td>http/https</td>
+<td><code>https_proxy=http://ip:hort composer install</code></td>
+</tr>
+<tr>
+<td>npm</td>
+<td>http/https</td>
+<td><code>npm config set proxy http://ip:port</code> <br/><code>npm config set https-proxy https://ip:port</code> <br/><br/> <code>yarn config set proxy http://ip:port</code> <br/> <code>yarn config set https-proxy https://ip:port</code></td>
+</tr>
+<tr>
+<td>gem</td>
+<td>http/https</td>
+<td><code>http_proxy=http://ip:host https_proxy=https://ip:host gem install</code></td>
+</tr>
+<tr>
+<td>go</td>
+<td>http/https</td>
+<td><code>http_proxy=http://ip:host https_proxy=https://ip:host go get</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+    <hr>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <svg t="1711088601860" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9444" width="16" height="16"><path d="M797.653 932.511l80.935-39.61c9.902 36.182 15.234 74.65 15.234 113.69v8.188h-87.98v-6.475c0-25.708-2.857-50.846-8.19-75.793zM643.78 715.034a332.254 332.254 0 0 0-175.39-50.084c-185.865 0-336.88 153.3-336.88 342.593v6.475H43.72v-8.19c0-201.099 135.78-370.015 318.788-417.814-113.69-45.514-188.15-156.157-188.15-278.607 0-164.916 131.782-299.554 294.223-299.554 162.06 0 294.222 134.066 294.222 299.554 0 127.02-78.078 235.378-188.15 278.607 39.61 10.474 78.079 26.851 113.119 48.37l-43.99 78.65zM263.863 309.598c0 114.832 91.98 208.526 204.527 208.526 113.119 0 204.528-93.313 204.528-208.526 0-114.833-91.98-208.527-204.528-208.527-112.356 0.381-204.527 93.694-204.527 208.527z m713.37 173.486c-2.856 20.948-6.475 43.039-11.045 67.605-4.57 23.804-9.331 48.37-14.664 72.936-4.57 22.662-9.902 44.943-15.806 67.605l-72.175 40.182c8.76-2.857 17.52-4.57 25.709-7.618 7.046-2.285 14.473-4.57 22.09-6.474 7.618-2.286 13.902-4 18.663-6.475l-7.617 29.136c-2.285 8.189-4 14.473-5.904 18.092-3.428 9.902-8.188 19.234-12.759 27.422-4.57 8.76-9.903 15.806-13.33 22.09-4.57 7.047-9.903 14.474-15.806 19.806l-66.462 19.805L862.4 857.1c-7.046 6.475-15.235 12.188-23.233 19.234-7.047 5.332-15.235 11.045-24.567 17.52-9.33 6.475-19.233 11.616-29.136 16.377-10.474 5.333-22.09 7.618-33.707 8.19-12.188 0-23.805-0.572-35.04-2.857-13.33-1.714-26.28-5.333-38.468-9.332 3.999-6.475 8.189-12.759 12.759-20.948 4-7.046 8.76-14.663 14.473-23.233s11.617-18.662 17.52-29.708c16.949-29.708 33.707-58.273 50.085-86.838s30.85-54.274 43.61-77.507c15.234-26.852 29.136-51.799 42.466-75.793-16.948 19.805-35.04 41.895-53.702 66.462-18.663 24.566-36.754 48.941-54.274 74.079-20.948 30.85-41.325 62.272-60.559 94.456-4.57 7.046-9.331 15.234-14.473 23.804-5.332 8.76-11.045 18.663-16.949 29.137-5.903 10.474-11.616 20.376-18.662 31.421-5.904 10.474-12.188 21.52-18.663 31.422-14.473 23.805-29.136 48.942-44.371 74.65 0.571-7.617 1.714-17.52 3.999-29.707 2.285-10.474 5.903-23.233 11.045-38.468 4.57-15.235 12.188-33.707 21.52-54.274 6.474-12.76 11.044-23.233 13.901-30.85s5.903-12.76 7.617-16.95c1.143-2.856 2.286-6.474 4.57-8.76-1.713-2.284-2.284-6.474-0.57-12.758 0.57-5.904 2.285-14.473 6.474-25.71 3.428-11.044 9.332-26.85 17.52-46.656 8.19-20.376 19.234-42.467 32.565-65.89 13.33-23.805 28.565-46.657 45.514-69.89 16.949-23.233 35.611-46.085 54.845-67.605 18.663-20.947 39.04-40.181 60.558-58.273 20.377-16.948 41.325-30.85 61.701-41.324s40.754-16.949 59.988-18.091c2.475 12.95 1.333 29.707-1.524 50.655z" p-id="9445"></path></svg>
+        <strong>本文作者：</strong>ShaoAo<br>
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6336" width="16" height="16"><path d="M552.106667 125.44a245.034667 245.034667 0 1 1 346.453333 346.453333l-113.834667 113.877334a300.714667 300.714667 0 0 0-16.938666-164.053334l40.277333-40.32a117.034667 117.034667 0 1 0-165.461333-165.461333l-170.666667 170.666667a117.034667 117.034667 0 0 0 38.4 191.061333l-93.994667 93.994667a245.034667 245.034667 0 0 1-34.986666-375.552l170.709333-170.666667z m-426.666667 426.666667l113.834667-113.877334a300.544 300.544 0 0 0 16.938666 164.053334l-40.277333 40.32a117.034667 117.034667 0 1 0 165.461333 165.461333l170.666667-170.666667a116.992 116.992 0 0 0-24.106667-184.021333L619.946667 361.386667a245.034667 245.034667 0 0 1 22.613333 366.506666l-170.666667 170.666667a245.034667 245.034667 0 0 1-346.453333-346.453333z" fill="currentColor" p-id="6337"></path></svg>
+        <strong>本文链接：</strong><a href="https://sawr.gitee.io/2023/09/05/tools/jingxiangyua/" title="https:&#x2F;&#x2F;sawr.gitee.io&#x2F;2023&#x2F;09&#x2F;05&#x2F;tools&#x2F;jingxiangyua&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;sawr.gitee.io&#x2F;2023&#x2F;09&#x2F;05&#x2F;tools&#x2F;jingxiangyua&#x2F;</a><br>
+        
+            <svg t="1711088267743" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8243" width="16" height="16"><path d="M475.428571 877.714286C256 877.714286 73.142857 694.857143 73.142857 475.428571S256 73.142857 475.428571 73.142857 877.714286 256 877.714286 475.428571 694.857143 877.714286 475.428571 877.714286m0-877.714286C212.114286 0 0 212.114286 0 475.428571S212.114286 950.857143 475.428571 950.857143 950.857143 738.742857 950.857143 475.428571 738.742857 0 475.428571 0m0 219.428571c-21.942857 0-36.571429 14.628571-36.571428 36.571429v292.571429c0 21.942857 14.628571 36.571429 36.571428 36.571428s36.571429-14.628571 36.571429-36.571428v-292.571429c0-21.942857-14.628571-36.571429-36.571429-36.571429m0 438.857143c-21.942857 0-36.571429 14.628571-36.571428 36.571429s14.628571 36.571429 36.571428 36.571428 36.571429-14.628571 36.571429-36.571428-14.628571-36.571429-36.571429-36.571429" p-id="8244"></path></svg>
+<strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议许可，仅作个人记录，转载请说明出处！
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E9%95%9C%E5%83%8F%E6%BA%90/" rel="tag">镜像源</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1714719124647"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <div id="tcomment"></div>
+<script src="https://cdn.staticfile.org/twikoo/1.6.31/twikoo.all.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://shaoao-twikoo.hf.space/', 
+    el: '#tcomment', // 容器元素
+    // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+    // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+    // lang: 'zh-CN', 
+  })
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Pip"><span class="toc-number">1.</span> <span class="toc-text">Pip</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Maven"><span class="toc-number">2.</span> <span class="toc-text">Maven</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Composer"><span class="toc-number">3.</span> <span class="toc-text">Composer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NPM"><span class="toc-number">4.</span> <span class="toc-text">NPM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gem"><span class="toc-number">5.</span> <span class="toc-text">Gem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E6%96%B9%E5%BC%8F"><span class="toc-number">6.</span> <span class="toc-text">代理方式</span></a></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索全站" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+</div><!-- hexo injector body_end start -->
+  <script>
+  const CODE_CONFIG = {
+    beautify: false,
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: 360,
+    isHighlightShrink: true,
+    copy: {
+      success: 'Copy Success',
+      error: 'Copy Error',
+      noSupport: 'Browser Not Support',
+    }
+  };
+  console.log(
+    `%c hexo-shiki-plugin %c v1.0.25 %c https://github.com/nova1751/hexo-shiki-plugin`,
+    "color: #fff; background: #5f5f5f",
+    "color: #fff; background: #80c8f8",
+    ""
+  );
+  </script>
+  <!-- hexo injector body_end end --></body></html>

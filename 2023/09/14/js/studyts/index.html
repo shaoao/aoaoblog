@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>学习笔记：TypeScript - 奥奥の探索日记</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="生活,摇滚,记录,编程,学习,剪辑,设计,项目,音乐">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="referrer" content="no-referrer" />
+
+<!-- 51la统计 -->
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3HQkdjDrH5f6vdfQ",ck:"3HQkdjDrH5f6vdfQ"})</script>
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="了解TypeScript·  TypeScript是由微软开发的一门开源的编程语言。 TypeScript简称TS，以JavaScript为基础构建的语言，JS有的TS都有。 Typescript &#x3D; Type + JavaScript（在JS基础之上，为JS添加了类型支持）。 可以在任何支持JavaScript的平台中执行。   优点· JavaScript是弱类型的编程语言，很多的错误只有在运">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记：TypeScript">
+<meta property="og:url" content="https://sawr.gitee.io/2023/09/14/js/studyts/index.html">
+<meta property="og:site_name" content="奥奥の探索日记">
+<meta property="og:description" content="了解TypeScript·  TypeScript是由微软开发的一门开源的编程语言。 TypeScript简称TS，以JavaScript为基础构建的语言，JS有的TS都有。 Typescript &#x3D; Type + JavaScript（在JS基础之上，为JS添加了类型支持）。 可以在任何支持JavaScript的平台中执行。   优点· JavaScript是弱类型的编程语言，很多的错误只有在运">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tucdn.wpon.cn/2023/09/14/c2f9543f296d3.png">
+<meta property="og:image" content="https://tucdn.wpon.cn/2023/09/14/2cdb1ed0cff3a.png">
+<meta property="article:published_time" content="2023-09-14T11:30:00.000Z">
+<meta property="article:modified_time" content="2024-04-10T09:22:18.026Z">
+<meta property="article:author" content="ShaoAo">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="TypeScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tucdn.wpon.cn/2023/09/14/c2f9543f296d3.png">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714719124745">
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4474869_y3x62ji5c4.css">
+
+<link rel="stylesheet" href="/css/style.css?v=1714719124745">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1714719124745">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1714719124745"></script>
+
+ 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-shiki-plugin@latest/lib/codeblock.css">
+<style>:root{--hl-color:#e1e4e8;--hl-bg:#24292e;--hltools-bg:#1f2428;--hltools-color:#c5c5c5;--hlnumber-bg:#24292e;--hlnumber-color:#444d56;--hlscrollbar-bg:#32383e;--hlexpand-bg:linear-gradient(180deg,rgba(36,41,46,0.1),rgba(36,41,46,0.9))}</style>
+    <style>
+    .code-expand-btn:not(.expand-done) ~ div.codeblock,
+    .code-expand-btn:not(.expand-done) ~ * div.codeblock {
+      overflow: hidden;
+      height: 360px;
+    }
+    </style>
+  <!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(https://tucdn.wpon.cn/2024/03/23/2247604107188.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer">奥奥の探索日记</div><a class="mdui-btn mdui-btn-icon" href="/" title="ShaoAo"><img src="https://cccimg.com/view.php/f8a4b6199c0c036da1f160b12d01f50d.jpg" alt="ShaoAo"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="ShaoAo">
+            <img src="https://cccimg.com/view.php/f8a4b6199c0c036da1f160b12d01f50d.jpg" alt="ShaoAo" alt="ShaoAo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>18</div>
+        <div><span>标签</span>19</div>
+        <div><span>分类</span>6</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="常看">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                常看
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索全站" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+
+
+	<script async src="/js/search.js?v=1714719124745"></script>
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/296465852"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/shaoao/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-githubic"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.travellings.cn/go.html"
+			target="_blank"
+			mdui-tooltip="{content: '开往'}"
+			style="
+				color: rgb(251,109,72);
+				background-color: rgba(251,109,72, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-ditiexiao"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.xiaohongshu.com/user/profile/60d9e8d7000000002002c59b"
+			target="_blank"
+			mdui-tooltip="{content: '小红书'}"
+			style="
+				color: rgb(255,46,77);
+				background-color: rgba(255,46,77, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-xiaohongshu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://steamcommunity.com/profiles/76561198846317988/"
+			target="_blank"
+			mdui-tooltip="{content: 'Steam'}"
+			style="
+				color: rgb(21,114,182);
+				background-color: rgba(21,114,182, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-steam"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/woaiwr"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.douyin.com/user/MS4wLjABAAAAbyj8R7eEae7UC9UMWpJKXAtr-vIBkvHzkY7iJT8dXJE?relation=0&vid=7354414206428499236"
+			target="_blank"
+			mdui-tooltip="{content: '抖音'}"
+			style="
+				color: rgb( 23, 11, 26);
+				background-color: rgba( 23, 11, 26, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-douyin"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/tools/">tools</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/前端/">前端</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/后端/">后端</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小技巧/">小技巧</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活随笔/">生活随笔</a>
+          <span class="category-list-count">6</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/英语/">英语</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/TypeScript/" style="font-size: 13.33px;">TypeScript</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/%E5%9B%BE%E5%BA%8A%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">图床配置</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">学习</a> <a href="/tags/%E5%B1%B1%E9%87%8E%E6%97%A5%E5%BF%97/" style="font-size: 10px;">山野日志</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">工具</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E6%9C%89%E7%94%A8%E5%88%86%E4%BA%AB/" style="font-size: 13.33px;">有用分享</a> <a href="/tags/%E7%88%AC%E5%B1%B1/" style="font-size: 10px;">爬山</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/" style="font-size: 10px;">英语单词</a> <a href="/tags/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/" style="font-size: 16.67px;">记录生活</a> <a href="/tags/%E8%BF%90%E5%8A%A8/" style="font-size: 10px;">运动</a> <a href="/tags/%E9%95%9C%E5%83%8F%E6%BA%90/" style="font-size: 10px;">镜像源</a> <a href="/tags/%E9%AA%91%E8%A1%8C/" style="font-size: 10px;">骑行</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(19);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+
+    
+        
+        
+        
+        
+   
+    <!-- <div class="nexmoe-copyright">
+        &copy; 2024 ShaoAo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+    </div> -->
+
+    <!-- 网站访问量侧边展示 -->
+    <!-- <div class="nexmoe-copyright">
+        <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3HQkdjDrH5f6vdfQ/quote.js?theme=0&f=12&display=0,0,0,1,0,0,0,1"></script>
+    </div> -->
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 37.5%;"> 
+            <img src="https://gitee.com/sawr/personalimage/raw/master/img/v2-1ca400be2937c210c86f3ae24d401b79_r.jpg" alt="学习笔记：TypeScript" loading="lazy">
+            <h1>学习笔记：TypeScript</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2023年09月14日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h2 id="了解TypeScript">了解TypeScript<a class="anchor" href="#了解TypeScript">·</a></h2>
+<ul>
+<li>TypeScript是由微软开发的一门开源的编程语言。</li>
+<li>TypeScript简称TS，以JavaScript为基础构建的语言，JS有的TS都有。</li>
+<li>Typescript = Type + JavaScript（在JS基础之上，为JS添加了类型支持）。</li>
+<li>可以在任何支持JavaScript的平台中执行。</li>
+</ul>
+<hr>
+<h3 id="优点"><strong>优点</strong><a class="anchor" href="#优点">·</a></h3>
+<p>JavaScript是弱类型的编程语言，很多的错误只有在运行的时候才会被发现，而TS在代码编译的时候（代码执行前）就可以发现错误。</p>
+<ul>
+<li>支持最新的ECMAScript语法。</li>
+<li>在代码编译阶段就能发现错误。</li>
+<li>在JS基础上增加了类型支持。</li>
+</ul>
+<hr>
+<h3 id="TS和JS的区别"><strong>TS和JS的区别</strong><a class="anchor" href="#TS和JS的区别">·</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>TypeScript</strong></th>
+<th><strong>JavaScript</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编译期发现错误</td>
+<td>运行时发现错误</td>
+</tr>
+<tr>
+<td>强类型语言,支持静态和动态类型</td>
+<td>弱类型语言，没有静态类型选项</td>
+</tr>
+<tr>
+<td>支持模块、泛型和接口</td>
+<td>不支持模块、泛型和接口</td>
+</tr>
+<tr>
+<td>代码运行时会被编译成JavaScript代码，浏览器才能识别</td>
+<td>可以直接在浏览器使用</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="建立TypeScript环境">建立TypeScript环境<a class="anchor" href="#建立TypeScript环境">·</a></h2>
+<h3 id="1-安装编译TS的工具包">1. <strong>安装编译TS的工具包</strong><a class="anchor" href="#1-安装编译TS的工具包">·</a></h3>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">npm</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">i</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-g</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">typescript</span></span></code></pre></div></div></figure>
+<h3 id="2-验证TS是否安装成功">2. <strong>验证TS是否安装成功</strong><a class="anchor" href="#2-验证TS是否安装成功">·</a></h3>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">tsc</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-v</span></span></code></pre></div></div></figure>
+<h3 id="3-TypeScript初体验">3. <strong>TypeScript初体验</strong><a class="anchor" href="#3-TypeScript初体验">·</a></h3>
+<ol>
+<li>创建一个TS文件，hello.ts（注意：TS文件的后缀名为 <strong>.ts</strong>），并输入以下的内容</li>
+</ol>
+<figure class="shiki ts"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">function</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">greet</span><span style="color: #E1E4E8">(</span><span style="color: #FFAB70">name</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8">)</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8"> { </span></span>
+<span class="line"><span style="color: #E1E4E8">	</span><span style="color: #F97583">return</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">`hello, ${</span><span style="color: #E1E4E8">name</span><span style="color: #9ECBFF">}`</span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #E1E4E8">} </span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> user </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;Echo&quot;</span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #E1E4E8">console.</span><span style="color: #B392F0">log</span><span style="color: #E1E4E8">(</span><span style="color: #B392F0">greet</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;Echo&quot;</span><span style="color: #E1E4E8">))</span></span></code></pre></div></div></figure>
+<hr>
+<ol start="2">
+<li>将TS文件编译为JS文件，在终端中输入命令：<strong>tsc hello.ts，</strong> （此时，在同级目录中会出现一个同名的JS文件）</li>
+</ol>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #9ECBFF">&quot;use strict&quot;</span><span style="color: #E1E4E8">; </span></span>
+<span class="line"><span style="color: #F97583">function</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">greet</span><span style="color: #E1E4E8">(</span><span style="color: #FFAB70">name</span><span style="color: #E1E4E8">) {     </span></span>
+<span class="line"><span style="color: #E1E4E8">	</span><span style="color: #F97583">return</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;Hello, &quot;</span><span style="color: #E1E4E8">.</span><span style="color: #B392F0">concat</span><span style="color: #E1E4E8">(name); </span></span>
+<span class="line"><span style="color: #E1E4E8">} </span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> user </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;Echo&quot;</span><span style="color: #E1E4E8">; </span></span>
+<span class="line"><span style="color: #E1E4E8">console.</span><span style="color: #B392F0">log</span><span style="color: #E1E4E8">(</span><span style="color: #B392F0">greet</span><span style="color: #E1E4E8">(user));</span></span></code></pre></div></div></figure>
+<hr>
+<ol start="3">
+<li>执行JS代码：在终端中输入命令，<strong>node hello.js</strong>，终端会输出 hello, Echo。</li>
+</ol>
+<figure class="shiki shell"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">&quot;hello, Echo&quot;</span></span></code></pre></div></div></figure>
+<hr>
+<h3 id="4-简化运行TS的步骤"><strong>4. 简化运行TS的步骤</strong><a class="anchor" href="#4-简化运行TS的步骤">·</a></h3>
+<p>每次修改代码后，都要重复执行两个命令，才能运行TS代码，我们可以直接使用<strong>ts-node</strong>工具包，直接在node.js中执行TS代码。</p>
+<p>安装命令：<strong><code>npm i -g ts-node</code></strong></p>
+<p>使用方式：<strong><code>ts-node hello.ts</code></strong></p>
+<hr>
+<h3 id="5-运行TS文件的另一种方法-Badge-text-推荐"><strong>5. 运行TS文件的另一种方法</strong> <Badge text='推荐'/><a class="anchor" href="#5-运行TS文件的另一种方法-Badge-text-推荐">·</a></h3>
+<p>在VSCode中安装<strong>Code Runner</strong>扩展插件，在需要运行的ts文件中按鼠标右键，选择<strong>Run Code</strong>(快捷键：<strong>Ctrl+Alt+N</strong>)。</p>
+<p>或者在VSCode窗口右上角单击小三角即可运行。
+<img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/09/14/c2f9543f296d3.png" alt="Snipaste_2023-09-14_19-41-00.png" data-caption="Snipaste_2023-09-14_19-41-00.png" loading="lazy"></p>
+<h2 id="TypeScript类型注解">TypeScript类型注解<a class="anchor" href="#TypeScript类型注解">·</a></h2>
+<h3 id="1-类型注解作用"><strong>1. 类型注解作用</strong><a class="anchor" href="#1-类型注解作用">·</a></h3>
+<p><strong>TS类型注解的作用是为变量、函数、类等添加类型信息，用于在静态类型检查阶段检查代码的类型正确性。</strong></p>
+<hr>
+<h3 id="2-类型注解用途"><strong>2. 类型注解用途</strong><a class="anchor" href="#2-类型注解用途">·</a></h3>
+<ol>
+<li>
+<p>提供类型提示：类型注解使得开发人员可以清晰地知道变量的类型，编辑器能够根据类型注解给出相应的代码提示，提高代码的可读性和可维护性。</p>
+</li>
+<li>
+<p>静态类型检查：通过给变量添加类型注解，在编译阶段可以对代码进行静态类型检查。它会检查变量的类型是否符合预期的类型，并发现潜在的类型错误。</p>
+</li>
+<li>
+<p>函数参数类型检查：类型注解可以帮助开发人员在编写函数时明确参数的类型，并在调用函数时进行参数类型检查。这样可以避免因参数类型不匹配引发的潜在错误。</p>
+</li>
+<li>
+<p>对象属性类型约束：通过类型注解，可以约束对象的属性类型，确保对象的属性符合特定的类型要求。</p>
+</li>
+</ol>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/09/14/2cdb1ed0cff3a.png" alt="Snipaste_2023-09-14_19-48-15.png" data-caption="Snipaste_2023-09-14_19-48-15.png" loading="lazy"></p>
+<p>例如，上述代码中的 <strong>: number</strong> 就是<strong>类型注解。</strong> 约定变量num的类型为number（数值类型）。</p>
+<hr>
+<h3 id="3-类型注解注意事项"><strong>3. 类型注解注意事项</strong><a class="anchor" href="#3-类型注解注意事项">·</a></h3>
+<ol>
+<li><strong>约定了什么类型，就只能给变量赋值该类型的值</strong>，否则，就会报错。</li>
+</ol>
+<p>例如，我们将变量num的值123，重新赋值为字符串的“456”，此时编辑器会给出错误提示：不能将类型“string”分配给类型“number”，这些很好理解。</p>
+<ol start="2">
+<li><strong>类型注解只在编译阶段起作用，并不会影响运行时的行为。</strong> 在编译后的 JavaScript 代码中，类型注解会被编译器忽略。</li>
+</ol>
+<p>例如,编译前的TS代码:</p>
+<figure class="shiki ts"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> num</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">number</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">123</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+<p>编译后的JS代码:</p>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> num </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">123</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+<h2 id="TypeScript类型">TypeScript类型<a class="anchor" href="#TypeScript类型">·</a></h2>
+<h3 id="1-TS中常用的基础类型"><strong>1. TS中常用的基础类型</strong><a class="anchor" href="#1-TS中常用的基础类型">·</a></h3>
+<p>我们可以将TS中常用的基础类型分为两类：</p>
+<ol>
+<li>JS已有的类型</li>
+<li>TS新增的类型</li>
+</ol>
+<p>JS已有的类型，我们又可以分为两类：</p>
+<ol>
+<li>
+<p>原始数据类型：<strong>number、string、boolean、null、undefined、symbol（ES6中的新类型）、bigint（ES10中的新类型）。</strong></p>
+</li>
+<li>
+<p>对象类型：<strong>object（包括数组、对象、函数等对象）。</strong></p>
+</li>
+</ol>
+<p>TS新增的类型：<strong>any、void、自定义类型（类型别名）、联合类型、接口、元组、字面量类型、枚举等。</strong></p>
+<hr>
+<h4 id="1-1-数值（number）"><strong>1.1.数值（number）</strong><a class="anchor" href="#1-1-数值（number）">·</a></h4>
+<p>和JS一样，TS里的所有数字都是浮点数。 这些浮点数的类型是 number。 除了支持十进制和十六进制字面量，TS还支持ECMAScript 2015中引入的二进制和八进制字面量。</p>
+<p>在TS中，使用 <code>number</code> 来定义数值类型：</p>
+<figure class="shiki ts"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">// 十进制 </span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> decLiteral</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">number</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">6</span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #6A737D">// 十六进制 </span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> hexLiteral</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">number</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0xf00d</span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #6A737D">// 二进制 </span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> binaryLiteral</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">number</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0b1010</span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #6A737D">// 八进制 </span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> octalLiteral</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">number</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0o744</span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> notANumber</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">number</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">NaN</span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> infinityNumber</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">number</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">Infinity</span></span></code></pre></div></div></figure>
+<p>编译结果：</p>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">// 十进制 </span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> decLiteral </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">6</span><span style="color: #E1E4E8">; </span></span>
+<span class="line"><span style="color: #6A737D">// 十六进制 </span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> hexLiteral </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0xf00d</span><span style="color: #E1E4E8">; </span></span>
+<span class="line"><span style="color: #6A737D">// 二进制 </span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> binaryLiteral </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">10</span><span style="color: #E1E4E8">; </span></span>
+<span class="line"><span style="color: #6A737D">// 八进制 </span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> octalLiteral </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">484</span><span style="color: #E1E4E8">; </span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> notANumber </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">NaN</span><span style="color: #E1E4E8">; </span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> infinityNumber </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">Infinity</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+<hr>
+<h4 id="1-2-布尔值（boolean）">1.2.布尔值（boolean）<a class="anchor" href="#1-2-布尔值（boolean）">·</a></h4>
+<p>在TS中，使用 <strong>boolean</strong> 来定义布尔值类型：</p>
+<figure class="shiki ts"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> flag</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">boolean</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">false</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+<p>编译结果：</p>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> flag </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">false</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+<hr>
+<h4 id="1-3-字符串（string）"><strong>1.3.字符串（string）</strong><a class="anchor" href="#1-3-字符串（string）">·</a></h4>
+<p>在TS中，使用 <strong>string</strong> 来定义字符串类型：</p>
+<p>在TS中，字符串的表现形式主要有以下三种方式：</p>
+<ol>
+<li>使用单引号（ <strong>’</strong> ）</li>
+<li>使用双引号（ <strong>&quot;</strong> ）</li>
+<li>使用模板字符串，它可以定义多行文本和内嵌表达式。这种字符串是被反引号包围（ <strong>`</strong> ），并且以 <strong>${ expr }</strong> 这种形式嵌入表达式</li>
+</ol>
+<figure class="shiki ts"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> myName</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;Echo&quot;</span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> age</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">number</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">25</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// 模板字符串</span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> sentence</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">`Hello, my name is ${</span><span style="color: #9ECBFF"> </span><span style="color: #E1E4E8">myName</span><span style="color: #9ECBFF"> </span><span style="color: #9ECBFF">}. I&#39;ll be ${</span><span style="color: #9ECBFF"> </span><span style="color: #E1E4E8">age</span><span style="color: #9ECBFF"> </span><span style="color: #F97583">+</span><span style="color: #9ECBFF"> </span><span style="color: #79B8FF">1</span><span style="color: #9ECBFF">} years old next month.`</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// 上面定义的sentence的语句与下面定义的sentence1语句的效果相同</span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> sentence1</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;Hello, my name is &quot;</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> myName </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;. I&#39;ll be &quot;</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> ( age </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">) </span><span style="color: #F97583">+</span><span style="color: #9ECBFF">&quot; years old next month.&quot;</span></span></code></pre></div></div></figure>
+<p>编译结果：</p>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> myName </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;Echo&quot;</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> age </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">25</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// 模板字符串</span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> sentence </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;Hello, my name is &quot;</span><span style="color: #E1E4E8">.</span><span style="color: #B392F0">concat</span><span style="color: #E1E4E8">(myName, </span><span style="color: #9ECBFF">&quot;. I&#39;ll be &quot;</span><span style="color: #E1E4E8">).</span><span style="color: #B392F0">concat</span><span style="color: #E1E4E8">(age </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">&quot; years old next month.&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// 上面定义的sentence的语句与下面定义的sentence1语句的效果相同</span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> sentence1 </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;Hello, my name is &quot;</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> myName </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;. I&#39;ll be &quot;</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> (age </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">) </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot; years old next month.&quot;</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+<hr>
+<h4 id="1-4-null-和-undefined"><strong>1.4.null 和 undefined</strong><a class="anchor" href="#1-4-null-和-undefined">·</a></h4>
+<p>null 和 undefined 是所有类型的子类型，默认情况下，可以把null 和 undefined赋值给其他类型。</p>
+<p>注意：如果你将 tsconfig.json 文件中的 <strong>strictNullChecks</strong> 选项设置为 <strong>false</strong>，下面这种操作不会报错，不过尽量不要这么做。</p>
+<figure class="shiki ts"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 string 类型</span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> str</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;哈哈哈&quot;</span></span>
+<span class="line"><span style="color: #E1E4E8">str </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span></span>
+<span class="line"><span style="color: #E1E4E8">str </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 number 类型</span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> num</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">number</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">123</span></span>
+<span class="line"><span style="color: #E1E4E8">num </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span></span>
+<span class="line"><span style="color: #E1E4E8">num </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 object 类型</span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> obj</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">object</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> {}</span></span>
+<span class="line"><span style="color: #E1E4E8">obj </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span></span>
+<span class="line"><span style="color: #E1E4E8">obj </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 boolean 类型</span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> flag</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">boolean</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">false</span></span>
+<span class="line"><span style="color: #E1E4E8">flag </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span></span>
+<span class="line"><span style="color: #E1E4E8">flag </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 symbol 类型</span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> sym</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">symbol</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Symbol</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;abc&quot;</span><span style="color: #E1E4E8">)</span></span>
+<span class="line"><span style="color: #E1E4E8">sym </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span></span>
+<span class="line"><span style="color: #E1E4E8">sym </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 bigint 类型</span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> big</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">bigint</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8">  </span><span style="color: #79B8FF">10</span><span style="color: #F97583">n</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">big </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span></span>
+<span class="line"><span style="color: #E1E4E8">big </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span></span></code></pre></div></div></figure>
+<p>编译结果：</p>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 string 类型</span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> str </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;哈哈哈&quot;</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">str </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">str </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 number 类型</span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> num </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">123</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">num </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">num </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 object 类型</span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> obj </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> {};</span></span>
+<span class="line"><span style="color: #E1E4E8">obj </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">obj </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 boolean 类型</span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> flag </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">false</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">flag </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">flag </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 symbol 类型</span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> sym </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Symbol</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;abc&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">sym </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">sym </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #6A737D">// 将 null 和 undefined 赋值给 bigint 类型</span></span>
+<span class="line"><span style="color: #F97583">var</span><span style="color: #E1E4E8"> big </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">10</span><span style="color: #F97583">n</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">big </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">big </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">undefined</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+<blockquote>
+<p>注意：如果你在 <strong>tsconfig.json</strong> 文件中指定了“<strong>strictNullChecks：true</strong>”，null 和 undefined 只能赋值给 <strong>void</strong> 和它们各自的类型。</p>
+</blockquote>
+<hr>
+<h4 id="1-5-symbol"><strong>1.5.symbol</strong><a class="anchor" href="#1-5-symbol">·</a></h4>
+<p><strong>symbol</strong> 是ES6新增的一种基本数据类型，<strong>Symbol()函数</strong> 会返回 <strong>symbol</strong> 类型的值，<strong>每个从 Symbol()函数 返回的 symbol 的值都是唯一的。</strong></p>
+<figure class="shiki ts"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">const</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">sym1</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">symbol</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Symbol</span><span style="color: #E1E4E8">()</span></span>
+<span class="line"><span style="color: #F97583">const</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">sym2</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">symbol</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Symbol</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&#39;temp&#39;</span><span style="color: #E1E4E8">)</span></span>
+<span class="line"><span style="color: #F97583">const</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">sym3</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">symbol</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Symbol</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&#39;temp&#39;</span><span style="color: #E1E4E8">)</span></span></code></pre></div></div></figure>
+<p>上面的代码创建了三个新的 symbol 类型，但是注意的是，每个从 Symbol()函数 返回的值都是唯一的。</p>
+<p>此时，如果我们在控制台打印下面的代码，两者并不相等。</p>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">console.</span><span style="color: #B392F0">log</span><span style="color: #E1E4E8">(sym2 </span><span style="color: #F97583">===</span><span style="color: #E1E4E8"> sym3) </span><span style="color: #6A737D">// false</span></span></code></pre></div></div></figure>
+<hr>
+<h4 id="1-6-bigint"><strong>1.6.bigint</strong><a class="anchor" href="#1-6-bigint">·</a></h4>
+<p><strong>bigint</strong> 是ES10新增的一种基本数据类型，在JS中，可以用 Number 表示的最大整数为 2^53 - 1，可以写为 Number.MAX_SAFE_INTEGER。如果超过了这个界限，那么就可以用 BigInt 来表示，它可以表示任意大的整数。</p>
+<p>在一个整数字面量后面加 n 的方式定义一个 bigint，或者调用函数 BigInt()。</p>
+<figure class="shiki ts"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> big1</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">bigint</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">10</span><span style="color: #F97583">n</span></span>
+<span class="line"><span style="color: #F97583">let</span><span style="color: #E1E4E8"> big2</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">bigint</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">BigInt</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">10</span><span style="color: #E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">console.</span><span style="color: #B392F0">log</span><span style="color: #E1E4E8">(big1 </span><span style="color: #F97583">===</span><span style="color: #E1E4E8"> big2) </span><span style="color: #6A737D">// true</span></span></code></pre></div></div></figure>
+<hr>
+<h4 id="1-7-区别"><strong>1.7.区别</strong><a class="anchor" href="#1-7-区别">·</a></h4>
+<h4 id="1-7-1-null-和-undefined-的区别">1.7.1. null 和 undefined 的区别<a class="anchor" href="#1-7-1-null-和-undefined-的区别">·</a></h4>
+<ol>
+<li>在JS中，null 表示“什么都没有”，而 undefined 是一个没有设置值的变量</li>
+<li>用 typeof 检测 null，返回 object；typeof 一个没有值的变量会返回 undefined</li>
+<li>null 是一个只有一个值的特殊类型，表示一个空对象的引用</li>
+<li>null 和 undefined 是其它任何类型（包括void）的子类型，可以赋值给其它类型，如数字类型，此时，赋值后的类型会变成 null 或 undefined。而在TS中启用严格的空校验（strictNullChecks）特性，就可以使得 null 和 undefined 只能被赋值给 void 或本身对应的类型</li>
+</ol>
+<hr>
+<h4 id="1-7-2-bigint-和-number-的区别">1.7.2. bigint 和 number 的区别<a class="anchor" href="#1-7-2-bigint-和-number-的区别">·</a></h4>
+<ol>
+<li>number 和 bigint 都可以表示数字，但是两者不能进行相互转换</li>
+<li>仅在值大于 2^53 - 1时，才使用 bigint，否则尽量使用 number</li>
+<li>用 typeof 检测 bigint 对象时，返回 bigint，用 typeof 检测 number，返回 number</li>
+</ol>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">console.</span><span style="color: #B392F0">log</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">typeof</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">10</span><span style="color: #E1E4E8">) </span><span style="color: #6A737D">// number</span></span>
+<span class="line"><span style="color: #E1E4E8">console.</span><span style="color: #B392F0">log</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">typeof</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Number</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">10</span><span style="color: #E1E4E8">)) </span><span style="color: #6A737D">// number</span></span>
+<span class="line"><span style="color: #E1E4E8">console.</span><span style="color: #B392F0">log</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">typeof</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">10</span><span style="color: #F97583">n</span><span style="color: #E1E4E8">) </span><span style="color: #6A737D">// bigint</span></span>
+<span class="line"><span style="color: #E1E4E8">console.</span><span style="color: #B392F0">log</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">typeof</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">BigInt</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">10</span><span style="color: #E1E4E8">)) </span><span style="color: #6A737D">// bigint</span></span></code></pre></div></div></figure>
+<hr>
+
+    <hr>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <svg t="1711088601860" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9444" width="16" height="16"><path d="M797.653 932.511l80.935-39.61c9.902 36.182 15.234 74.65 15.234 113.69v8.188h-87.98v-6.475c0-25.708-2.857-50.846-8.19-75.793zM643.78 715.034a332.254 332.254 0 0 0-175.39-50.084c-185.865 0-336.88 153.3-336.88 342.593v6.475H43.72v-8.19c0-201.099 135.78-370.015 318.788-417.814-113.69-45.514-188.15-156.157-188.15-278.607 0-164.916 131.782-299.554 294.223-299.554 162.06 0 294.222 134.066 294.222 299.554 0 127.02-78.078 235.378-188.15 278.607 39.61 10.474 78.079 26.851 113.119 48.37l-43.99 78.65zM263.863 309.598c0 114.832 91.98 208.526 204.527 208.526 113.119 0 204.528-93.313 204.528-208.526 0-114.833-91.98-208.527-204.528-208.527-112.356 0.381-204.527 93.694-204.527 208.527z m713.37 173.486c-2.856 20.948-6.475 43.039-11.045 67.605-4.57 23.804-9.331 48.37-14.664 72.936-4.57 22.662-9.902 44.943-15.806 67.605l-72.175 40.182c8.76-2.857 17.52-4.57 25.709-7.618 7.046-2.285 14.473-4.57 22.09-6.474 7.618-2.286 13.902-4 18.663-6.475l-7.617 29.136c-2.285 8.189-4 14.473-5.904 18.092-3.428 9.902-8.188 19.234-12.759 27.422-4.57 8.76-9.903 15.806-13.33 22.09-4.57 7.047-9.903 14.474-15.806 19.806l-66.462 19.805L862.4 857.1c-7.046 6.475-15.235 12.188-23.233 19.234-7.047 5.332-15.235 11.045-24.567 17.52-9.33 6.475-19.233 11.616-29.136 16.377-10.474 5.333-22.09 7.618-33.707 8.19-12.188 0-23.805-0.572-35.04-2.857-13.33-1.714-26.28-5.333-38.468-9.332 3.999-6.475 8.189-12.759 12.759-20.948 4-7.046 8.76-14.663 14.473-23.233s11.617-18.662 17.52-29.708c16.949-29.708 33.707-58.273 50.085-86.838s30.85-54.274 43.61-77.507c15.234-26.852 29.136-51.799 42.466-75.793-16.948 19.805-35.04 41.895-53.702 66.462-18.663 24.566-36.754 48.941-54.274 74.079-20.948 30.85-41.325 62.272-60.559 94.456-4.57 7.046-9.331 15.234-14.473 23.804-5.332 8.76-11.045 18.663-16.949 29.137-5.903 10.474-11.616 20.376-18.662 31.421-5.904 10.474-12.188 21.52-18.663 31.422-14.473 23.805-29.136 48.942-44.371 74.65 0.571-7.617 1.714-17.52 3.999-29.707 2.285-10.474 5.903-23.233 11.045-38.468 4.57-15.235 12.188-33.707 21.52-54.274 6.474-12.76 11.044-23.233 13.901-30.85s5.903-12.76 7.617-16.95c1.143-2.856 2.286-6.474 4.57-8.76-1.713-2.284-2.284-6.474-0.57-12.758 0.57-5.904 2.285-14.473 6.474-25.71 3.428-11.044 9.332-26.85 17.52-46.656 8.19-20.376 19.234-42.467 32.565-65.89 13.33-23.805 28.565-46.657 45.514-69.89 16.949-23.233 35.611-46.085 54.845-67.605 18.663-20.947 39.04-40.181 60.558-58.273 20.377-16.948 41.325-30.85 61.701-41.324s40.754-16.949 59.988-18.091c2.475 12.95 1.333 29.707-1.524 50.655z" p-id="9445"></path></svg>
+        <strong>本文作者：</strong>ShaoAo<br>
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6336" width="16" height="16"><path d="M552.106667 125.44a245.034667 245.034667 0 1 1 346.453333 346.453333l-113.834667 113.877334a300.714667 300.714667 0 0 0-16.938666-164.053334l40.277333-40.32a117.034667 117.034667 0 1 0-165.461333-165.461333l-170.666667 170.666667a117.034667 117.034667 0 0 0 38.4 191.061333l-93.994667 93.994667a245.034667 245.034667 0 0 1-34.986666-375.552l170.709333-170.666667z m-426.666667 426.666667l113.834667-113.877334a300.544 300.544 0 0 0 16.938666 164.053334l-40.277333 40.32a117.034667 117.034667 0 1 0 165.461333 165.461333l170.666667-170.666667a116.992 116.992 0 0 0-24.106667-184.021333L619.946667 361.386667a245.034667 245.034667 0 0 1 22.613333 366.506666l-170.666667 170.666667a245.034667 245.034667 0 0 1-346.453333-346.453333z" fill="currentColor" p-id="6337"></path></svg>
+        <strong>本文链接：</strong><a href="https://sawr.gitee.io/2023/09/14/js/studyts/" title="https:&#x2F;&#x2F;sawr.gitee.io&#x2F;2023&#x2F;09&#x2F;14&#x2F;js&#x2F;studyts&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;sawr.gitee.io&#x2F;2023&#x2F;09&#x2F;14&#x2F;js&#x2F;studyts&#x2F;</a><br>
+        
+            <svg t="1711088267743" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8243" width="16" height="16"><path d="M475.428571 877.714286C256 877.714286 73.142857 694.857143 73.142857 475.428571S256 73.142857 475.428571 73.142857 877.714286 256 877.714286 475.428571 694.857143 877.714286 475.428571 877.714286m0-877.714286C212.114286 0 0 212.114286 0 475.428571S212.114286 950.857143 475.428571 950.857143 950.857143 738.742857 950.857143 475.428571 738.742857 0 475.428571 0m0 219.428571c-21.942857 0-36.571429 14.628571-36.571428 36.571429v292.571429c0 21.942857 14.628571 36.571429 36.571428 36.571428s36.571429-14.628571 36.571429-36.571428v-292.571429c0-21.942857-14.628571-36.571429-36.571429-36.571429m0 438.857143c-21.942857 0-36.571429 14.628571-36.571428 36.571429s14.628571 36.571429 36.571428 36.571428 36.571429-14.628571 36.571429-36.571428-14.628571-36.571429-36.571429-36.571429" p-id="8244"></path></svg>
+<strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议许可，仅作个人记录，转载请说明出处！
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/JavaScript/" rel="tag">JavaScript</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/TypeScript/" rel="tag">TypeScript</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1714719124646"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <div id="tcomment"></div>
+<script src="https://cdn.staticfile.org/twikoo/1.6.31/twikoo.all.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://shaoao-twikoo.hf.space/', 
+    el: '#tcomment', // 容器元素
+    // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+    // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+    // lang: 'zh-CN', 
+  })
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3TypeScript"><span class="toc-number">1.</span> <span class="toc-text">了解TypeScript</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TS%E5%92%8CJS%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.</span> <span class="toc-text">TS和JS的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8BTypeScript%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">建立TypeScript环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91TS%E7%9A%84%E5%B7%A5%E5%85%B7%E5%8C%85"><span class="toc-number">2.1.</span> <span class="toc-text">1. 安装编译TS的工具包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%AA%8C%E8%AF%81TS%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="toc-number">2.2.</span> <span class="toc-text">2. 验证TS是否安装成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-TypeScript%E5%88%9D%E4%BD%93%E9%AA%8C"><span class="toc-number">2.3.</span> <span class="toc-text">3. TypeScript初体验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%AE%80%E5%8C%96%E8%BF%90%E8%A1%8CTS%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.4.</span> <span class="toc-text">4. 简化运行TS的步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%BF%90%E8%A1%8CTS%E6%96%87%E4%BB%B6%E7%9A%84%E5%8F%A6%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95-Badge-text-%E6%8E%A8%E8%8D%90"><span class="toc-number">2.5.</span> <span class="toc-text">5. 运行TS文件的另一种方法 ·</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TypeScript%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3"><span class="toc-number">3.</span> <span class="toc-text">TypeScript类型注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3%E4%BD%9C%E7%94%A8"><span class="toc-number">3.1.</span> <span class="toc-text">1. 类型注解作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3%E7%94%A8%E9%80%94"><span class="toc-number">3.2.</span> <span class="toc-text">2. 类型注解用途</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.3.</span> <span class="toc-text">3. 类型注解注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TypeScript%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text">TypeScript类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-TS%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.1.</span> <span class="toc-text">1. TS中常用的基础类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E6%95%B0%E5%80%BC%EF%BC%88number%EF%BC%89"><span class="toc-number">4.1.1.</span> <span class="toc-text">1.1.数值（number）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E5%B8%83%E5%B0%94%E5%80%BC%EF%BC%88boolean%EF%BC%89"><span class="toc-number">4.1.2.</span> <span class="toc-text">1.2.布尔值（boolean）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88string%EF%BC%89"><span class="toc-number">4.1.3.</span> <span class="toc-text">1.3.字符串（string）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-null-%E5%92%8C-undefined"><span class="toc-number">4.1.4.</span> <span class="toc-text">1.4.null 和 undefined</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-symbol"><span class="toc-number">4.1.5.</span> <span class="toc-text">1.5.symbol</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6-bigint"><span class="toc-number">4.1.6.</span> <span class="toc-text">1.6.bigint</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7-%E5%8C%BA%E5%88%AB"><span class="toc-number">4.1.7.</span> <span class="toc-text">1.7.区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7-1-null-%E5%92%8C-undefined-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">4.1.8.</span> <span class="toc-text">1.7.1. null 和 undefined 的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7-2-bigint-%E5%92%8C-number-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">4.1.9.</span> <span class="toc-text">1.7.2. bigint 和 number 的区别</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索全站" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+</div><!-- hexo injector body_end start -->
+  <script>
+  const CODE_CONFIG = {
+    beautify: false,
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: 360,
+    isHighlightShrink: true,
+    copy: {
+      success: 'Copy Success',
+      error: 'Copy Error',
+      noSupport: 'Browser Not Support',
+    }
+  };
+  console.log(
+    `%c hexo-shiki-plugin %c v1.0.25 %c https://github.com/nova1751/hexo-shiki-plugin`,
+    "color: #fff; background: #5f5f5f",
+    "color: #fff; background: #80c8f8",
+    ""
+  );
+  </script>
+  <!-- hexo injector body_end end --></body></html>

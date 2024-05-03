@@ -1,0 +1,1388 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>Tailwind CSS教程 - 奥奥の探索日记</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="生活,摇滚,记录,编程,学习,剪辑,设计,项目,音乐">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="referrer" content="no-referrer" />
+
+<!-- 51la统计 -->
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3HQkdjDrH5f6vdfQ",ck:"3HQkdjDrH5f6vdfQ"})</script>
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="Tailwind CSS 是一个高度可定制的 CSS 框架，它提供了一系列的预定义样式和实用工具类，帮助开发者快速构建现代化的网页界面，可以直接应用于HTML元素，从而快速而灵活地创建页面布局和设计。 之前有介绍过DaisyUI，这个东西就是基于TailwindCss来进行开发的，很方便很好用。 官网：Tailwind CSS 特点·  原子级别的 CSS 类：Tailwind CSS 提供了一组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tailwind CSS教程">
+<meta property="og:url" content="https://sawr.gitee.io/2023/10/18/css/tailwind/index.html">
+<meta property="og:site_name" content="奥奥の探索日记">
+<meta property="og:description" content="Tailwind CSS 是一个高度可定制的 CSS 框架，它提供了一系列的预定义样式和实用工具类，帮助开发者快速构建现代化的网页界面，可以直接应用于HTML元素，从而快速而灵活地创建页面布局和设计。 之前有介绍过DaisyUI，这个东西就是基于TailwindCss来进行开发的，很方便很好用。 官网：Tailwind CSS 特点·  原子级别的 CSS 类：Tailwind CSS 提供了一组">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tucdn.wpon.cn/2023/10/23/dcb657a237779.png">
+<meta property="article:published_time" content="2023-10-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-04-10T09:18:19.772Z">
+<meta property="article:author" content="ShaoAo">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tucdn.wpon.cn/2023/10/23/dcb657a237779.png">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714719124732">
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4474869_y3x62ji5c4.css">
+
+<link rel="stylesheet" href="/css/style.css?v=1714719124732">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1714719124732">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1714719124732"></script>
+
+ 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-shiki-plugin@latest/lib/codeblock.css">
+<style>:root{--hl-color:#e1e4e8;--hl-bg:#24292e;--hltools-bg:#1f2428;--hltools-color:#c5c5c5;--hlnumber-bg:#24292e;--hlnumber-color:#444d56;--hlscrollbar-bg:#32383e;--hlexpand-bg:linear-gradient(180deg,rgba(36,41,46,0.1),rgba(36,41,46,0.9))}</style>
+    <style>
+    .code-expand-btn:not(.expand-done) ~ div.codeblock,
+    .code-expand-btn:not(.expand-done) ~ * div.codeblock {
+      overflow: hidden;
+      height: 360px;
+    }
+    </style>
+  <!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(https://tucdn.wpon.cn/2024/03/23/2247604107188.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer">奥奥の探索日记</div><a class="mdui-btn mdui-btn-icon" href="/" title="ShaoAo"><img src="https://cccimg.com/view.php/f8a4b6199c0c036da1f160b12d01f50d.jpg" alt="ShaoAo"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="ShaoAo">
+            <img src="https://cccimg.com/view.php/f8a4b6199c0c036da1f160b12d01f50d.jpg" alt="ShaoAo" alt="ShaoAo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>18</div>
+        <div><span>标签</span>19</div>
+        <div><span>分类</span>6</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="常看">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                常看
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索全站" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+
+
+	<script async src="/js/search.js?v=1714719124732"></script>
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/296465852"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/shaoao/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-githubic"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.travellings.cn/go.html"
+			target="_blank"
+			mdui-tooltip="{content: '开往'}"
+			style="
+				color: rgb(251,109,72);
+				background-color: rgba(251,109,72, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-ditiexiao"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.xiaohongshu.com/user/profile/60d9e8d7000000002002c59b"
+			target="_blank"
+			mdui-tooltip="{content: '小红书'}"
+			style="
+				color: rgb(255,46,77);
+				background-color: rgba(255,46,77, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-xiaohongshu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://steamcommunity.com/profiles/76561198846317988/"
+			target="_blank"
+			mdui-tooltip="{content: 'Steam'}"
+			style="
+				color: rgb(21,114,182);
+				background-color: rgba(21,114,182, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-steam"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/woaiwr"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.douyin.com/user/MS4wLjABAAAAbyj8R7eEae7UC9UMWpJKXAtr-vIBkvHzkY7iJT8dXJE?relation=0&vid=7354414206428499236"
+			target="_blank"
+			mdui-tooltip="{content: '抖音'}"
+			style="
+				color: rgb( 23, 11, 26);
+				background-color: rgba( 23, 11, 26, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-douyin"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/tools/">tools</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/前端/">前端</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/后端/">后端</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小技巧/">小技巧</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活随笔/">生活随笔</a>
+          <span class="category-list-count">6</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/英语/">英语</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/TypeScript/" style="font-size: 13.33px;">TypeScript</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/%E5%9B%BE%E5%BA%8A%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">图床配置</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">学习</a> <a href="/tags/%E5%B1%B1%E9%87%8E%E6%97%A5%E5%BF%97/" style="font-size: 10px;">山野日志</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">工具</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E6%9C%89%E7%94%A8%E5%88%86%E4%BA%AB/" style="font-size: 13.33px;">有用分享</a> <a href="/tags/%E7%88%AC%E5%B1%B1/" style="font-size: 10px;">爬山</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/" style="font-size: 10px;">英语单词</a> <a href="/tags/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/" style="font-size: 16.67px;">记录生活</a> <a href="/tags/%E8%BF%90%E5%8A%A8/" style="font-size: 10px;">运动</a> <a href="/tags/%E9%95%9C%E5%83%8F%E6%BA%90/" style="font-size: 10px;">镜像源</a> <a href="/tags/%E9%AA%91%E8%A1%8C/" style="font-size: 10px;">骑行</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(19);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+
+    
+        
+        
+        
+        
+   
+    <!-- <div class="nexmoe-copyright">
+        &copy; 2024 ShaoAo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+    </div> -->
+
+    <!-- 网站访问量侧边展示 -->
+    <!-- <div class="nexmoe-copyright">
+        <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3HQkdjDrH5f6vdfQ/quote.js?theme=0&f=12&display=0,0,0,1,0,0,0,1"></script>
+    </div> -->
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 37.5%;"> 
+            <img src="https://gitee.com/sawr/personalimage/raw/master/img/v2-4a4423bec4bbb7cabea28011d4a99ad0_r.jpg" alt="Tailwind CSS教程" loading="lazy">
+            <h1>Tailwind CSS教程</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2023年10月18日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <p>Tailwind CSS 是一个高度可定制的 CSS 框架，它提供了一系列的预定义样式和实用工具类，帮助开发者快速构建现代化的网页界面，可以直接应用于HTML元素，从而快速而灵活地创建页面布局和设计。</p>
+<p>之前有介绍过DaisyUI，这个东西就是基于TailwindCss来进行开发的，很方便很好用。</p>
+<p>官网：<a target="_blank" rel="noopener" href="https://www.tailwindcss.cn/">Tailwind CSS</a></p>
+<h2 id="特点">特点<a class="anchor" href="#特点">·</a></h2>
+<ol>
+<li>原子级别的 CSS 类：Tailwind CSS 提供了一组小而独立的 CSS 类，每个类对应一个具体的样式属性或效果，例如颜色、边距、宽度等。通过组合这些类，开发者可以精确地控制样式，同时避免编写大量重复的 CSS 代码。</li>
+<li>高度可定制：Tailwind CSS 允许开发者通过配置文件来自定义项目中使用的样式和工具类，可以添加、删除或修改现有的样式设置，以适应特定的设计需求。</li>
+<li>响应式设计支持：Tailwind CSS 提供了一套响应式设计的工具类，使开发者可以轻松地在不同屏幕尺寸下调整布局和样式。</li>
+<li>效率与一致性：通过使用 Tailwind CSS，开发者可以快速构建一致性强、易于维护的界面，无需手动编写和管理大量的 CSS 样式表。</li>
+</ol>
+<p>用官方的话来说：<strong>只需书写HTML代码，无需书写CSS，即可快速构建美观的网站。</strong></p>
+<update text="科普"/>
+科普一下什么是原子化的CSS
+<p>比如我们正常开发写CSS是这样的</p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;tittle&quot;</span><span style="color: #E1E4E8">&gt;标题&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">style</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #B392F0">.tittle</span><span style="color: #E1E4E8">{</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #79B8FF">font-size</span><span style="color: #E1E4E8">: </span><span style="color: #79B8FF">18</span><span style="color: #F97583">px</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #79B8FF">color</span><span style="color: #E1E4E8">:</span><span style="color: #79B8FF">white</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">style</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p>在html代码中指定class，然后在css里定义这个class的样式，也就是一个class里包含了多个样式。</p>
+<p>而原子化css就是定义多个class，每个class包含一个样式，例如：</p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;text-base p-1 border border-black border-solid&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">.text-base</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #79B8FF">font-size</span><span style="color: #E1E4E8">: </span><span style="color: #79B8FF">16</span><span style="color: #F97583">px</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span>
+<span class="line"><span style="color: #B392F0">.p-1</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #79B8FF">padding</span><span style="color: #E1E4E8">: </span><span style="color: #79B8FF">4</span><span style="color: #F97583">px</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span>
+<span class="line"><span style="color: #B392F0">.border</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #79B8FF">border-width</span><span style="color: #E1E4E8">: </span><span style="color: #79B8FF">1</span><span style="color: #F97583">px</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span>
+<span class="line"><span style="color: #B392F0">.border-black</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #79B8FF">border-color</span><span style="color: #E1E4E8">: </span><span style="color: #79B8FF">black</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span>
+<span class="line"><span style="color: #B392F0">.border-solid</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #79B8FF">border-style</span><span style="color: #E1E4E8">: </span><span style="color: #79B8FF">solid</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre></div></div></figure>
+<p>好理解吧，这种属于是细粒度的class，叫做原子class，然后引用这些class。</p>
+<p>而<code>TailWindCSS</code>就是定义了非常多的这种class方便你进行引用的一个css框架。</p>
+<h2 id="快速安装入门">快速安装入门<a class="anchor" href="#快速安装入门">·</a></h2>
+<blockquote>
+<p>本文是基于Vue3来进行安装使用的。</p>
+</blockquote>
+<p>安装 Tailwind CSS 和 PostCSS 插件：</p>
+<figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">npm</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">install</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">tailwindcss</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">postcss</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">autoprefixer</span></span></code></pre></div></div></figure>
+<p>在项目根目录下创建一个 <code>tailwind.config.js</code> 文件，用于配置 <code>Tailwind CSS</code>：</p>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">// tailwind.config.js</span></span>
+<span class="line"><span style="color: #79B8FF">module</span><span style="color: #E1E4E8">.</span><span style="color: #79B8FF">exports</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">  mode: </span><span style="color: #9ECBFF">&#39;jit&#39;</span><span style="color: #E1E4E8">,</span></span>
+<span class="line"><span style="color: #E1E4E8">  purge: [</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #9ECBFF">&#39;./src/**/*.{vue,js,ts,jsx,tsx}&#39;</span><span style="color: #E1E4E8">,</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #9ECBFF">&#39;./public/index.html&#39;</span></span>
+<span class="line"><span style="color: #E1E4E8">  ],</span></span>
+<span class="line"><span style="color: #E1E4E8">  darkMode: </span><span style="color: #79B8FF">false</span><span style="color: #E1E4E8">, </span><span style="color: #6A737D">// or &#39;media&#39; or &#39;class&#39;</span></span>
+<span class="line"><span style="color: #E1E4E8">  theme: {</span></span>
+<span class="line"><span style="color: #E1E4E8">    extend: {},</span></span>
+<span class="line"><span style="color: #E1E4E8">  },</span></span>
+<span class="line"><span style="color: #E1E4E8">  variants: {</span></span>
+<span class="line"><span style="color: #E1E4E8">    extend: {},</span></span>
+<span class="line"><span style="color: #E1E4E8">  },</span></span>
+<span class="line"><span style="color: #E1E4E8">  plugins: [],</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre></div></div></figure>
+<p>在项目根目录下创建一个 postcss.config.js 文件，用于配置 PostCSS 插件：</p>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">// postcss.config.js</span></span>
+<span class="line"><span style="color: #79B8FF">module</span><span style="color: #E1E4E8">.</span><span style="color: #79B8FF">exports</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">  plugins: {</span></span>
+<span class="line"><span style="color: #E1E4E8">    tailwindcss: {},</span></span>
+<span class="line"><span style="color: #E1E4E8">    autoprefixer: {},</span></span>
+<span class="line"><span style="color: #E1E4E8">  },</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre></div></div></figure>
+<p>在src/index.css创建一个css文件，引入TailwindCSS的内容</p>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">@tailwind</span><span style="color: #E1E4E8"> base;</span></span>
+<span class="line"><span style="color: #F97583">@tailwind</span><span style="color: #E1E4E8"> components;</span></span>
+<span class="line"><span style="color: #F97583">@tailwind</span><span style="color: #E1E4E8"> utilities;</span></span></code></pre></div></div></figure>
+<p>然后在main.js中引入这个css：</p>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> { createApp } </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;vue&#39;</span><span style="color: #E1E4E8"> import </span><span style="color: #9ECBFF">&#39;./style.css&#39;</span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #6A737D">// 引入前面添加的css </span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;./index.css&#39;</span><span style="color: #E1E4E8"> import App </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;./App.vue&#39;</span><span style="color: #E1E4E8"> </span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #B392F0">createApp</span><span style="color: #E1E4E8">(App).</span><span style="color: #B392F0">mount</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&#39;#app&#39;</span><span style="color: #E1E4E8">)</span></span></code></pre></div></div></figure>
+<p>然后就可以进行使用了！</p>
+<figure class="shiki vue"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">template</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;flex items-center justify-center h-screen bg-gray-100&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;p-6 bg-white rounded-lg shadow-lg&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;</span><span style="color: #85E89D">h1</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;text-2xl font-bold text-gray-800&quot;</span><span style="color: #E1E4E8">&gt;Hello Tailwind CSS!&lt;/</span><span style="color: #85E89D">h1</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;mt-2 text-gray-600&quot;</span><span style="color: #E1E4E8">&gt;Lorem ipsum dolor sit amet.&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;</span><span style="color: #85E89D">button</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-600&quot;</span><span style="color: #E1E4E8">&gt;Click me!&lt;/</span><span style="color: #85E89D">button</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">template</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p>我写过一篇关于<code>DaisyUI</code>框架的内容，是基于本框架实现的。</p>
+<h2 id="插件">插件<a class="anchor" href="#插件">·</a></h2>
+<p>由于这个命令太多而且较难记住，所以可以在VSCode 中可以安装 <code>Tailwind CSS IntelliSense</code> 插件</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/10/23/dcb657a237779.png" alt="1697995815198.png" data-caption="1697995815198.png" loading="lazy"></p>
+<p>这样写 <code>Tailwind CSS</code> 会有提示，而且当鼠标悬浮到class上时，也会有有智能提示，可以查看它对应的样式。</p>
+<h2 id="常用写法">常用写法<a class="anchor" href="#常用写法">·</a></h2>
+<h3 id="宽和高">宽和高<a class="anchor" href="#宽和高">·</a></h3>
+<p>以<code>w-</code>开头，表示宽;<code>h-</code>开头，表示高</p>
+<p>后面接数字，1 = 4px = 0.25rem</p>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">/* 普通数值 */</span></span>
+<span class="line"><span style="color: #85E89D">w-1</span><span style="color: #E1E4E8">	 //width: 0.25rem; </span><span style="color: #6A737D">/* 4px */</span></span>
+<span class="line"><span style="color: #85E89D">w-4</span><span style="color: #E1E4E8">	 //width: 1rem; </span><span style="color: #6A737D">/* 16px */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">/* 百分比 */</span></span>
+<span class="line"><span style="color: #85E89D">w-1</span><span style="color: #E1E4E8">/2  //width: 50%;</span></span>
+<span class="line"><span style="color: #85E89D">w-1</span><span style="color: #E1E4E8">/4  //width: 25%;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">/* 后面接 [] 里面可以填写具体的值 */</span></span>
+<span class="line"><span style="color: #85E89D">w-</span><span style="color: #E1E4E8">[4</span><span style="color: #B392F0">rem</span><span style="color: #E1E4E8">] //	width: 4rem;</span></span>
+<span class="line"><span style="color: #85E89D">w-</span><span style="color: #E1E4E8">[200</span><span style="color: #B392F0">px</span><span style="color: #E1E4E8">] //	width: 200px;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">/* 固定单词 */</span></span>
+<span class="line"><span style="color: #85E89D">w-full</span><span style="color: #E1E4E8">	//width: 100%;</span></span>
+<span class="line"><span style="color: #85E89D">w-screen</span><span style="color: #E1E4E8">	//width: 100vw;</span></span>
+<span class="line"><span style="color: #85E89D">w-min</span><span style="color: #E1E4E8">	//width: </span><span style="color: #85E89D">min-content</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #85E89D">w-max</span><span style="color: #E1E4E8">	//width: </span><span style="color: #85E89D">max-content</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #85E89D">w-fit</span><span style="color: #E1E4E8">	//width: </span><span style="color: #85E89D">fit-content</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+<h3 id="边距">边距<a class="anchor" href="#边距">·</a></h3>
+<p>margin的缩写是 m</p>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #85E89D">m-1</span><span style="color: #E1E4E8"> // margin: 4px;</span></span>
+<span class="line"><span style="color: #85E89D">mx-1</span><span style="color: #E1E4E8"> // 在x轴上 </span><span style="color: #85E89D">margin-left</span><span style="color: #E1E4E8">: 4px; </span><span style="color: #85E89D">margin-right</span><span style="color: #E1E4E8">: 4px;</span></span>
+<span class="line"><span style="color: #85E89D">my-1</span><span style="color: #E1E4E8"> // 在y轴上 </span><span style="color: #85E89D">margin-top</span><span style="color: #E1E4E8">: 4px; </span><span style="color: #85E89D">margin-bottom</span><span style="color: #E1E4E8">: 4px;</span></span></code></pre></div></div></figure>
+<p>padding 的缩写是p,使用方式与margin一样</p>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #85E89D">p-1</span><span style="color: #E1E4E8"> // padding: 4px;</span></span>
+<span class="line"><span style="color: #85E89D">px-1</span><span style="color: #E1E4E8"> // 在x轴上 </span><span style="color: #85E89D">padding-left</span><span style="color: #E1E4E8">: 4px; </span><span style="color: #85E89D">padding-right</span><span style="color: #E1E4E8">: 4px;</span></span>
+<span class="line"><span style="color: #85E89D">py-1</span><span style="color: #E1E4E8"> // 在y轴上 </span><span style="color: #85E89D">padding-top</span><span style="color: #E1E4E8">: 4px; </span><span style="color: #85E89D">padding-bottom</span><span style="color: #E1E4E8">: 4px;</span></span></code></pre></div></div></figure>
+<p>为单边添加边距: 使用 m{t|r|b|l}-{size} 实用程序控制元素一侧的边距。</p>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">/* margin */</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> class=&quot;</span><span style="color: #85E89D">mt-4</span><span style="color: #E1E4E8">&quot;</span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8">上&lt;/</span><span style="color: #85E89D">div</span><span style="color: #F97583">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> class=&quot;</span><span style="color: #85E89D">mr-4</span><span style="color: #E1E4E8">&quot;</span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8">右&lt;/</span><span style="color: #85E89D">div</span><span style="color: #F97583">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> class=&quot;</span><span style="color: #85E89D">mb-4</span><span style="color: #E1E4E8">&quot;</span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8">下&lt;/</span><span style="color: #85E89D">div</span><span style="color: #F97583">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> class=&quot;</span><span style="color: #85E89D">ml-4</span><span style="color: #E1E4E8">&quot;</span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8">左&lt;/</span><span style="color: #85E89D">div</span><span style="color: #F97583">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">/* padding */</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> class=&quot;</span><span style="color: #85E89D">pt-4</span><span style="color: #E1E4E8">&quot;</span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8">上&lt;/</span><span style="color: #85E89D">div</span><span style="color: #F97583">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> class=&quot;</span><span style="color: #85E89D">pr-4</span><span style="color: #E1E4E8">&quot;</span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8">右&lt;/</span><span style="color: #85E89D">div</span><span style="color: #F97583">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> class=&quot;</span><span style="color: #85E89D">pb-4</span><span style="color: #E1E4E8">&quot;</span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8">下&lt;/</span><span style="color: #85E89D">div</span><span style="color: #F97583">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> class=&quot;</span><span style="color: #85E89D">pl-4</span><span style="color: #E1E4E8">&quot;</span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8">左&lt;/</span><span style="color: #85E89D">div</span><span style="color: #F97583">&gt;</span></span></code></pre></div></div></figure>
+<h3 id="字体大小">字体大小<a class="anchor" href="#字体大小">·</a></h3>
+<p>字体大小，使用 <code>text-&#123;size&#125;</code>。不同的值对应不同的大小</p>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #85E89D">text-xs</span><span style="color: #E1E4E8"> //（字体大小：</span><span style="color: #FDAEB7; font-style: italic">.75rem；）</span></span>
+<span class="line"><span style="color: #85E89D">text-sm</span><span style="color: #E1E4E8"> //（字体大小：</span><span style="color: #FDAEB7; font-style: italic">.875rem；）</span></span>
+<span class="line"><span style="color: #85E89D">text-base</span><span style="color: #E1E4E8"> //（字体大小：1rem;）</span></span>
+<span class="line"><span style="color: #85E89D">text-lg</span><span style="color: #E1E4E8"> //（字体大小：1</span><span style="color: #B392F0">.125rem；）</span></span>
+<span class="line"><span style="color: #85E89D">text-xl</span><span style="color: #E1E4E8"> //（字体大小：1</span><span style="color: #B392F0">.25rem；）</span></span>
+<span class="line"><span style="color: #85E89D">text-2xl</span><span style="color: #E1E4E8"> //（字体大小：1</span><span style="color: #B392F0">.5rem；）</span></span>
+<span class="line"><span style="color: #85E89D">text-3xl</span><span style="color: #E1E4E8"> //（字体大小：1</span><span style="color: #B392F0">.875rem；）</span></span>
+<span class="line"><span style="color: #85E89D">text-4xl</span><span style="color: #E1E4E8"> //（字体大小：2</span><span style="color: #B392F0">.25rem；</span><span style="color: #E1E4E8">)</span></span></code></pre></div></div></figure>
+<p>同样可以使用<code>[]</code>定义大小</p>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #85E89D">text-</span><span style="color: #E1E4E8">[14</span><span style="color: #B392F0">px</span><span style="color: #E1E4E8">] // </span><span style="color: #85E89D">font-size</span><span style="color: #E1E4E8">:14px</span></span></code></pre></div></div></figure>
+<h3 id="hover悬停">hover悬停<a class="anchor" href="#hover悬停">·</a></h3>
+<p>使用hover,设置鼠标悬停后文本设为红色</p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot; hover:text-red-400&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    TailWind css</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<h2 id="响应式设计">响应式设计<a class="anchor" href="#响应式设计">·</a></h2>
+<p>Tailwind 中的每个实用程序类都可以有条件地应用于不同的断点，这使得在不离开 HTML 的情况下构建复杂的响应式接口变得轻而易举。</p>
+<p>默认情况下有五个断点，受常见设备分辨率的启发：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">断点前缀</th>
+<th style="text-align:center">最小宽度</th>
+<th style="text-align:center">CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>sm</code></td>
+<td style="text-align:center">640px 640像素</td>
+<td style="text-align:center"><code>@media (min-width: 640px) &#123; ... &#125;</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>md</code></td>
+<td style="text-align:center">768px 768像素</td>
+<td style="text-align:center"><code>@media (min-width: 768px) &#123; ... &#125;</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>lg</code></td>
+<td style="text-align:center">1024px 1024像素</td>
+<td style="text-align:center"><code>@media (min-width: 1024px) &#123; ... &#125;</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>xl</code></td>
+<td style="text-align:center">1280px 1280像素</td>
+<td style="text-align:center"><code>@media (min-width: 1280px) &#123; ... &#125;</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>2xl</code></td>
+<td style="text-align:center">1536px 1536像素</td>
+<td style="text-align:center"><code>@media (min-width: 1536px) &#123; ... &#125;</code></td>
+</tr>
+</tbody>
+</table>
+<p>例如：当宽度小于768px，把背景变为红色</p>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> class=&quot;md:</span><span style="color: #85E89D">bg-red-500</span><span style="color: #E1E4E8">&quot;</span><span style="color: #F97583">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    TailWind css</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #F97583">&gt;</span></span></code></pre></div></div></figure>
+<h2 id="使用flex布局">使用flex布局<a class="anchor" href="#使用flex布局">·</a></h2>
+<ul>
+<li><code>flex-row</code>：水平排列子元素。</li>
+<li><code>flex-col</code>：垂直排列子元素。</li>
+<li><code>flex-wrap</code>：当子元素超出容器宽度时换行。</li>
+<li><code>justify-start</code>、<code>justify-end</code>、<code>justify-center</code>、<code>justify-between</code>、<code>justify-around</code>：控制子元素在主轴上的对齐方式。</li>
+<li><code>items-start</code>、<code>items-end</code>、<code>items-center</code>、<code>items-baseline</code>、<code>items-stretch</code>：控制子元素在交叉轴上的对齐方式。</li>
+<li><code>flex-1</code>：将子元素的宽度或高度设置为 1，以填充剩余的空间。</li>
+</ul>
+<h3 id="简单导航栏">简单导航栏<a class="anchor" href="#简单导航栏">·</a></h3>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">nav</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;flex justify-between items-center p-4 bg-gray-800 text-white&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">a</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">href</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;#&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;font-bold&quot;</span><span style="color: #E1E4E8">&gt;Logo&lt;/</span><span style="color: #85E89D">a</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;flex&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;&lt;</span><span style="color: #85E89D">a</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">href</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;#&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;mx-2&quot;</span><span style="color: #E1E4E8">&gt;Home&lt;/</span><span style="color: #85E89D">a</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;&lt;</span><span style="color: #85E89D">a</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">href</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;#&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;mx-2&quot;</span><span style="color: #E1E4E8">&gt;About&lt;/</span><span style="color: #85E89D">a</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;&lt;</span><span style="color: #85E89D">a</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">href</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;#&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;mx-2&quot;</span><span style="color: #E1E4E8">&gt;Contact&lt;/</span><span style="color: #85E89D">a</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">nav</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p>使用了 <code>flex</code>、<code>justify-between</code> 和 <code>items-center</code> 类来实现导航栏的布局。子元素 <code>a</code> 和 <code>ul</code> 都被包裹在 <code>nav</code> 元素中，<code>ul</code> 元素上的 <code>flex</code> 类使其成为一个 <code>flex</code> 容器，子元素 <code>li</code> 和 <code>a</code>使用了 <code>margin</code> 类来实现间距。</p>
+<h3 id="常见布局">常见布局<a class="anchor" href="#常见布局">·</a></h3>
+<p><strong>两栏布局</strong></p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;flex&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #6A737D">&lt;!-- 左侧栏 --&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;w-1/4 bg-gray-100&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;左侧栏&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #6A737D">&lt;!-- 右侧内容 --&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;w-3/4&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;右侧内容&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p><strong>三栏布局</strong></p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;flex&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #6A737D">&lt;!-- 左侧栏 --&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;w-1/4 bg-gray-100&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;左侧栏&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #6A737D">&lt;!-- 主要内容 --&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;w-1/2&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;主要内容&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #6A737D">&lt;!-- 右侧栏 --&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;w-1/4 bg-gray-100&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;右侧栏&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p><strong>等分布局</strong></p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;flex&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;flex-1 p-4 bg-gray-100&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;等分1/3&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;flex-1 p-4 bg-gray-200&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;等分1/3&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;flex-1 p-4 bg-gray-300&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;等分1/3&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p><strong>响应式布局</strong></p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;flex flex-col md:flex-row&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #6A737D">&lt;!-- 左侧栏 --&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;w-full md:w-1/3 p-4 bg-gray-100&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">h2</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;text-lg font-medium mb-4&quot;</span><span style="color: #E1E4E8">&gt;左侧栏&lt;/</span><span style="color: #85E89D">h2</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;list-disc pl-4&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;Link 1&lt;/</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;Link 2&lt;/</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;Link 3&lt;/</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;/</span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #6A737D">&lt;!-- 右侧内容 --&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;w-full md:w-2/3 p-4 bg-white&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">h2</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;text-lg font-medium mb-4&quot;</span><span style="color: #E1E4E8">&gt;右侧内容&lt;/</span><span style="color: #85E89D">h2</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<h2 id="黑白主题切换">黑白主题切换<a class="anchor" href="#黑白主题切换">·</a></h2>
+<p>在 <code>tailwind.config.js</code> 配置文件中定义颜色变量。</p>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #79B8FF">module</span><span style="color: #E1E4E8">.</span><span style="color: #79B8FF">exports</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">  theme: {</span></span>
+<span class="line"><span style="color: #E1E4E8">    extend: {</span></span>
+<span class="line"><span style="color: #E1E4E8">      colors: {</span></span>
+<span class="line"><span style="color: #E1E4E8">        black: </span><span style="color: #9ECBFF">&#39;#000&#39;</span><span style="color: #E1E4E8">,</span></span>
+<span class="line"><span style="color: #E1E4E8">        white: </span><span style="color: #9ECBFF">&#39;#fff&#39;</span><span style="color: #E1E4E8">,</span></span>
+<span class="line"><span style="color: #E1E4E8">      },</span></span>
+<span class="line"><span style="color: #E1E4E8">    },</span></span>
+<span class="line"><span style="color: #E1E4E8">  },</span></span>
+<span class="line"><span style="color: #E1E4E8">  variants: {},</span></span>
+<span class="line"><span style="color: #E1E4E8">  plugins: [],</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre></div></div></figure>
+<p>在 <code>App.vue</code> 的 <code>&lt;template&gt;</code> 标签中添加一个切换主题的按钮，并使用 <code>isDark</code> 变量来切换主题。</p>
+<figure class="shiki vue"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">template</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> :</span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;</span><span style="color: #E1E4E8">{ </span><span style="color: #9ECBFF">&#39;dark&#39;</span><span style="color: #E1E4E8">: isDark }</span><span style="color: #9ECBFF">&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;bg-white text-black&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">      &lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;Some text&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">button</span><span style="color: #E1E4E8"> @</span><span style="color: #B392F0">click</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;</span><span style="color: #E1E4E8">toggleTheme</span><span style="color: #9ECBFF">&quot;</span><span style="color: #E1E4E8">&gt;Toggle theme&lt;/</span><span style="color: #85E89D">button</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">template</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">script</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> { ref } </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;vue&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">export</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">default</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #B392F0">setup</span><span style="color: #E1E4E8">() {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">const</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">isDark</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">ref</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">false</span><span style="color: #E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">const</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">toggleTheme</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> () </span><span style="color: #F97583">=&gt;</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">      isDark.value </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">!</span><span style="color: #E1E4E8">isDark.value</span></span>
+<span class="line"><span style="color: #E1E4E8">      </span><span style="color: #F97583">const</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">html</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> document.</span><span style="color: #B392F0">querySelector</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&#39;html&#39;</span><span style="color: #E1E4E8">)</span></span>
+<span class="line"><span style="color: #E1E4E8">      html.classList.</span><span style="color: #B392F0">toggle</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&#39;dark&#39;</span><span style="color: #E1E4E8">)</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">return</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">      isDark,</span></span>
+<span class="line"><span style="color: #E1E4E8">      toggleTheme,</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"><span style="color: #E1E4E8">  },</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">script</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p>使用 Tailwind CSS 的 dark 模式类来定义黑色主题，并使用颜色变量来设置背景和文本颜色。</p>
+<figure class="shiki vue"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;bg-white text-black dark:bg-black dark:text-white&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">  &lt;p&gt;Some text&lt;/p&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">/* tailwind.config.js */</span></span>
+<span class="line"><span style="color: #79B8FF">module</span><span style="color: #E1E4E8">.</span><span style="color: #79B8FF">exports</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">  theme: {</span></span>
+<span class="line"><span style="color: #E1E4E8">    extend: {</span></span>
+<span class="line"><span style="color: #E1E4E8">      colors: {</span></span>
+<span class="line"><span style="color: #E1E4E8">        black: </span><span style="color: #9ECBFF">&#39;#000&#39;</span><span style="color: #E1E4E8">,</span></span>
+<span class="line"><span style="color: #E1E4E8">        white: </span><span style="color: #9ECBFF">&#39;#fff&#39;</span><span style="color: #E1E4E8">,</span></span>
+<span class="line"><span style="color: #E1E4E8">      },</span></span>
+<span class="line"><span style="color: #E1E4E8">      darkMode: </span><span style="color: #9ECBFF">&#39;class&#39;</span><span style="color: #E1E4E8">,</span></span>
+<span class="line"><span style="color: #E1E4E8">    },</span></span>
+<span class="line"><span style="color: #E1E4E8">  },</span></span>
+<span class="line"><span style="color: #E1E4E8">  variants: {},</span></span>
+<span class="line"><span style="color: #E1E4E8">  plugins: [],</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre></div></div></figure>
+<p>完成上述操作，即可实现黑白切换。</p>
+<p>daisyUI的黑白效果会更好一些，推荐。</p>
+<h2 id="记忆规律-Badge-text-重要记忆">记忆规律<Badge text="重要记忆"/><a class="anchor" href="#记忆规律-Badge-text-重要记忆">·</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">简写</th>
+<th style="text-align:center">全拼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">m</td>
+<td style="text-align:center">margin</td>
+</tr>
+<tr>
+<td style="text-align:center">p</td>
+<td style="text-align:center">padding</td>
+</tr>
+<tr>
+<td style="text-align:center">t</td>
+<td style="text-align:center">top</td>
+</tr>
+<tr>
+<td style="text-align:center">r</td>
+<td style="text-align:center">right</td>
+</tr>
+<tr>
+<td style="text-align:center">b</td>
+<td style="text-align:center">bottom</td>
+</tr>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:center">left</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:center">left &amp; right</td>
+</tr>
+<tr>
+<td style="text-align:center">y</td>
+<td style="text-align:center">top &amp; bottom</td>
+</tr>
+<tr>
+<td style="text-align:center">s</td>
+<td style="text-align:center">inline-start</td>
+</tr>
+<tr>
+<td style="text-align:center">e</td>
+<td style="text-align:center">inline-end</td>
+</tr>
+<tr>
+<td style="text-align:center">px</td>
+<td style="text-align:center">1px</td>
+</tr>
+<tr>
+<td style="text-align:center">col</td>
+<td style="text-align:center">column</td>
+</tr>
+<tr>
+<td style="text-align:center">full</td>
+<td style="text-align:center">100%</td>
+</tr>
+<tr>
+<td style="text-align:center">min</td>
+<td style="text-align:center">min-content</td>
+</tr>
+<tr>
+<td style="text-align:center">max</td>
+<td style="text-align:center">max-content</td>
+</tr>
+<tr>
+<td style="text-align:center">fit</td>
+<td style="text-align:center">fit-content</td>
+</tr>
+<tr>
+<td style="text-align:center">screen</td>
+<td style="text-align:center">100vw</td>
+</tr>
+<tr>
+<td style="text-align:center">leading</td>
+<td style="text-align:center">line-height</td>
+</tr>
+<tr>
+<td style="text-align:center">bg</td>
+<td style="text-align:center">background</td>
+</tr>
+<tr>
+<td style="text-align:center">rounded</td>
+<td style="text-align:center">border-radius</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Class</th>
+<th style="text-align:center">举例</th>
+<th style="text-align:center">Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">p{t,r,b,l,x,y,s,e}-{size}</td>
+<td style="text-align:center">p-0</td>
+<td style="text-align:center">padding: 0px;</td>
+</tr>
+<tr>
+<td style="text-align:center">m{t,r,b,l,x,y,s,e}-{size}</td>
+<td style="text-align:center">m-0</td>
+<td style="text-align:center">margin: 0px;</td>
+</tr>
+<tr>
+<td style="text-align:center">w-{size}</td>
+<td style="text-align:center">w-0</td>
+<td style="text-align:center">width: 0px;</td>
+</tr>
+<tr>
+<td style="text-align:center">min-w-{size}</td>
+<td style="text-align:center">min-w-0</td>
+<td style="text-align:center">min-width: 0px;</td>
+</tr>
+<tr>
+<td style="text-align:center">max-w-{size}</td>
+<td style="text-align:center">max-w-0</td>
+<td style="text-align:center">max-width: 0rem;</td>
+</tr>
+<tr>
+<td style="text-align:center">h-{size}</td>
+<td style="text-align:center">h-0</td>
+<td style="text-align:center">height: 0px;</td>
+</tr>
+<tr>
+<td style="text-align:center">min-h-{size}</td>
+<td style="text-align:center">min-h-0</td>
+<td style="text-align:center">min-height: 0px;</td>
+</tr>
+<tr>
+<td style="text-align:center">max-h-{size}</td>
+<td style="text-align:center">max-h-0</td>
+<td style="text-align:center">max-height: 0rem;</td>
+</tr>
+<tr>
+<td style="text-align:center">grid-cols-{number}</td>
+<td style="text-align:center">grid-cols-1</td>
+<td style="text-align:center">grid-template-columns: repeat(1, minmax(0, 1fr));</td>
+</tr>
+<tr>
+<td style="text-align:center">grid-rows-{number}</td>
+<td style="text-align:center">grid-rows-1</td>
+<td style="text-align:center">grid-template-rows: repeat(1, minmax(0, 1fr));</td>
+</tr>
+<tr>
+<td style="text-align:center">col-span-{number}</td>
+<td style="text-align:center">col-span-1</td>
+<td style="text-align:center">grid-column: span 1 / span 1;</td>
+</tr>
+<tr>
+<td style="text-align:center">auto-cols-{size}</td>
+<td style="text-align:center">auto-cols-auto</td>
+<td style="text-align:center">grid-auto-columns: auto;</td>
+</tr>
+<tr>
+<td style="text-align:center">auto-rows-{size}</td>
+<td style="text-align:center">auto-rows-auto</td>
+<td style="text-align:center">grid-auto-rows: auto;</td>
+</tr>
+<tr>
+<td style="text-align:center">tracking-{size}</td>
+<td style="text-align:center">tracking-tighter</td>
+<td style="text-align:center">letter-spacing: -0.05em;</td>
+</tr>
+<tr>
+<td style="text-align:center">leading-{size}</td>
+<td style="text-align:center">leading-1</td>
+<td style="text-align:center">line-height: .25rem;</td>
+</tr>
+<tr>
+<td style="text-align:center">scroll-m{t,r,b,l,x,y,s,e}-{size}</td>
+<td style="text-align:center">scroll-m-0</td>
+<td style="text-align:center">scroll-margin: 0px;</td>
+</tr>
+<tr>
+<td style="text-align:center">scroll-p{t,r,b,l,x,y,s,e}-{size}</td>
+<td style="text-align:center">scroll-p-0</td>
+<td style="text-align:center">scroll-padding: 0px;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>多态：多态是指一种模式对应多个属性。</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>举例</th>
+<th>Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>object-{value}</td>
+<td>object-contain</td>
+<td>object-fit: contain;</td>
+</tr>
+<tr>
+<td>object-{side}</td>
+<td>object-bottom</td>
+<td>object-position: bottom;</td>
+</tr>
+<tr>
+<td>flex-{direction}</td>
+<td>flex-row</td>
+<td>flex-direction: row;</td>
+</tr>
+<tr>
+<td>flex-{value}</td>
+<td>flex-wrap</td>
+<td>flex-wrap: wrap;</td>
+</tr>
+<tr>
+<td>flex-{number}</td>
+<td>flex-1</td>
+<td>flex: 1 1 0%;</td>
+</tr>
+<tr>
+<td>font-{sans,serif,mono}</td>
+<td>font-serif</td>
+<td>font-family: ui-serif, Georgia, Cambria, “Times New Roman”, Times, serif;</td>
+</tr>
+<tr>
+<td>font-{weight}</td>
+<td>font-thin</td>
+<td>font-weight: 100;</td>
+</tr>
+<tr>
+<td>list-{value}</td>
+<td>list-inside</td>
+<td>list-style-position: inside;</td>
+</tr>
+<tr>
+<td>list-{value}</td>
+<td>list-disc</td>
+<td>list-style-type: disc;</td>
+</tr>
+<tr>
+<td>text-{size}</td>
+<td>text-xs</td>
+<td>font-size: 0.75rem; line-height: 1rem;</td>
+</tr>
+<tr>
+<td>text-{side}</td>
+<td>text-left</td>
+<td>text-align: left;</td>
+</tr>
+<tr>
+<td>text-{color}</td>
+<td>text-black</td>
+<td>color: rgb(0 0 0);</td>
+</tr>
+<tr>
+<td>text-{ellipsis,clip}</td>
+<td>text-ellipsis</td>
+<td>text-overflow: ellipsis;</td>
+</tr>
+<tr>
+<td>decoration-{color}</td>
+<td>decoration-current</td>
+<td>text-decoration-color: currentColor;</td>
+</tr>
+<tr>
+<td>decoration-{value}</td>
+<td>decoration-solid</td>
+<td>text-decoration-style: solid;</td>
+</tr>
+<tr>
+<td>decoration-{size}</td>
+<td>decoration-0</td>
+<td>text-decoration-thickness: 0px;</td>
+</tr>
+<tr>
+<td>bg-{attachment}</td>
+<td>bg-fixed</td>
+<td>background-attachment: fixed;</td>
+</tr>
+<tr>
+<td>bg-{color}</td>
+<td>bg-current</td>
+<td>background-color: currentColor;</td>
+</tr>
+<tr>
+<td>bg-{side}</td>
+<td>bg-bottom</td>
+<td>background-position: bottom;</td>
+</tr>
+<tr>
+<td>bg-{auto,cover,contain}</td>
+<td>bg-auto</td>
+<td>background-size: auto;</td>
+</tr>
+<tr>
+<td>border-{size}</td>
+<td>border-0</td>
+<td>border-width: 0px;</td>
+</tr>
+<tr>
+<td>border-{color}</td>
+<td>border-black</td>
+<td>border-color: rgb(0 0 0);</td>
+</tr>
+<tr>
+<td>border-{value}</td>
+<td>border-dashed</td>
+<td>border-style: dashed;</td>
+</tr>
+<tr>
+<td>outline-{size}</td>
+<td>outline-0</td>
+<td>outline-width: 0px;</td>
+</tr>
+<tr>
+<td>outline-{color}</td>
+<td>outline-current</td>
+<td>outline-color: currentColor;</td>
+</tr>
+<tr>
+<td>outline-{value}</td>
+<td>outline-dashed</td>
+<td>outline-style: dashed;</td>
+</tr>
+<tr>
+<td>outline-{size}</td>
+<td>outline-offset-0</td>
+<td>outline-offset: 0px;</td>
+</tr>
+<tr>
+<td>shadow-{size}</td>
+<td>shadow-sm</td>
+<td>box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);</td>
+</tr>
+<tr>
+<td>shadow-{color}</td>
+<td>shadow-black</td>
+<td>–tw-shadow-color: #000;</td>
+</tr>
+<tr>
+<td>snap-{value}</td>
+<td>snap-start</td>
+<td>scroll-snap-align: start;</td>
+</tr>
+<tr>
+<td>snap-{normal,always}</td>
+<td>snap-normal</td>
+<td>scroll-snap-stop: normal;</td>
+</tr>
+<tr>
+<td>snap-{value}</td>
+<td>snap-x</td>
+<td>scroll-snap-type: x var(–tw-scroll-snap-strictness);</td>
+</tr>
+</tbody>
+</table>
+<p><strong>其他</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>举例</th>
+<th>Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isolation-auto</td>
+<td></td>
+<td>isolation: auto;</td>
+</tr>
+<tr>
+<td>invisible</td>
+<td></td>
+<td>visibility: hidden;</td>
+</tr>
+<tr>
+<td>flex-1</td>
+<td></td>
+<td>flex: 1 1 0%;</td>
+</tr>
+<tr>
+<td>flex-auto</td>
+<td></td>
+<td>flex: 1 1 auto;</td>
+</tr>
+<tr>
+<td>flex-initial</td>
+<td></td>
+<td>flex: 0 1 auto;</td>
+</tr>
+<tr>
+<td>grow</td>
+<td></td>
+<td>flex-grow: 1;</td>
+</tr>
+<tr>
+<td>shrink</td>
+<td></td>
+<td>flex-shrink: 1;</td>
+</tr>
+<tr>
+<td>order-first</td>
+<td></td>
+<td>order: -9999;</td>
+</tr>
+<tr>
+<td>order-last</td>
+<td></td>
+<td>order: 9999;</td>
+</tr>
+<tr>
+<td>order-none</td>
+<td></td>
+<td>order: 0;</td>
+</tr>
+<tr>
+<td>row-auto</td>
+<td></td>
+<td>grid-row: auto;</td>
+</tr>
+<tr>
+<td>row-span-full</td>
+<td></td>
+<td>grid-row: 1 / -1;</td>
+</tr>
+<tr>
+<td>gap-x-{size}</td>
+<td>gap-x-0</td>
+<td>column-gap: 0px;</td>
+</tr>
+<tr>
+<td>gap-y-{size}</td>
+<td>gap-y-0</td>
+<td>row-gap: 0px;</td>
+</tr>
+<tr>
+<td>subpixel-antialiased</td>
+<td></td>
+<td>-webkit-font-smoothing: auto;</td>
+</tr>
+<tr>
+<td>not-italic</td>
+<td></td>
+<td>font-style: normal;</td>
+</tr>
+<tr>
+<td>normal-nums</td>
+<td></td>
+<td>font-variant-numeric: normal;</td>
+</tr>
+<tr>
+<td>list-image-none</td>
+<td></td>
+<td>list-style-image: none;</td>
+</tr>
+<tr>
+<td>no-underline</td>
+<td></td>
+<td>text-decoration-line: none;</td>
+</tr>
+<tr>
+<td>normal-case</td>
+<td></td>
+<td>text-transform: none;</td>
+</tr>
+<tr>
+<td>truncate</td>
+<td></td>
+<td>overflow: hidden;text-overflow: ellipsis;white-space: nowrap;</td>
+</tr>
+<tr>
+<td>break-normal</td>
+<td></td>
+<td>overflow-wrap: normal;word-break: normal;</td>
+</tr>
+<tr>
+<td>break-words</td>
+<td></td>
+<td>overflow-wrap: break-word;</td>
+</tr>
+<tr>
+<td>break-keep</td>
+<td></td>
+<td>word-break: keep-all;</td>
+</tr>
+<tr>
+<td>inset-x-{size}</td>
+<td>inset-x-0</td>
+<td>left: 0px;right: 0px;</td>
+</tr>
+<tr>
+<td>inset-y-{size}</td>
+<td>inset-y-0</td>
+<td>top: 0px;bottom: 0px;</td>
+</tr>
+<tr>
+<td>line-clamp-{number}</td>
+<td>line-clamp-1</td>
+<td>overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;</td>
+</tr>
+<tr>
+<td>bg-no-repeat</td>
+<td></td>
+<td>background-repeat: no-repeat;</td>
+</tr>
+<tr>
+<td>bg-gradient-{direction}</td>
+<td>bg-gradient-to-t</td>
+<td>background-image: linear-gradient(to top, var(–tw-gradient-stops));</td>
+</tr>
+<tr>
+<td>outline-none</td>
+<td></td>
+<td>outline: 2px solid transparent;outline-offset: 2px;</td>
+</tr>
+<tr>
+<td>outline</td>
+<td></td>
+<td>outline-style: solid;</td>
+</tr>
+<tr>
+<td>resize-y</td>
+<td></td>
+<td>resize: vertical;</td>
+</tr>
+<tr>
+<td>resize-x</td>
+<td></td>
+<td>resize: horizontal;</td>
+</tr>
+<tr>
+<td>resize</td>
+<td></td>
+<td>resize: both;</td>
+</tr>
+<tr>
+<td>snap-align-none</td>
+<td></td>
+<td>scroll-snap-align: none;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="影响基础样式">影响基础样式<a class="anchor" href="#影响基础样式">·</a></h2>
+<p>Tailwind css会默认将一些基础样式设置为普通文字样式，包括以下几种：</p>
+<ul>
+<li>在Tailwindcss中 h1到 h6 标签，所有标题元素，其字体大小与字体粗细与普通文本无差别。</li>
+<li>在Tailwindcss中 有序列表和无序列表:  ul,li默认情况下是无样式的，没有符号标记和数字，同时也没有外边距和内边距</li>
+<li>在Tailwindcss中 标题、块引用、段落等元素的所有默认外边距。</li>
+<li>正常情况下图片、svg、video、canvas是行内块元素， 在Tailwindcss中 默认设置为 display:block</li>
+<li>Tailwindcss重写了border所有元素的默认边框样式。</li>
+</ul>
+<p>如果想去掉影响的这些部分，那么可以：</p>
+<p>注释掉 <code>@tailwind base;</code> ,里面存放的是tailwind重写原生标签后的初始样式,把它删了就可以解决上面的一些问题，但可能也会导致一些不可预料的问题。</p>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">// </span><span style="color: #F97583">@tailwind</span><span style="color: #E1E4E8"> base; </span></span>
+<span class="line"><span style="color: #E1E4E8">@tailwind components;</span></span>
+<span class="line"><span style="color: #E1E4E8">@tailwind utilities;</span></span></code></pre></div></div></figure>
+<p>或者</p>
+<p>在全局的css文件里 重写样式,用@layer base重新自定义样式;</p>
+<p>@layer指令，Tailwind 将自动将这些样式移到 @tailwind base的同一位置，以避免出现一些意</p>
+<figure class="shiki css"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">@tailwind</span><span style="color: #E1E4E8"> base;</span></span>
+<span class="line"><span style="color: #F97583">@tailwind</span><span style="color: #E1E4E8"> components;</span></span>
+<span class="line"><span style="color: #F97583">@tailwind</span><span style="color: #E1E4E8"> utilities;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">// 自定义样式</span></span>
+<span class="line"><span style="color: #E1E4E8"> </span><span style="color: #F97583">@layer</span><span style="color: #E1E4E8"> base {</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #85E89D">h1</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">      @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">text-</span><span style="color: #E1E4E8">2</span><span style="color: #79B8FF">xl</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">  }</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #85E89D">h2</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">      @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">text-xl</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">  }</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #85E89D">h3</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">      @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">text-lg</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">  }</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre></div></div></figure>
+<h2 id="参考">参考<a class="anchor" href="#参考">·</a></h2>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7216990794942201913">Vue中使用 Tailwind CSS</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7260756459671207993">Tailwind css 在项目中的使用与问题</a></p>
+<p>感谢！</p>
+
+    <hr>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <svg t="1711088601860" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9444" width="16" height="16"><path d="M797.653 932.511l80.935-39.61c9.902 36.182 15.234 74.65 15.234 113.69v8.188h-87.98v-6.475c0-25.708-2.857-50.846-8.19-75.793zM643.78 715.034a332.254 332.254 0 0 0-175.39-50.084c-185.865 0-336.88 153.3-336.88 342.593v6.475H43.72v-8.19c0-201.099 135.78-370.015 318.788-417.814-113.69-45.514-188.15-156.157-188.15-278.607 0-164.916 131.782-299.554 294.223-299.554 162.06 0 294.222 134.066 294.222 299.554 0 127.02-78.078 235.378-188.15 278.607 39.61 10.474 78.079 26.851 113.119 48.37l-43.99 78.65zM263.863 309.598c0 114.832 91.98 208.526 204.527 208.526 113.119 0 204.528-93.313 204.528-208.526 0-114.833-91.98-208.527-204.528-208.527-112.356 0.381-204.527 93.694-204.527 208.527z m713.37 173.486c-2.856 20.948-6.475 43.039-11.045 67.605-4.57 23.804-9.331 48.37-14.664 72.936-4.57 22.662-9.902 44.943-15.806 67.605l-72.175 40.182c8.76-2.857 17.52-4.57 25.709-7.618 7.046-2.285 14.473-4.57 22.09-6.474 7.618-2.286 13.902-4 18.663-6.475l-7.617 29.136c-2.285 8.189-4 14.473-5.904 18.092-3.428 9.902-8.188 19.234-12.759 27.422-4.57 8.76-9.903 15.806-13.33 22.09-4.57 7.047-9.903 14.474-15.806 19.806l-66.462 19.805L862.4 857.1c-7.046 6.475-15.235 12.188-23.233 19.234-7.047 5.332-15.235 11.045-24.567 17.52-9.33 6.475-19.233 11.616-29.136 16.377-10.474 5.333-22.09 7.618-33.707 8.19-12.188 0-23.805-0.572-35.04-2.857-13.33-1.714-26.28-5.333-38.468-9.332 3.999-6.475 8.189-12.759 12.759-20.948 4-7.046 8.76-14.663 14.473-23.233s11.617-18.662 17.52-29.708c16.949-29.708 33.707-58.273 50.085-86.838s30.85-54.274 43.61-77.507c15.234-26.852 29.136-51.799 42.466-75.793-16.948 19.805-35.04 41.895-53.702 66.462-18.663 24.566-36.754 48.941-54.274 74.079-20.948 30.85-41.325 62.272-60.559 94.456-4.57 7.046-9.331 15.234-14.473 23.804-5.332 8.76-11.045 18.663-16.949 29.137-5.903 10.474-11.616 20.376-18.662 31.421-5.904 10.474-12.188 21.52-18.663 31.422-14.473 23.805-29.136 48.942-44.371 74.65 0.571-7.617 1.714-17.52 3.999-29.707 2.285-10.474 5.903-23.233 11.045-38.468 4.57-15.235 12.188-33.707 21.52-54.274 6.474-12.76 11.044-23.233 13.901-30.85s5.903-12.76 7.617-16.95c1.143-2.856 2.286-6.474 4.57-8.76-1.713-2.284-2.284-6.474-0.57-12.758 0.57-5.904 2.285-14.473 6.474-25.71 3.428-11.044 9.332-26.85 17.52-46.656 8.19-20.376 19.234-42.467 32.565-65.89 13.33-23.805 28.565-46.657 45.514-69.89 16.949-23.233 35.611-46.085 54.845-67.605 18.663-20.947 39.04-40.181 60.558-58.273 20.377-16.948 41.325-30.85 61.701-41.324s40.754-16.949 59.988-18.091c2.475 12.95 1.333 29.707-1.524 50.655z" p-id="9445"></path></svg>
+        <strong>本文作者：</strong>ShaoAo<br>
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6336" width="16" height="16"><path d="M552.106667 125.44a245.034667 245.034667 0 1 1 346.453333 346.453333l-113.834667 113.877334a300.714667 300.714667 0 0 0-16.938666-164.053334l40.277333-40.32a117.034667 117.034667 0 1 0-165.461333-165.461333l-170.666667 170.666667a117.034667 117.034667 0 0 0 38.4 191.061333l-93.994667 93.994667a245.034667 245.034667 0 0 1-34.986666-375.552l170.709333-170.666667z m-426.666667 426.666667l113.834667-113.877334a300.544 300.544 0 0 0 16.938666 164.053334l-40.277333 40.32a117.034667 117.034667 0 1 0 165.461333 165.461333l170.666667-170.666667a116.992 116.992 0 0 0-24.106667-184.021333L619.946667 361.386667a245.034667 245.034667 0 0 1 22.613333 366.506666l-170.666667 170.666667a245.034667 245.034667 0 0 1-346.453333-346.453333z" fill="currentColor" p-id="6337"></path></svg>
+        <strong>本文链接：</strong><a href="https://sawr.gitee.io/2023/10/18/css/tailwind/" title="https:&#x2F;&#x2F;sawr.gitee.io&#x2F;2023&#x2F;10&#x2F;18&#x2F;css&#x2F;tailwind&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;sawr.gitee.io&#x2F;2023&#x2F;10&#x2F;18&#x2F;css&#x2F;tailwind&#x2F;</a><br>
+        
+            <svg t="1711088267743" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8243" width="16" height="16"><path d="M475.428571 877.714286C256 877.714286 73.142857 694.857143 73.142857 475.428571S256 73.142857 475.428571 73.142857 877.714286 256 877.714286 475.428571 694.857143 877.714286 475.428571 877.714286m0-877.714286C212.114286 0 0 212.114286 0 475.428571S212.114286 950.857143 475.428571 950.857143 950.857143 738.742857 950.857143 475.428571 738.742857 0 475.428571 0m0 219.428571c-21.942857 0-36.571429 14.628571-36.571428 36.571429v292.571429c0 21.942857 14.628571 36.571429 36.571428 36.571428s36.571429-14.628571 36.571429-36.571428v-292.571429c0-21.942857-14.628571-36.571429-36.571429-36.571429m0 438.857143c-21.942857 0-36.571429 14.628571-36.571428 36.571429s14.628571 36.571429 36.571428 36.571428 36.571429-14.628571 36.571429-36.571428-14.628571-36.571429-36.571429-36.571429" p-id="8244"></path></svg>
+<strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议许可，仅作个人记录，转载请说明出处！
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/CSS/" rel="tag">CSS</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1714719124643"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <div id="tcomment"></div>
+<script src="https://cdn.staticfile.org/twikoo/1.6.31/twikoo.all.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://shaoao-twikoo.hf.space/', 
+    el: '#tcomment', // 容器元素
+    // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+    // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+    // lang: 'zh-CN', 
+  })
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E5%85%A5%E9%97%A8"><span class="toc-number">2.</span> <span class="toc-text">快速安装入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%86%99%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">常用写法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%BD%E5%92%8C%E9%AB%98"><span class="toc-number">4.1.</span> <span class="toc-text">宽和高</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%B9%E8%B7%9D"><span class="toc-number">4.2.</span> <span class="toc-text">边距</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F"><span class="toc-number">4.3.</span> <span class="toc-text">字体大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hover%E6%82%AC%E5%81%9C"><span class="toc-number">4.4.</span> <span class="toc-text">hover悬停</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">5.</span> <span class="toc-text">响应式设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8flex%E5%B8%83%E5%B1%80"><span class="toc-number">6.</span> <span class="toc-text">使用flex布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E5%AF%BC%E8%88%AA%E6%A0%8F"><span class="toc-number">6.1.</span> <span class="toc-text">简单导航栏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80"><span class="toc-number">6.2.</span> <span class="toc-text">常见布局</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%91%E7%99%BD%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2"><span class="toc-number">7.</span> <span class="toc-text">黑白主题切换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E8%A7%84%E5%BE%8B-Badge-text-%E9%87%8D%E8%A6%81%E8%AE%B0%E5%BF%86"><span class="toc-number">8.</span> <span class="toc-text">记忆规律·</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E5%93%8D%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F"><span class="toc-number">9.</span> <span class="toc-text">影响基础样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">10.</span> <span class="toc-text">参考</span></a></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索全站" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+</div><!-- hexo injector body_end start -->
+  <script>
+  const CODE_CONFIG = {
+    beautify: false,
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: 360,
+    isHighlightShrink: true,
+    copy: {
+      success: 'Copy Success',
+      error: 'Copy Error',
+      noSupport: 'Browser Not Support',
+    }
+  };
+  console.log(
+    `%c hexo-shiki-plugin %c v1.0.25 %c https://github.com/nova1751/hexo-shiki-plugin`,
+    "color: #fff; background: #5f5f5f",
+    "color: #fff; background: #80c8f8",
+    ""
+  );
+  </script>
+  <!-- hexo injector body_end end --></body></html>

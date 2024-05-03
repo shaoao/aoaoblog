@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>哔哩哔哩视频嵌入最详细教程 - 奥奥の探索日记</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="生活,摇滚,记录,编程,学习,剪辑,设计,项目,音乐">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="referrer" content="no-referrer" />
+
+<!-- 51la统计 -->
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3HQkdjDrH5f6vdfQ",ck:"3HQkdjDrH5f6vdfQ"})</script>
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="之前图床服务出现问题导致图片无法加载，请见谅。   哔哩哔哩支持使用iframe来嵌入视频，并且不会卡顿。演示的视频我都添加了&amp;muted&#x3D;1参数，目的是静音播放不惊吓各位。  我们搭建一些博客或者一些别的个人网站，可能是出于兴趣爱好，并不会买一台几百兆带宽的服务器或者是购买国内CND来进行加速，如果把视频塞到自己的服务器中，那么效果肯定是不太行。 那应该怎么办呢！ 不怕！哔哩哔哩在很久">
+<meta property="og:type" content="article">
+<meta property="og:title" content="哔哩哔哩视频嵌入最详细教程">
+<meta property="og:url" content="https://sawr.gitee.io/2023/10/04/tutorial/biliqianru/index.html">
+<meta property="og:site_name" content="奥奥の探索日记">
+<meta property="og:description" content="之前图床服务出现问题导致图片无法加载，请见谅。   哔哩哔哩支持使用iframe来嵌入视频，并且不会卡顿。演示的视频我都添加了&amp;muted&#x3D;1参数，目的是静音播放不惊吓各位。  我们搭建一些博客或者一些别的个人网站，可能是出于兴趣爱好，并不会买一台几百兆带宽的服务器或者是购买国内CND来进行加速，如果把视频塞到自己的服务器中，那么效果肯定是不太行。 那应该怎么办呢！ 不怕！哔哩哔哩在很久">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tucdn.wpon.cn/2023/10/04/fa18676cd2fbe.png">
+<meta property="og:image" content="https://tucdn.wpon.cn/2023/10/04/5c3d1fcecf1c1.png">
+<meta property="og:image" content="https://tucdn.wpon.cn/2023/10/04/13397f18b288f.png">
+<meta property="og:image" content="https://tucdn.wpon.cn/2023/10/04/d752ef313a829.png">
+<meta property="article:published_time" content="2023-10-04T06:20:00.000Z">
+<meta property="article:modified_time" content="2024-04-10T09:28:37.919Z">
+<meta property="article:author" content="ShaoAo">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tucdn.wpon.cn/2023/10/04/fa18676cd2fbe.png">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714719124739">
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4474869_y3x62ji5c4.css">
+
+<link rel="stylesheet" href="/css/style.css?v=1714719124739">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1714719124739">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1714719124739"></script>
+
+ 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-shiki-plugin@latest/lib/codeblock.css">
+<style>:root{--hl-color:#e1e4e8;--hl-bg:#24292e;--hltools-bg:#1f2428;--hltools-color:#c5c5c5;--hlnumber-bg:#24292e;--hlnumber-color:#444d56;--hlscrollbar-bg:#32383e;--hlexpand-bg:linear-gradient(180deg,rgba(36,41,46,0.1),rgba(36,41,46,0.9))}</style>
+    <style>
+    .code-expand-btn:not(.expand-done) ~ div.codeblock,
+    .code-expand-btn:not(.expand-done) ~ * div.codeblock {
+      overflow: hidden;
+      height: 360px;
+    }
+    </style>
+  <!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(https://tucdn.wpon.cn/2024/03/23/2247604107188.jpg)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer">奥奥の探索日记</div><a class="mdui-btn mdui-btn-icon" href="/" title="ShaoAo"><img src="https://cccimg.com/view.php/f8a4b6199c0c036da1f160b12d01f50d.jpg" alt="ShaoAo"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="ShaoAo">
+            <img src="https://cccimg.com/view.php/f8a4b6199c0c036da1f160b12d01f50d.jpg" alt="ShaoAo" alt="ShaoAo">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>18</div>
+        <div><span>标签</span>19</div>
+        <div><span>分类</span>6</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="常看">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                常看
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索全站" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+
+
+	<script async src="/js/search.js?v=1714719124739"></script>
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/296465852"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/shaoao/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-githubic"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.travellings.cn/go.html"
+			target="_blank"
+			mdui-tooltip="{content: '开往'}"
+			style="
+				color: rgb(251,109,72);
+				background-color: rgba(251,109,72, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-ditiexiao"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.xiaohongshu.com/user/profile/60d9e8d7000000002002c59b"
+			target="_blank"
+			mdui-tooltip="{content: '小红书'}"
+			style="
+				color: rgb(255,46,77);
+				background-color: rgba(255,46,77, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-xiaohongshu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://steamcommunity.com/profiles/76561198846317988/"
+			target="_blank"
+			mdui-tooltip="{content: 'Steam'}"
+			style="
+				color: rgb(21,114,182);
+				background-color: rgba(21,114,182, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-steam"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/woaiwr"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.douyin.com/user/MS4wLjABAAAAbyj8R7eEae7UC9UMWpJKXAtr-vIBkvHzkY7iJT8dXJE?relation=0&vid=7354414206428499236"
+			target="_blank"
+			mdui-tooltip="{content: '抖音'}"
+			style="
+				color: rgb( 23, 11, 26);
+				background-color: rgba( 23, 11, 26, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-douyin"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/tools/">tools</a>
+          <span class="category-list-count">5</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/前端/">前端</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/后端/">后端</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小技巧/">小技巧</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/生活随笔/">生活随笔</a>
+          <span class="category-list-count">6</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/英语/">英语</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/TypeScript/" style="font-size: 13.33px;">TypeScript</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/%E5%9B%BE%E5%BA%8A%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">图床配置</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">学习</a> <a href="/tags/%E5%B1%B1%E9%87%8E%E6%97%A5%E5%BF%97/" style="font-size: 10px;">山野日志</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">工具</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 20px;">教程</a> <a href="/tags/%E6%9C%89%E7%94%A8%E5%88%86%E4%BA%AB/" style="font-size: 13.33px;">有用分享</a> <a href="/tags/%E7%88%AC%E5%B1%B1/" style="font-size: 10px;">爬山</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/" style="font-size: 10px;">英语单词</a> <a href="/tags/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/" style="font-size: 16.67px;">记录生活</a> <a href="/tags/%E8%BF%90%E5%8A%A8/" style="font-size: 10px;">运动</a> <a href="/tags/%E9%95%9C%E5%83%8F%E6%BA%90/" style="font-size: 10px;">镜像源</a> <a href="/tags/%E9%AA%91%E8%A1%8C/" style="font-size: 10px;">骑行</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(19);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+
+    
+        
+        
+        
+        
+   
+    <!-- <div class="nexmoe-copyright">
+        &copy; 2024 ShaoAo
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+    </div> -->
+
+    <!-- 网站访问量侧边展示 -->
+    <!-- <div class="nexmoe-copyright">
+        <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3HQkdjDrH5f6vdfQ/quote.js?theme=0&f=12&display=0,0,0,1,0,0,0,1"></script>
+    </div> -->
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 37.5%;"> 
+            <img src="https://gitee.com/sawr/personalimage/raw/master/img/v2-8e40cc0dbad304617ad773d0f256d339_r.jpg" alt="哔哩哔哩视频嵌入最详细教程" loading="lazy">
+            <h1>哔哩哔哩视频嵌入最详细教程</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2023年10月04日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <blockquote>
+<p>之前图床服务出现问题导致图片无法加载，请见谅。</p>
+</blockquote>
+<blockquote>
+<p>哔哩哔哩支持使用<code>iframe</code>来嵌入视频，并且不会卡顿。演示的视频我都添加了<code>&amp;muted=1</code>参数，目的是静音播放不惊吓各位。</p>
+</blockquote>
+<p>我们搭建一些博客或者一些别的个人网站，可能是出于兴趣爱好，并不会买一台几百兆带宽的服务器或者是购买国内CND来进行加速，如果把视频塞到自己的服务器中，那么效果肯定是不太行。</p>
+<p>那应该怎么办呢！</p>
+<p><strong>不怕！哔哩哔哩在很久之前就已经支持<code>iframe</code>嵌入播放器了！而且支持代码一键复制，只需要把复制的代码嵌入到你的网站中即可。</strong></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/10/04/fa18676cd2fbe.png" alt="Snipaste_2023-10-04_14-32-53.png" data-caption="Snipaste_2023-10-04_14-32-53.png" loading="lazy"></p>
+<p>然后就会得到官方给的代码：</p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//player.bilibili.com/player.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #FDAEB7; font-style: italic">border</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">framespacing</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">allowfullscreen</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;true&quot;</span><span style="color: #E1E4E8">&gt; &lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p>得到如下效果</p>
+<iframe src="//player.bilibili.com/player.html?aid=275949729&bvid=BV1BF411D7LZ&cid=1265069356&p=1&muted=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<h2 id="修改官方代码">修改官方代码<a class="anchor" href="#修改官方代码">·</a></h2>
+<p>这玩意看起来，效果有点拉拉跨，有点一言难尽，连个自适应也没给，这么小上面还带这么多大的文字提示，视觉观感一点儿也不行，这可怎么办呀！！</p>
+<p><strong>别担心</strong></p>
+<p>一键复制的官方的东西，官方很懒这也没办法，不过咱们可以给他进行一个优化！</p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//player.bilibili.com/player.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">width</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;95%&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">height</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;600&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p>只需要把官方代码<code>src=&quot;&quot;</code>里面的链接替换到上方代码的<code>src=&quot;&quot;</code>链接即可得到下面的效果，就可以看到现在明显的不一样了。</p>
+<p>在这里提供一个干净的代码，只需要把链接复制进去即可使用。</p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">// 把你拷贝的链接复制到 src=“链接”</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">width</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;95%&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">height</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;600&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p><strong>来看效果</strong></p>
+<p>
+<iframe src="//player.bilibili.com/player.html?aid=275949729&bvid=BV1BF411D7LZ&cid=1265069356&p=1&muted=1" frameborder="no" scrolling="no" width="95%" height="600"></iframe></p>
+<p>这样看起来，感觉效果还不错，看着样子大小都还可以，感觉就可以直接拿来用了，如果只是电脑来浏览观看，那么这样已经足够了。</p>
+<p>但是手机也是主要的浏览工具，来看一下手机版本怎么表现的。</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/10/04/5c3d1fcecf1c1.png" alt="1696402495463.png" data-caption="1696402495463.png" loading="lazy"></p>
+<p>可以看出来，手机端表现也还说得过去，这是一个横屏视频，视频比例没什么问题，就是把高度直接给用黑色填充了，这个黑色的完全没必要有，所以我们还需要对手机端进行适配才行。</p>
+<h2 id="解决手机端比例">解决手机端比例<a class="anchor" href="#解决手机端比例">·</a></h2>
+<p>对于这个比例问题，有点像抖音那种短视频的感觉，就是横屏视频在竖屏浏览的时候填充黑色，很多已经习惯了抖音的这种感觉，所以就觉得问题不大，但是我们也可以把他给进行解决。</p>
+<p>参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/experdot/">ExperDot</a>大佬给出的方案</p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//player.bilibili.com/player.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p>只需要把官方代码<code>src=&quot;&quot;</code>里面的链接替换到上方代码的<code>src=&quot;&quot;</code>链接即可</p>
+<p><strong>依旧提供干净代码</strong></p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p><strong>效果</strong></p>
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=275949729&bvid=BV1BF411D7LZ&cid=1265069356&p=1&muted=1" frameborder="no" scrolling="no"></iframe>
+</div>
+<p>来看看手机端</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/10/04/13397f18b288f.png" alt="1696403102122.png" data-caption="1696403102122.png" loading="lazy"></p>
+<p>这感觉就很完美了！！我直接奥里给太给力了吧。这样就基本实现了一整个把哔哩哔哩嵌入到网站里面的流程。</p>
+<h2 id="简洁优化播放器">简洁优化播放器<a class="anchor" href="#简洁优化播放器">·</a></h2>
+<p>仔细看PC端的播放器界面</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/10/04/d752ef313a829.png" alt="1696403333667.png" data-caption="1696403333667.png" loading="lazy"></p>
+<p>艾玛这界面杂乱的，看着我都有点不想看，这么臃肿的界面很难有一直看下去的想法，所以我们可以让他变得清爽一些。</p>
+<p><strong>尿素过多，直接上干货</strong></p>
+<p>其实哔哩哔哩很🐕，把PC端的播放器做的很花里胡哨，但是在移动端，一点点儿一捏捏广告都木有！！</p>
+<p>这不就很简单了，我们直接把移动端的播放器拿过来，在PC端上用，不就可以实现无广告的清纯界面辣！奥里给，直接上手开干。</p>
+<p><strong>掏出我们之前的代码</strong></p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//player.bilibili.com/player.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p><strong>修改为</strong></p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p>就是就是把源代码 <code>src=&quot;&quot;</code> 里的链接里的 <code>//player.bilibili.com/player.html</code> 换成了 <code>//www.bilibili.com/blackboard/html5mobileplayer.html</code> 而已，其余的代码我可<strong>一点儿都没动！</strong></p>
+<p><strong>上效果</strong></p>
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&bvid=BV1BF411D7LZ&cid=1265069356&p=1" frameborder="no" scrolling="no"></iframe>
+</div>
+<p>哇塞塞！这效果属是不错，而且这界面确实干净整洁无异味，不是伪娘就是…咳咳说正题，这里在看KNIFE大佬写的文章的时候，发现这个代码，简单是简单，但是没有办法全屏。</p>
+<p>想想就有点难过！如此干净的视频却没办法全屏欣赏！不答应！所以！</p>
+<p><strong><p style="font-size:40px">上 最 终 法 宝！</p></strong></p>
+<h2 id="最终版播放器">最终版播放器<a class="anchor" href="#最终版播放器">·</a></h2>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #FDAEB7; font-style: italic">border</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">framespacing</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">allowfullscreen</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;true&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p><strong>干净代码</strong></p>
+<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//www.bilibili.com/blackboard/html5mobileplayer.html?&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #FDAEB7; font-style: italic">border</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">framespacing</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">allowfullscreen</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;true&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+<p>记得把<code>?</code>后面的链接粘贴到<code>src</code>中的最后面即可使用最强大的哔哩哔哩播放器了。</p>
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&bvid=BV1BF411D7LZ&cid=1265069356&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+<p><strong>保姆教程 - 干净链接</strong></p>
+<p><strong>你复制的链接是<code>//player.bilibili.com/player.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1</code></strong></p>
+<p><strong>你只需要把<code>aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1</code></strong></p>
+<p><strong>复制粘贴到<code>src=&quot;//www.bilibili.com/blackboard/html5mobileplayer.html?链接内容&quot;</code></strong></p>
+<p><strong>变成<code>src=&quot;//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</code>即可</strong></p>
+<h2 id="哔哩哔哩播放器参数表">哔哩哔哩播放器参数表<a class="anchor" href="#哔哩哔哩播放器参数表">·</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数用途</th>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">使用方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">是否自动播放(默认否)</td>
+<td style="text-align:center">autoplay</td>
+<td style="text-align:center">1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">默认弹幕开关(默认开启)</td>
+<td style="text-align:center">danmaku</td>
+<td style="text-align:center">1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">是否默认静音(默认否)</td>
+<td style="text-align:center">muted</td>
+<td style="text-align:center">1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">一键静音按钮是否显示(默认不显示</td>
+<td style="text-align:center">hasMuteButton</td>
+<td style="text-align:center">1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">视频封面下方是都显示播放量弹幕量等信息(默认显示)</td>
+<td style="text-align:center">hideCoverInfo</td>
+<td style="text-align:center">1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">是否隐藏弹幕按钮（默认不隐藏）</td>
+<td style="text-align:center">hideDanmakuButton</td>
+<td style="text-align:center">1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">是否隐藏全屏按钮(默认显示)</td>
+<td style="text-align:center">noFullScreenButton</td>
+<td style="text-align:center">1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">是否开始记忆播放(默认开启)</td>
+<td style="text-align:center">fjw</td>
+<td style="text-align:center">1: 开启, 0: 关闭</td>
+</tr>
+<tr>
+<td style="text-align:center">默认开始时间(默认0)</td>
+<td style="text-align:center">t</td>
+<td style="text-align:center">直接填写数值，单位秒</td>
+</tr>
+<tr>
+<td style="text-align:center">是否显示高清(默认否）</td>
+<td style="text-align:center">highQuality</td>
+<td style="text-align:center">1: 开启, 0: 关闭（貌似是无用的，各位可以试试）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>使用方法</strong></p>
+<p>比如使用<code>danmaku</code>弹幕参数 1=开启，0=关闭，我们直接在该链接的最后加上一个 <code>&amp;</code> 符号，然后再将 <code>danmaku=0</code> 黏贴上去即可。</p>
+<p><strong>例如</strong></p>
+<p><code>//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&amp;danmaku=0</code></p>
+<p>把上面的链接复制到<code>src</code>中就可以实现关闭弹幕播放(有弹幕按钮后续想看可以开开)</p>
+<p><strong>可以添加多个参数，使用<code>?</code>隔开</strong></p>
+<p><code>//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&amp;danmaku=0?&amp;muted=1</code></p>
+<h2 id="参考">参考<a class="anchor" href="#参考">·</a></h2>
+<p>注：本文参考了一些别的博主写法，全文文字以及展示都是由个人撰写，文章通俗易懂也更加全面。</p>
+
+    <hr>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <svg t="1711088601860" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9444" width="16" height="16"><path d="M797.653 932.511l80.935-39.61c9.902 36.182 15.234 74.65 15.234 113.69v8.188h-87.98v-6.475c0-25.708-2.857-50.846-8.19-75.793zM643.78 715.034a332.254 332.254 0 0 0-175.39-50.084c-185.865 0-336.88 153.3-336.88 342.593v6.475H43.72v-8.19c0-201.099 135.78-370.015 318.788-417.814-113.69-45.514-188.15-156.157-188.15-278.607 0-164.916 131.782-299.554 294.223-299.554 162.06 0 294.222 134.066 294.222 299.554 0 127.02-78.078 235.378-188.15 278.607 39.61 10.474 78.079 26.851 113.119 48.37l-43.99 78.65zM263.863 309.598c0 114.832 91.98 208.526 204.527 208.526 113.119 0 204.528-93.313 204.528-208.526 0-114.833-91.98-208.527-204.528-208.527-112.356 0.381-204.527 93.694-204.527 208.527z m713.37 173.486c-2.856 20.948-6.475 43.039-11.045 67.605-4.57 23.804-9.331 48.37-14.664 72.936-4.57 22.662-9.902 44.943-15.806 67.605l-72.175 40.182c8.76-2.857 17.52-4.57 25.709-7.618 7.046-2.285 14.473-4.57 22.09-6.474 7.618-2.286 13.902-4 18.663-6.475l-7.617 29.136c-2.285 8.189-4 14.473-5.904 18.092-3.428 9.902-8.188 19.234-12.759 27.422-4.57 8.76-9.903 15.806-13.33 22.09-4.57 7.047-9.903 14.474-15.806 19.806l-66.462 19.805L862.4 857.1c-7.046 6.475-15.235 12.188-23.233 19.234-7.047 5.332-15.235 11.045-24.567 17.52-9.33 6.475-19.233 11.616-29.136 16.377-10.474 5.333-22.09 7.618-33.707 8.19-12.188 0-23.805-0.572-35.04-2.857-13.33-1.714-26.28-5.333-38.468-9.332 3.999-6.475 8.189-12.759 12.759-20.948 4-7.046 8.76-14.663 14.473-23.233s11.617-18.662 17.52-29.708c16.949-29.708 33.707-58.273 50.085-86.838s30.85-54.274 43.61-77.507c15.234-26.852 29.136-51.799 42.466-75.793-16.948 19.805-35.04 41.895-53.702 66.462-18.663 24.566-36.754 48.941-54.274 74.079-20.948 30.85-41.325 62.272-60.559 94.456-4.57 7.046-9.331 15.234-14.473 23.804-5.332 8.76-11.045 18.663-16.949 29.137-5.903 10.474-11.616 20.376-18.662 31.421-5.904 10.474-12.188 21.52-18.663 31.422-14.473 23.805-29.136 48.942-44.371 74.65 0.571-7.617 1.714-17.52 3.999-29.707 2.285-10.474 5.903-23.233 11.045-38.468 4.57-15.235 12.188-33.707 21.52-54.274 6.474-12.76 11.044-23.233 13.901-30.85s5.903-12.76 7.617-16.95c1.143-2.856 2.286-6.474 4.57-8.76-1.713-2.284-2.284-6.474-0.57-12.758 0.57-5.904 2.285-14.473 6.474-25.71 3.428-11.044 9.332-26.85 17.52-46.656 8.19-20.376 19.234-42.467 32.565-65.89 13.33-23.805 28.565-46.657 45.514-69.89 16.949-23.233 35.611-46.085 54.845-67.605 18.663-20.947 39.04-40.181 60.558-58.273 20.377-16.948 41.325-30.85 61.701-41.324s40.754-16.949 59.988-18.091c2.475 12.95 1.333 29.707-1.524 50.655z" p-id="9445"></path></svg>
+        <strong>本文作者：</strong>ShaoAo<br>
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6336" width="16" height="16"><path d="M552.106667 125.44a245.034667 245.034667 0 1 1 346.453333 346.453333l-113.834667 113.877334a300.714667 300.714667 0 0 0-16.938666-164.053334l40.277333-40.32a117.034667 117.034667 0 1 0-165.461333-165.461333l-170.666667 170.666667a117.034667 117.034667 0 0 0 38.4 191.061333l-93.994667 93.994667a245.034667 245.034667 0 0 1-34.986666-375.552l170.709333-170.666667z m-426.666667 426.666667l113.834667-113.877334a300.544 300.544 0 0 0 16.938666 164.053334l-40.277333 40.32a117.034667 117.034667 0 1 0 165.461333 165.461333l170.666667-170.666667a116.992 116.992 0 0 0-24.106667-184.021333L619.946667 361.386667a245.034667 245.034667 0 0 1 22.613333 366.506666l-170.666667 170.666667a245.034667 245.034667 0 0 1-346.453333-346.453333z" fill="currentColor" p-id="6337"></path></svg>
+        <strong>本文链接：</strong><a href="https://sawr.gitee.io/2023/10/04/tutorial/biliqianru/" title="https:&#x2F;&#x2F;sawr.gitee.io&#x2F;2023&#x2F;10&#x2F;04&#x2F;tutorial&#x2F;biliqianru&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;sawr.gitee.io&#x2F;2023&#x2F;10&#x2F;04&#x2F;tutorial&#x2F;biliqianru&#x2F;</a><br>
+        
+            <svg t="1711088267743" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8243" width="16" height="16"><path d="M475.428571 877.714286C256 877.714286 73.142857 694.857143 73.142857 475.428571S256 73.142857 475.428571 73.142857 877.714286 256 877.714286 475.428571 694.857143 877.714286 475.428571 877.714286m0-877.714286C212.114286 0 0 212.114286 0 475.428571S212.114286 950.857143 475.428571 950.857143 950.857143 738.742857 950.857143 475.428571 738.742857 0 475.428571 0m0 219.428571c-21.942857 0-36.571429 14.628571-36.571428 36.571429v292.571429c0 21.942857 14.628571 36.571429 36.571428 36.571428s36.571429-14.628571 36.571429-36.571428v-292.571429c0-21.942857-14.628571-36.571429-36.571429-36.571429m0 438.857143c-21.942857 0-36.571429 14.628571-36.571428 36.571429s14.628571 36.571429 36.571428 36.571428 36.571429-14.628571 36.571429-36.571428-14.628571-36.571429-36.571429-36.571429" p-id="8244"></path></svg>
+<strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议许可，仅作个人记录，转载请说明出处！
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1714719124644"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <div id="tcomment"></div>
+<script src="https://cdn.staticfile.org/twikoo/1.6.31/twikoo.all.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://shaoao-twikoo.hf.space/', 
+    el: '#tcomment', // 容器元素
+    // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+    // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+    // lang: 'zh-CN', 
+  })
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">修改官方代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%89%8B%E6%9C%BA%E7%AB%AF%E6%AF%94%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">解决手机端比例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E6%B4%81%E4%BC%98%E5%8C%96%E6%92%AD%E6%94%BE%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text">简洁优化播放器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E7%89%88%E6%92%AD%E6%94%BE%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">最终版播放器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E6%92%AD%E6%94%BE%E5%99%A8%E5%8F%82%E6%95%B0%E8%A1%A8"><span class="toc-number">5.</span> <span class="toc-text">哔哩哔哩播放器参数表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">6.</span> <span class="toc-text">参考</span></a></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索全站" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+</div><!-- hexo injector body_end start -->
+  <script>
+  const CODE_CONFIG = {
+    beautify: false,
+    highlightCopy: true,
+    highlightLang: true,
+    highlightHeightLimit: 360,
+    isHighlightShrink: true,
+    copy: {
+      success: 'Copy Success',
+      error: 'Copy Error',
+      noSupport: 'Browser Not Support',
+    }
+  };
+  console.log(
+    `%c hexo-shiki-plugin %c v1.0.25 %c https://github.com/nova1751/hexo-shiki-plugin`,
+    "color: #fff; background: #5f5f5f",
+    "color: #fff; background: #80c8f8",
+    ""
+  );
+  </script>
+  <!-- hexo injector body_end end --></body></html>
