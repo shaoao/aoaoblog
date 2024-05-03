@@ -33,17 +33,17 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714719124739">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714721891656">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4474869_y3x62ji5c4.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1714719124739">
+<link rel="stylesheet" href="/css/style.css?v=1714721891656">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1714719124739">
+        <link rel="stylesheet" href="/custom.css?v=1714721891656">
     
 
 
@@ -53,7 +53,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1714719124739"></script>
+<script async src="/js/app.js?v=1714721891656"></script>
 
  
 
@@ -139,7 +139,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1714719124739"></script>
+	<script async src="/js/search.js?v=1714721891656"></script>
 
 
 
@@ -377,7 +377,7 @@
 <p>之前图床服务出现问题导致图片无法加载，请见谅。</p>
 </blockquote>
 <blockquote>
-<p>哔哩哔哩支持使用<code>iframe</code>来嵌入视频，并且不会卡顿。演示的视频我都添加了<code>&amp;muted=1</code>参数，目的是静音播放不惊吓各位。</p>
+<p>哔哩哔哩支持使用<code>iframe</code>来嵌入视频，并且不会卡顿。<br>演示的视频我都添加了<code>&amp;muted=1</code>参数，目的是静音播放不惊吓各位。</p>
 </blockquote>
 <p>我们搭建一些博客或者一些别的个人网站，可能是出于兴趣爱好，并不会买一台几百兆带宽的服务器或者是购买国内CND来进行加速，如果把视频塞到自己的服务器中，那么效果肯定是不太行。</p>
 <p>那应该怎么办呢！</p>
@@ -385,44 +385,51 @@
 <p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/10/04/fa18676cd2fbe.png" alt="Snipaste_2023-10-04_14-32-53.png" data-caption="Snipaste_2023-10-04_14-32-53.png" loading="lazy"></p>
 <p>然后就会得到官方给的代码：</p>
 <figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//player.bilibili.com/player.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #FDAEB7; font-style: italic">border</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">framespacing</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">allowfullscreen</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;true&quot;</span><span style="color: #E1E4E8">&gt; &lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+
 <p>得到如下效果</p>
 <iframe src="//player.bilibili.com/player.html?aid=275949729&bvid=BV1BF411D7LZ&cid=1265069356&p=1&muted=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<h2 id="修改官方代码">修改官方代码<a class="anchor" href="#修改官方代码">·</a></h2>
-<p>这玩意看起来，效果有点拉拉跨，有点一言难尽，连个自适应也没给，这么小上面还带这么多大的文字提示，视觉观感一点儿也不行，这可怎么办呀！！</p>
+
+
+<h2 id="修改官方代码"><a href="#修改官方代码" class="headerlink" title="修改官方代码"></a>修改官方代码</h2><p>这玩意看起来，效果有点拉拉跨，有点一言难尽，连个自适应也没给，这么小上面还带这么多大的文字提示，视觉观感一点儿也不行，这可怎么办呀！！</p>
 <p><strong>别担心</strong></p>
 <p>一键复制的官方的东西，官方很懒这也没办法，不过咱们可以给他进行一个优化！</p>
 <figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//player.bilibili.com/player.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">width</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;95%&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">height</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;600&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+
 <p>只需要把官方代码<code>src=&quot;&quot;</code>里面的链接替换到上方代码的<code>src=&quot;&quot;</code>链接即可得到下面的效果，就可以看到现在明显的不一样了。</p>
 <p>在这里提供一个干净的代码，只需要把链接复制进去即可使用。</p>
 <figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">// 把你拷贝的链接复制到 src=“链接”</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">width</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;95%&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">height</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;600&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">p</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+
 <p><strong>来看效果</strong></p>
 <p>
 <iframe src="//player.bilibili.com/player.html?aid=275949729&bvid=BV1BF411D7LZ&cid=1265069356&p=1&muted=1" frameborder="no" scrolling="no" width="95%" height="600"></iframe></p>
+
+
 <p>这样看起来，感觉效果还不错，看着样子大小都还可以，感觉就可以直接拿来用了，如果只是电脑来浏览观看，那么这样已经足够了。</p>
 <p>但是手机也是主要的浏览工具，来看一下手机版本怎么表现的。</p>
 <p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/10/04/5c3d1fcecf1c1.png" alt="1696402495463.png" data-caption="1696402495463.png" loading="lazy"></p>
 <p>可以看出来，手机端表现也还说得过去，这是一个横屏视频，视频比例没什么问题，就是把高度直接给用黑色填充了，这个黑色的完全没必要有，所以我们还需要对手机端进行适配才行。</p>
-<h2 id="解决手机端比例">解决手机端比例<a class="anchor" href="#解决手机端比例">·</a></h2>
-<p>对于这个比例问题，有点像抖音那种短视频的感觉，就是横屏视频在竖屏浏览的时候填充黑色，很多已经习惯了抖音的这种感觉，所以就觉得问题不大，但是我们也可以把他给进行解决。</p>
+<h2 id="解决手机端比例"><a href="#解决手机端比例" class="headerlink" title="解决手机端比例"></a>解决手机端比例</h2><p>对于这个比例问题，有点像抖音那种短视频的感觉，就是横屏视频在竖屏浏览的时候填充黑色，很多已经习惯了抖音的这种感觉，所以就觉得问题不大，但是我们也可以把他给进行解决。</p>
 <p>参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/experdot/">ExperDot</a>大佬给出的方案</p>
 <figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//player.bilibili.com/player.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+
 <p>只需要把官方代码<code>src=&quot;&quot;</code>里面的链接替换到上方代码的<code>src=&quot;&quot;</code>链接即可</p>
 <p><strong>依旧提供干净代码</strong></p>
 <figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+
 <p><strong>效果</strong></p>
 <div style="position: relative; padding: 30% 45%;">
 <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=275949729&bvid=BV1BF411D7LZ&cid=1265069356&p=1&muted=1" frameborder="no" scrolling="no"></iframe>
 </div>
+
 <p>来看看手机端</p>
 <p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/10/04/13397f18b288f.png" alt="1696403102122.png" data-caption="1696403102122.png" loading="lazy"></p>
 <p>这感觉就很完美了！！我直接奥里给太给力了吧。这样就基本实现了一整个把哔哩哔哩嵌入到网站里面的流程。</p>
-<h2 id="简洁优化播放器">简洁优化播放器<a class="anchor" href="#简洁优化播放器">·</a></h2>
-<p>仔细看PC端的播放器界面</p>
+<h2 id="简洁优化播放器"><a href="#简洁优化播放器" class="headerlink" title="简洁优化播放器"></a>简洁优化播放器</h2><p>仔细看PC端的播放器界面</p>
 <p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://tucdn.wpon.cn/2023/10/04/d752ef313a829.png" alt="1696403333667.png" data-caption="1696403333667.png" loading="lazy"></p>
 <p>艾玛这界面杂乱的，看着我都有点不想看，这么臃肿的界面很难有一直看下去的想法，所以我们可以让他变得清爽一些。</p>
 <p><strong>尿素过多，直接上干货</strong></p>
@@ -432,106 +439,107 @@
 <figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//player.bilibili.com/player.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+
 <p><strong>修改为</strong></p>
 <figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+
 <p>就是就是把源代码 <code>src=&quot;&quot;</code> 里的链接里的 <code>//player.bilibili.com/player.html</code> 换成了 <code>//www.bilibili.com/blackboard/html5mobileplayer.html</code> 而已，其余的代码我可<strong>一点儿都没动！</strong></p>
 <p><strong>上效果</strong></p>
 <div style="position: relative; padding: 30% 45%;">
 <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&bvid=BV1BF411D7LZ&cid=1265069356&p=1" frameborder="no" scrolling="no"></iframe>
 </div>
+
 <p>哇塞塞！这效果属是不错，而且这界面确实干净整洁无异味，不是伪娘就是…咳咳说正题，这里在看KNIFE大佬写的文章的时候，发现这个代码，简单是简单，但是没有办法全屏。</p>
 <p>想想就有点难过！如此干净的视频却没办法全屏欣赏！不答应！所以！</p>
 <p><strong><p style="font-size:40px">上 最 终 法 宝！</p></strong></p>
-<h2 id="最终版播放器">最终版播放器<a class="anchor" href="#最终版播放器">·</a></h2>
-<figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<h2 id="最终版播放器"><a href="#最终版播放器" class="headerlink" title="最终版播放器"></a>最终版播放器</h2><figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #FDAEB7; font-style: italic">border</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">framespacing</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">allowfullscreen</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;true&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+
 <p><strong>干净代码</strong></p>
 <figure class="shiki html"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: relative; padding: 30% 45%;&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">style</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;//www.bilibili.com/blackboard/html5mobileplayer.html?&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scrolling</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #FDAEB7; font-style: italic">border</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">frameborder</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;no&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">framespacing</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;0&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">allowfullscreen</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;true&quot;</span><span style="color: #E1E4E8">&gt;&lt;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">&gt;</span></span>
 <span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">&gt;</span></span></code></pre></div></div></figure>
+
 <p>记得把<code>?</code>后面的链接粘贴到<code>src</code>中的最后面即可使用最强大的哔哩哔哩播放器了。</p>
 <div style="position: relative; padding: 30% 45%;">
 <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&bvid=BV1BF411D7LZ&cid=1265069356&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 </div>
+
 <p><strong>保姆教程 - 干净链接</strong></p>
 <p><strong>你复制的链接是<code>//player.bilibili.com/player.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1</code></strong></p>
 <p><strong>你只需要把<code>aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1</code></strong></p>
 <p><strong>复制粘贴到<code>src=&quot;//www.bilibili.com/blackboard/html5mobileplayer.html?链接内容&quot;</code></strong></p>
 <p><strong>变成<code>src=&quot;//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&quot;</code>即可</strong></p>
-<h2 id="哔哩哔哩播放器参数表">哔哩哔哩播放器参数表<a class="anchor" href="#哔哩哔哩播放器参数表">·</a></h2>
-<table>
+<h2 id="哔哩哔哩播放器参数表"><a href="#哔哩哔哩播放器参数表" class="headerlink" title="哔哩哔哩播放器参数表"></a>哔哩哔哩播放器参数表</h2><table>
 <thead>
 <tr>
-<th style="text-align:center">参数用途</th>
-<th style="text-align:center">参数名</th>
-<th style="text-align:center">使用方法</th>
+<th align="center">参数用途</th>
+<th align="center">参数名</th>
+<th align="center">使用方法</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">是否自动播放(默认否)</td>
-<td style="text-align:center">autoplay</td>
-<td style="text-align:center">1: 开启, 0: 关闭</td>
+<tbody><tr>
+<td align="center">是否自动播放(默认否)</td>
+<td align="center">autoplay</td>
+<td align="center">1: 开启, 0: 关闭</td>
 </tr>
 <tr>
-<td style="text-align:center">默认弹幕开关(默认开启)</td>
-<td style="text-align:center">danmaku</td>
-<td style="text-align:center">1: 开启, 0: 关闭</td>
+<td align="center">默认弹幕开关(默认开启)</td>
+<td align="center">danmaku</td>
+<td align="center">1: 开启, 0: 关闭</td>
 </tr>
 <tr>
-<td style="text-align:center">是否默认静音(默认否)</td>
-<td style="text-align:center">muted</td>
-<td style="text-align:center">1: 开启, 0: 关闭</td>
+<td align="center">是否默认静音(默认否)</td>
+<td align="center">muted</td>
+<td align="center">1: 开启, 0: 关闭</td>
 </tr>
 <tr>
-<td style="text-align:center">一键静音按钮是否显示(默认不显示</td>
-<td style="text-align:center">hasMuteButton</td>
-<td style="text-align:center">1: 开启, 0: 关闭</td>
+<td align="center">一键静音按钮是否显示(默认不显示</td>
+<td align="center">hasMuteButton</td>
+<td align="center">1: 开启, 0: 关闭</td>
 </tr>
 <tr>
-<td style="text-align:center">视频封面下方是都显示播放量弹幕量等信息(默认显示)</td>
-<td style="text-align:center">hideCoverInfo</td>
-<td style="text-align:center">1: 开启, 0: 关闭</td>
+<td align="center">视频封面下方是都显示播放量弹幕量等信息(默认显示)</td>
+<td align="center">hideCoverInfo</td>
+<td align="center">1: 开启, 0: 关闭</td>
 </tr>
 <tr>
-<td style="text-align:center">是否隐藏弹幕按钮（默认不隐藏）</td>
-<td style="text-align:center">hideDanmakuButton</td>
-<td style="text-align:center">1: 开启, 0: 关闭</td>
+<td align="center">是否隐藏弹幕按钮（默认不隐藏）</td>
+<td align="center">hideDanmakuButton</td>
+<td align="center">1: 开启, 0: 关闭</td>
 </tr>
 <tr>
-<td style="text-align:center">是否隐藏全屏按钮(默认显示)</td>
-<td style="text-align:center">noFullScreenButton</td>
-<td style="text-align:center">1: 开启, 0: 关闭</td>
+<td align="center">是否隐藏全屏按钮(默认显示)</td>
+<td align="center">noFullScreenButton</td>
+<td align="center">1: 开启, 0: 关闭</td>
 </tr>
 <tr>
-<td style="text-align:center">是否开始记忆播放(默认开启)</td>
-<td style="text-align:center">fjw</td>
-<td style="text-align:center">1: 开启, 0: 关闭</td>
+<td align="center">是否开始记忆播放(默认开启)</td>
+<td align="center">fjw</td>
+<td align="center">1: 开启, 0: 关闭</td>
 </tr>
 <tr>
-<td style="text-align:center">默认开始时间(默认0)</td>
-<td style="text-align:center">t</td>
-<td style="text-align:center">直接填写数值，单位秒</td>
+<td align="center">默认开始时间(默认0)</td>
+<td align="center">t</td>
+<td align="center">直接填写数值，单位秒</td>
 </tr>
 <tr>
-<td style="text-align:center">是否显示高清(默认否）</td>
-<td style="text-align:center">highQuality</td>
-<td style="text-align:center">1: 开启, 0: 关闭（貌似是无用的，各位可以试试）</td>
+<td align="center">是否显示高清(默认否）</td>
+<td align="center">highQuality</td>
+<td align="center">1: 开启, 0: 关闭（貌似是无用的，各位可以试试）</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>使用方法</strong></p>
-<p>比如使用<code>danmaku</code>弹幕参数 1=开启，0=关闭，我们直接在该链接的最后加上一个 <code>&amp;</code> 符号，然后再将 <code>danmaku=0</code> 黏贴上去即可。</p>
+<p>比如使用<code>danmaku</code>弹幕参数 1&#x3D;开启，0&#x3D;关闭，我们直接在该链接的最后加上一个 <code>&amp;</code> 符号，然后再将 <code>danmaku=0</code> 黏贴上去即可。</p>
 <p><strong>例如</strong></p>
 <p><code>//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&amp;danmaku=0</code></p>
 <p>把上面的链接复制到<code>src</code>中就可以实现关闭弹幕播放(有弹幕按钮后续想看可以开开)</p>
 <p><strong>可以添加多个参数，使用<code>?</code>隔开</strong></p>
 <p><code>//www.bilibili.com/blackboard/html5mobileplayer.html?aid=275949729&amp;bvid=BV1BF411D7LZ&amp;cid=1265069356&amp;p=1&amp;danmaku=0?&amp;muted=1</code></p>
-<h2 id="参考">参考<a class="anchor" href="#参考">·</a></h2>
-<p>注：本文参考了一些别的博主写法，全文文字以及展示都是由个人撰写，文章通俗易懂也更加全面。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>注：本文参考了一些别的博主写法，全文文字以及展示都是由个人撰写，文章通俗易懂也更加全面。</p>
 
     <hr>
 
@@ -562,7 +570,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1714719124644"></script>
+    <script async src="/js/copy-codeblock.js?v=1714721891549"></script>
   
 
   

@@ -11,12 +11,12 @@
 <script>LA.init({id:"3HQkdjDrH5f6vdfQ",ck:"3HQkdjDrH5f6vdfQ"})</script>
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<meta name="description" content="Git 是一个分布式的版本控制系统，是目前最先进的，几乎全网程序员都在用Git来进行版本管理。  Git 特点  分布式版本控制 非常方便的对比不同版本区别 多人协作可以快速检测是否有代码冲突   使用Git前配置   设置用户名 git config --global user.name &quot;Your Name&quot;   设置邮箱 git config --global user">
+<meta name="description" content="Git 是一个分布式的版本控制系统，是目前最先进的，几乎全网程序员都在用Git来进行版本管理。  Git 特点  分布式版本控制 非常方便的对比不同版本区别 多人协作可以快速检测是否有代码冲突   使用Git前配置  设置用户名 git config --global user.name &quot;Your Name&quot;  设置邮箱 git config --global user.e">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 常用命令">
 <meta property="og:url" content="https://sawr.gitee.io/2023/09/19/tools/gitused/index.html">
 <meta property="og:site_name" content="奥奥の探索日记">
-<meta property="og:description" content="Git 是一个分布式的版本控制系统，是目前最先进的，几乎全网程序员都在用Git来进行版本管理。  Git 特点  分布式版本控制 非常方便的对比不同版本区别 多人协作可以快速检测是否有代码冲突   使用Git前配置   设置用户名 git config --global user.name &quot;Your Name&quot;   设置邮箱 git config --global user">
+<meta property="og:description" content="Git 是一个分布式的版本控制系统，是目前最先进的，几乎全网程序员都在用Git来进行版本管理。  Git 特点  分布式版本控制 非常方便的对比不同版本区别 多人协作可以快速检测是否有代码冲突   使用Git前配置  设置用户名 git config --global user.name &quot;Your Name&quot;  设置邮箱 git config --global user.e">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-18T16:00:00.000Z">
 <meta property="article:modified_time" content="2024-04-10T09:13:26.816Z">
@@ -28,17 +28,17 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714719124741">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714721891664">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4474869_y3x62ji5c4.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1714719124741">
+<link rel="stylesheet" href="/css/style.css?v=1714721891664">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1714719124741">
+        <link rel="stylesheet" href="/custom.css?v=1714721891664">
     
 
 
@@ -48,7 +48,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1714719124741"></script>
+<script async src="/js/app.js?v=1714721891664"></script>
 
  
 
@@ -134,7 +134,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1714719124742"></script>
+	<script async src="/js/search.js?v=1714721891664"></script>
 
 
 
@@ -380,50 +380,39 @@
 <hr>
 <p><strong>使用Git前配置</strong></p>
 <ol>
-<li>
-<p>设置用户名
-<code>git config --global user.name &quot;Your Name&quot;</code></p>
+<li><p>设置用户名<br> <code>git config --global user.name &quot;Your Name&quot;</code></p>
 </li>
-<li>
-<p>设置邮箱
-<code>git config --global user.email &quot;email@example.com&quot;</code></p>
+<li><p>设置邮箱<br> <code>git config --global user.email &quot;email@example.com&quot;</code></p>
 </li>
-<li>
-<p>查看 Git 配置信息
-<code>git config --list</code></p>
+<li><p>查看 Git 配置信息<br> <code>git config --list</code></p>
 </li>
 </ol>
 <blockquote>
 <p>如果想要修改配置，则只需要重新执行 1 2 两条命令即可，这些配置只需要配置一次即可。</p>
 </blockquote>
-<h2 id="Git-命令">Git 命令<a class="anchor" href="#Git-命令">·</a></h2>
-<ol>
+<h2 id="Git-命令"><a href="#Git-命令" class="headerlink" title="Git 命令"></a>Git 命令</h2><ol>
 <li><code>git init</code> : 初始化 , 生成 git 仓库</li>
-<li><code>git add</code> : 把文件添加到仓库(在暂存区)
-<ul>
+<li><code>git add</code> : 把文件添加到仓库(在暂存区)<ul>
 <li>可以跟的值：file.xx 某一个文件</li>
-<li>. / -A 代表所有文件</li>
+<li>. &#x2F; -A 代表所有文件</li>
 </ul>
 </li>
-<li><code>git commit -m '提示提交的说明'</code> : 把文件提交到仓库(提交到版本库)</li>
+<li><code>git commit -m &#39;提示提交的说明&#39;</code> : 把文件提交到仓库(提交到版本库)</li>
 <li><code>git status</code> : 查看暂存区的工作状态</li>
 <li><code>git reset HEAD &lt;file&gt;</code> : 可以把暂存区的修改撤销掉（unstage），重新放回工作区</li>
 <li><code>git checkout -- file</code> : 可以丢弃工作区的修改,(可以把仓库中的文件下载到本地)</li>
-<li><code>git reset --hard HEAD^</code> : 版本回退
-<ul>
-<li>一个&quot;^&quot;代表一层版本</li>
+<li><code>git reset --hard HEAD^</code> : 版本回退<ul>
+<li>一个”^”代表一层版本</li>
 </ul>
 </li>
-<li><code>git log</code> : 查看提交记录
-<ul>
+<li><code>git log</code> : 查看提交记录<ul>
 <li>运行后鼠标会悬挂，输入字母’q’退出</li>
 </ul>
 </li>
 <li><code>git reflog</code> : 查看所有历史记录</li>
 <li><code>git rm</code> : 删除命令</li>
 </ol>
-<h2 id="Git-分支">Git 分支<a class="anchor" href="#Git-分支">·</a></h2>
-<ol>
+<h2 id="Git-分支"><a href="#Git-分支" class="headerlink" title="Git 分支"></a>Git 分支</h2><ol>
 <li>不在源代码上直接修改，可以开启具体相同代码的分支，在分支上进行开发，开发完成后再合并到主分支即可</li>
 <li><code>git checkout -b name</code> : 开启一个分支，并切换到这个分支下 <code>git branch name</code> : 开启一个分支 <code>git checkout name</code> : 切换分支</li>
 <li><code>git branch</code> : 查看分支 (分支前有*符号就是当前所在分支)</li>
@@ -433,25 +422,21 @@
 <li><code>git branch -d name</code> 删除分支（记得不要在当前分支下删，会删除失败）</li>
 <li><code>git checkout -b [本地分支名] [origin/远程分支名]</code> 从远程仓库拉本地不存在的分支</li>
 </ol>
-<h2 id="标签">标签<a class="anchor" href="#标签">·</a></h2>
-<ol>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ol>
 <li><code>git tag vx.x.x</code> : 创建</li>
 <li><code>git tag</code> : 查看标签</li>
 <li><code>git show &lt;tagname&gt;</code> : 查看标签详情</li>
 </ol>
-<h2 id="远程仓库">远程仓库<a class="anchor" href="#远程仓库">·</a></h2>
-<ol>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><ol>
 <li>克隆功能 <code>git clone git@gitee.com:gavinzhulei/vue-form-making.git</code></li>
-<li>本地已经有clone下来的仓库了，需要关联远程仓库（比如公司的仓库） <code>git remote add origin https://gitee.com/numbrun/vuepress-blog.git</code>
-<ul>
+<li>本地已经有clone下来的仓库了，需要关联远程仓库（比如公司的仓库） <code>git remote add origin https://gitee.com/numbrun/vuepress-blog.git</code><ul>
 <li>origin 是默认，关联多个仓库的时候可以替换别的名字，比如 company</li>
 </ul>
 </li>
 <li><code>git remote -v</code> 查看远程仓库地址</li>
 <li>推送功能 本地向远程仓库推送代码： <code>git push oigin develop</code></li>
 <li>拉取功能 从远程仓库把代码下载到本地 : <code>git pull company develop</code></li>
-<li>标签
-<ol>
+<li>标签<ol>
 <li><code>git push origin &lt;tagname&gt;</code> : 向远程仓库推送 tag</li>
 <li><code>git push origin --tags</code> : 一次性推送全部尚未推送到远程的本地标签</li>
 <li><code>git tag -d name</code> : 删除本地 tag</li>
@@ -459,16 +444,13 @@
 </ol>
 </li>
 </ol>
-<h2 id="Git-Stash">Git Stash<a class="anchor" href="#Git-Stash">·</a></h2>
-<ol>
+<h2 id="Git-Stash"><a href="#Git-Stash" class="headerlink" title="Git Stash"></a>Git Stash</h2><ol>
 <li><code>git stash save</code> 能够将所有未提交的修改（工作区和暂存区）保存至堆栈中，用于后续恢复当前工作目录。</li>
 <li><code>git stash pop</code> 将当前stash中的内容弹出，并应用到当前分支对应的工作目录上。</li>
 <li><code>git stash list</code> 所有保存的记录列表</li>
 <li><code>git stash clear</code> 删除所有保存</li>
 </ol>
-<h2 id="我的-Git-提交名模式">我的 Git 提交名模式<a class="anchor" href="#我的-Git-提交名模式">·</a></h2>
-<h3 id="第一种"><strong>第一种</strong><a class="anchor" href="#第一种">·</a></h3>
-<blockquote>
+<h2 id="我的-Git-提交名模式"><a href="#我的-Git-提交名模式" class="headerlink" title="我的 Git 提交名模式"></a>我的 Git 提交名模式</h2><h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a><strong>第一种</strong></h3><blockquote>
 <p>远程仓库有两个，一个是自己的，一个是公司的,公司的仓库是fork来的，所以你的远程仓库其实有两个 注：可通过 <code>git remote -v</code> 查看</p>
 </blockquote>
 <p>步骤如下</p>
@@ -486,9 +468,9 @@
 <span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">push</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">origin</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">develop</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">//提到自己远程的仓库的分支</span><span style="color: #E1E4E8">  </span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #B392F0">//提交到自己的仓库后，在gitlab上操作-&gt;与公司仓库进行合并</span></span></code></pre></div></div></figure>
+
 <p>这种的相对比较规范性，因为主仓库的commit会更精华简介性，因为你在本地可能有无数次的commit，会导致仓库臃肿</p>
-<h3 id="第二种"><strong>第二种</strong><a class="anchor" href="#第二种">·</a></h3>
-<blockquote>
+<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a><strong>第二种</strong></h3><blockquote>
 <p>远程仓库只有一个，主要通过分支管理，有一个主分支，如dev，还有其他的分支，包括属于自己的分支名，或以某个功能开发模块命名的分支等等 步骤如下</p>
 </blockquote>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">clone</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">自己的仓库地址.git</span></span>
@@ -516,14 +498,14 @@
 <span class="line"><span style="color: #6A737D"># 1. 去gitlab做合并请求操作</span></span>
 <span class="line"><span style="color: #B392F0">通过网页端</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">做合并请求，可能会有审核人审核，包括权限等等问题</span></span>
 <span class="line"><span style="color: #B392F0">通过后你的代码就合并到主分支上了</span></span></code></pre></div></div></figure>
-<h3 id="常见问题"><strong>常见问题</strong><a class="anchor" href="#常见问题">·</a></h3>
-<ol>
+
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a><strong>常见问题</strong></h3><ol>
 <li>远程新建一个分支 production-type-set ，本地没有 需要切到production-type-set 这时候直接切<code>git checkout production-type-set</code>是会报错的</li>
 </ol>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">runnumb@h</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">标准版</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">%</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">checkout</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">production-type-set</span></span>
 <span class="line"><span style="color: #B392F0">error:</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">pathspec</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;production-type-set&#39;</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">did</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">not</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">match</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">any</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">file</span><span style="color: #E1E4E8">(</span><span style="color: #B392F0">s</span><span style="color: #E1E4E8">) </span><span style="color: #9ECBFF">known</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">to</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">git</span></span></code></pre></div></div></figure>
-<h3 id="解决方法"><strong>解决方法</strong><a class="anchor" href="#解决方法">·</a></h3>
-<ol>
+
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a><strong>解决方法</strong></h3><ol>
 <li>首先我们看一下远程分支情况：<code>git branch -a</code></li>
 <li>在这里没有看到我们想要的分支,先获取所有分支 <code>git fetch</code></li>
 <li>这时在切到<code>git checkout production-type-set</code>即可</li>
@@ -558,7 +540,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1714719124645"></script>
+    <script async src="/js/copy-codeblock.js?v=1714721891552"></script>
   
 
   

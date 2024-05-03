@@ -40,17 +40,17 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714719124727">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714721891642">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4474869_y3x62ji5c4.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1714719124727">
+<link rel="stylesheet" href="/css/style.css?v=1714721891642">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1714719124727">
+        <link rel="stylesheet" href="/custom.css?v=1714721891642">
     
 
 
@@ -60,7 +60,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1714719124727"></script>
+<script async src="/js/app.js?v=1714721891642"></script>
 
  
 
@@ -146,7 +146,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1714719124727"></script>
+	<script async src="/js/search.js?v=1714721891643"></script>
 
 
 
@@ -398,30 +398,25 @@
 <li>Garmin_to_Strava(Using Garmin Run, Strava backup data)</li>
 <li>Strava_to_Garmin(Using Strava Run, Garmin backup data)</li>
 </ul>
-<h2 id="搭建准备">搭建准备<a class="anchor" href="#搭建准备">·</a></h2>
-<h3 id="Node-js">Node.js<a class="anchor" href="#Node-js">·</a></h3>
-<p>官网：<a target="_blank" rel="noopener" href="https://nodejs.org/en">Node.js (nodejs.org)</a></p>
-<h3 id="Git">Git<a class="anchor" href="#Git">·</a></h3>
-<p>官网：<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git - Downloading Package (git-scm.com)</a></p>
-<h3 id="Python">Python<a class="anchor" href="#Python">·</a></h3>
-<p>官网：<a target="_blank" rel="noopener" href="https://www.python.org/">python.org</a></p>
+<h2 id="搭建准备"><a href="#搭建准备" class="headerlink" title="搭建准备"></a>搭建准备</h2><h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>官网：<a target="_blank" rel="noopener" href="https://nodejs.org/en">Node.js (nodejs.org)</a></p>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>官网：<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git - Downloading Package (git-scm.com)</a></p>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>官网：<a target="_blank" rel="noopener" href="https://www.python.org/">python.org</a></p>
 <p>这些都是老朋友了，要想快速搞，环境不能少。</p>
-<h2 id="开始搭建">开始搭建<a class="anchor" href="#开始搭建">·</a></h2>
-<p>克隆项目</p>
+<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><p>克隆项目</p>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">clone https://github.com/yihong0618/running_page.git</span></span></code></pre></div></div></figure>
+
 <p>依次执行</p>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">pip3</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">install</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-r</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">requirements.txt</span></span>
 <span class="line"><span style="color: #B392F0">yarn</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">install</span></span>
 <span class="line"><span style="color: #B392F0">yarn</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">develop</span></span></code></pre></div></div></figure>
+
 <p>到最后终端显示如下即可打开<code>http://localhost:5173/</code>查看。</p>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://gitee.com/sawr/personalimage/raw/master/img/20231027211326.png" alt="" data-caption="" loading="lazy"></p>
+<p><img src="https://gitee.com/sawr/personalimage/raw/master/img/20231027211326.png"></p>
 <p>默认打开的是原作者的数据，所以我们需要来制作自己的数据。</p>
-<h2 id="修改代码">修改代码<a class="anchor" href="#修改代码">·</a></h2>
-<p>首先打开 <code>.github/workflows</code> 下的 <code>run_data_sync.yml</code> 文件，定位到第 22 行代码的位置。</p>
+<h2 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h2><p>首先打开 <code>.github/workflows</code> 下的 <code>run_data_sync.yml</code> 文件，定位到第 22 行代码的位置。</p>
 <p><code>RUN_TYPE</code>填入你平时在用的运动 App，例如 keep，下面的 ATHLETE、TITLE、GITHUB_NAME、GITHUB_EMAIL，分别更改为自己的昵称、最终呈现在网站的热力图的标题、GitHub ID 和邮箱。</p>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://gitee.com/sawr/personalimage/raw/master/img/20231027212516.png" alt="" data-caption="" loading="lazy"></p>
-<h3 id="个性化设置">个性化设置<a class="anchor" href="#个性化设置">·</a></h3>
-<p>在仓库目录下找到 <code>src/static/site-metadata.ts</code>，找到以下内容并修改成你自己想要的。</p>
+<p><img src="https://gitee.com/sawr/personalimage/raw/master/img/20231027212516.png"></p>
+<h3 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h3><p>在仓库目录下找到 <code>src/static/site-metadata.ts</code>，找到以下内容并修改成你自己想要的。</p>
 <figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">siteMetadata</span><span style="color: #E1E4E8">: {</span></span>
 <span class="line"><span style="color: #E1E4E8">  </span><span style="color: #B392F0">siteTitle</span><span style="color: #E1E4E8">: </span><span style="color: #9ECBFF">&#39;Running Page&#39;</span><span style="color: #E1E4E8">, #网站标题</span></span>
 <span class="line"><span style="color: #E1E4E8">  </span><span style="color: #B392F0">siteUrl</span><span style="color: #E1E4E8">: </span><span style="color: #9ECBFF">&#39;https://yihong.run&#39;</span><span style="color: #E1E4E8">, #网站域名</span></span>
@@ -438,11 +433,13 @@
 <span class="line"><span style="color: #E1E4E8">    },</span></span>
 <span class="line"><span style="color: #E1E4E8">  ],</span></span>
 <span class="line"><span style="color: #E1E4E8">},</span></span></code></pre></div></div></figure>
+
 <p>修改 <code>src/utils/const.ts</code> 文件中的样式：</p>
 <figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">// styling: 关闭虚线：设置为 `false`</span></span>
 <span class="line"><span style="color: #F97583">const</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">USE_DASH_LINE</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">true</span><span style="color: #E1E4E8">;</span></span>
 <span class="line"><span style="color: #6A737D">// styling: 透明度：[0, 1]</span></span>
 <span class="line"><span style="color: #F97583">const</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">LINE_OPACITY</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0.4</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <p>隐私保护：设置下面环境变量：</p>
 <figure class="shiki js"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8"># 忽略每个 polyline 的起点和终点的长度（单位：米）。</span></span>
 <span class="line"><span style="color: #79B8FF">IGNORE_START_END_RANGE</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">200</span></span>
@@ -455,32 +452,36 @@
 <span class="line"></span>
 <span class="line"><span style="color: #E1E4E8"># 在保存到数据库之前进行过滤，你会丢失一些数据，但可以保护你的隐私，如果你使用的是公共仓库，建议设置为 </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">。不设置可关闭。</span></span>
 <span class="line"><span style="color: #79B8FF">IGNORE_BEFORE_SAVING</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span></span></code></pre></div></div></figure>
+
 <hr>
 <p>找到到 assets 文件夹，只保留其中的 3 个文件：<code>start.svg</code>、<code>end.svg</code>、<code>grid.svg</code>、<code>index.tsx</code>，将其余的 svg 文件删除，因为其他的文件都是原作者的，我们不需要。</p>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://gitee.com/sawr/personalimage/raw/master/img/20231027221916.png" alt="" data-caption="" loading="lazy"></p>
+<p><img src="https://gitee.com/sawr/personalimage/raw/master/img/20231027221916.png"></p>
 <p>到 <code>src/static</code> 文件夹，删除其中的 <code>activities.json</code> 文件.</p>
 <p>到 <code>run_page</code> 文件夹，删除其中的 <code>data.db</code> 文件。</p>
-<h2 id="配置Keep">配置Keep<a class="anchor" href="#配置Keep">·</a></h2>
-<p>确保自己的账号能用<strong>手机号 + 密码登陆</strong> (不要忘记添加 secret 和更改自己的账号，在 GitHub Actions 中), 注：海外手机号需要换成国内 +86 的手机号</p>
+<h2 id="配置Keep"><a href="#配置Keep" class="headerlink" title="配置Keep"></a>配置Keep</h2><p>确保自己的账号能用<strong>手机号 + 密码登陆</strong> (不要忘记添加 secret 和更改自己的账号，在 GitHub Actions 中), 注：海外手机号需要换成国内 +86 的手机号</p>
 <p>在终端输入以下命令：</p>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">python</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">run_page/keep_sync.py</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">手机号</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">密码</span></span></code></pre></div></div></figure>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://gitee.com/sawr/personalimage/raw/master/img/20231027214723.png" alt="" data-caption="" loading="lazy"></p>
+
+<p><img src="https://gitee.com/sawr/personalimage/raw/master/img/20231027214723.png"></p>
 <p>运行完成以后就会在代码文件夹中的相应位置，生成我们需要的运动数据，具体体现为文件夹中新增了两个文件，分别是 <code>activities.json</code> 和 <code>data.db</code> 文件，就是我们之前删除的。</p>
-<h3 id="生成数据展示">生成数据展示<a class="anchor" href="#生成数据展示">·</a></h3>
-<p>可以改下方参数 (–special-distance 10 --special-distance2 20, 10km~20km 展示为 special-color1 20km 以上展示为 special-color2, --min-distance 10.0 用来筛选 10km 以上的)</p>
+<h3 id="生成数据展示"><a href="#生成数据展示" class="headerlink" title="生成数据展示"></a>生成数据展示</h3><p>可以改下方参数 (–special-distance 10 –special-distance2 20, 10km~20km 展示为 special-color1 20km 以上展示为 special-color2, –min-distance 10.0 用来筛选 10km 以上的)</p>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">python</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">run_page/gen_svg.py</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--from-db</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--title</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;${{ </span><span style="color: #E1E4E8">env</span><span style="color: #9ECBFF">.</span><span style="color: #E1E4E8">TITLE</span><span style="color: #9ECBFF"> }}&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--type</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">github</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--athlete</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;${{ </span><span style="color: #E1E4E8">env</span><span style="color: #9ECBFF">.</span><span style="color: #E1E4E8">ATHLETE</span><span style="color: #9ECBFF"> }}&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-distance</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">10</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-distance2</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">20</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-color</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">yellow</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-color2</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">red</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--output</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">assets/github.svg</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--use-localtime</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--min-distance</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0.5</span></span></code></pre></div></div></figure>
+
 <p>例如：</p>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">python</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">run_page/gen_svg.py</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--from-db</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--title</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;累计跑步热力图&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--type</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">github</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--athlete</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;奥奥的跑步日记&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-distance</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">10</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-distance2</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">20</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-color</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">yellow</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-color2</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">red</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--output</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">assets/github.svg</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--use-localtime</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--min-distance</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0.5</span></span></code></pre></div></div></figure>
+
 <hr>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">python</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">run_page/gen_svg.py</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--from-db</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--title</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;${{ </span><span style="color: #E1E4E8">env</span><span style="color: #9ECBFF">.</span><span style="color: #E1E4E8">TITLE_GRID</span><span style="color: #9ECBFF"> }}&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--type</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">grid</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--athlete</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;${{ </span><span style="color: #E1E4E8">env</span><span style="color: #9ECBFF">.</span><span style="color: #E1E4E8">ATHLETE</span><span style="color: #9ECBFF"> }}&quot;</span><span style="color: #E1E4E8">  </span><span style="color: #79B8FF">--output</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">assets/grid.svg</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--min-distance</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">10.0</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-color</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">yellow</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-color2</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">red</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-distance</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">20</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-distance2</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">40</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--use-localtime</span></span></code></pre></div></div></figure>
+
 <p>例如：我这个是2KM-10KM</p>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">python</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">run_page/gen_svg.py</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--from-db</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--title</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;五公里以上&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--type</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">grid</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--athlete</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot;奥奥的跑步日记&quot;</span><span style="color: #E1E4E8">  </span><span style="color: #79B8FF">--output</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">assets/grid.svg</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--min-distance</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">5</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-color</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">yellow</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-color2</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">red</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-distance</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">5</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--special-distance2</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">20</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--use-localtime</span></span></code></pre></div></div></figure>
+
 <p><strong>生成年度环形数据</strong></p>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">python</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">run_page/gen_svg.py</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--from-db</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--type</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">circular</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">--use-localtime</span></span></code></pre></div></div></figure>
+
 <p>生成完毕以后就可以查看自己的数据了，我在2020年的时候还是一个积极运动的热血青年，现在也是青年但是不够热血，我要多跑跑步。</p>
-<h2 id="配置GitHub">配置GitHub<a class="anchor" href="#配置GitHub">·</a></h2>
-<p>新建一个仓库，名字都无所谓。</p>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://gitee.com/sawr/personalimage/raw/master/img/20231028010934.png" alt="" data-caption="" loading="lazy"></p>
+<h2 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h2><p>新建一个仓库，名字都无所谓。</p>
+<p><img src="https://gitee.com/sawr/personalimage/raw/master/img/20231028010934.png"></p>
 <p>把代码推送到GitHub仓库中。</p>
 <figure class="shiki bash"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">init</span></span>
 <span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">add</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">.</span></span>
@@ -488,23 +489,21 @@
 <span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">branch</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-M</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">main</span></span>
 <span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">remote</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">add</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">origin</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">https://github.com/shaoao/running.git</span></span>
 <span class="line"><span style="color: #B392F0">git</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">push</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">-u</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">origin</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">main</span></span></code></pre></div></div></figure>
+
 <p>执行完毕以后就可以看到代码已经跑到GitHub仓库里了。</p>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://gitee.com/sawr/personalimage/raw/master/img/20231028011228.png" alt="" data-caption="" loading="lazy"></p>
-<h2 id="GitHub-仓库配置密钥和-Token">GitHub 仓库配置密钥和 Token<a class="anchor" href="#GitHub-仓库配置密钥和-Token">·</a></h2>
-<h3 id="配置仓库">配置仓库<a class="anchor" href="#配置仓库">·</a></h3>
-<p>这个项目的作者在代码中用到了<strong>GitHub Actions</strong>自动化技术，每天会自动运行一次 <strong>Run Data Sync</strong>，可以及时地将我们的运动数据更新到网站上。</p>
+<p><img src="https://gitee.com/sawr/personalimage/raw/master/img/20231028011228.png"></p>
+<h2 id="GitHub-仓库配置密钥和-Token"><a href="#GitHub-仓库配置密钥和-Token" class="headerlink" title="GitHub 仓库配置密钥和 Token"></a>GitHub 仓库配置密钥和 Token</h2><h3 id="配置仓库"><a href="#配置仓库" class="headerlink" title="配置仓库"></a>配置仓库</h3><p>这个项目的作者在代码中用到了<strong>GitHub Actions</strong>自动化技术，每天会自动运行一次 <strong>Run Data Sync</strong>，可以及时地将我们的运动数据更新到网站上。</p>
 <p>配置密钥，我们要按照下图进行操作，打开仓库的 <strong>Settings</strong> 页面，左侧切换到 <strong>Secrets and vairables</strong> 选项卡，点击右上角的 <strong>New repository secret</strong>，需要我们填入<strong>密钥名称 Name</strong> 和<strong>值 Value</strong>。</p>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://gitee.com/sawr/personalimage/raw/master/img/20231028110300.png" alt="" data-caption="" loading="lazy"></p>
+<p><img src="https://gitee.com/sawr/personalimage/raw/master/img/20231028110300.png"></p>
 <p>这里的密钥名称取决于你目前正在使用的运动 App，<strong>不同 App 的密钥名称存在着区别</strong>，查看密钥名称需要打开 <code>.github/workflows/run_data_sync.yml</code> 文件。</p>
 <p>以我在用的 Keep 为例，它的两个密钥名称分别为 <strong>KEEP_MOBILE</strong> 和 <strong>KEEP_PASSWORD</strong>，它们的 Value 值其实分别对应——注册 Keep 账号的手机号和密码。</p>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://gitee.com/sawr/personalimage/raw/master/img/20231028110453.png" alt="" data-caption="" loading="lazy"></p>
-<h3 id="配置Token">配置Token<a class="anchor" href="#配置Token">·</a></h3>
-<p>为了方便可以直接打开<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">Personal Access Tokens</a>进入，然后点击右上角的 <strong>Generate new token</strong>，生成一个新的 Token。</p>
+<p><img src="https://gitee.com/sawr/personalimage/raw/master/img/20231028110453.png"></p>
+<h3 id="配置Token"><a href="#配置Token" class="headerlink" title="配置Token"></a>配置Token</h3><p>为了方便可以直接打开<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">Personal Access Tokens</a>进入，然后点击右上角的 <strong>Generate new token</strong>，生成一个新的 Token。</p>
 <p>打开会让你输入密码验证，生成 Token 时，有两个注意点，将 Token 的<strong>有效期 Expiration</strong> 设置为 No expiration(长期有效)，<strong>勾选下面的所有复选框</strong>，将所有权限都打开。</p>
 <p><strong>生成的Token</strong></p>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://gitee.com/sawr/personalimage/raw/master/img/20231028111625.png" alt="" data-caption="" loading="lazy"></p>
+<p><img src="https://gitee.com/sawr/personalimage/raw/master/img/20231028111625.png"></p>
 <p>接下来依次点击「Actions」&gt;「Run Data Svnc」&gt;「Run workflow」执行数据同步。</p>
-<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://gitee.com/sawr/personalimage/raw/master/img/20231028113059.png" alt="" data-caption="" loading="lazy"></p>
+<p><img src="https://gitee.com/sawr/personalimage/raw/master/img/20231028113059.png"></p>
 <p>这样就会每天都把keep的数据给同步到网站上了。</p>
 <p>接下来就是部署了，很简单就不解释了。</p>
 
@@ -537,7 +536,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1714719124642"></script>
+    <script async src="/js/copy-codeblock.js?v=1714721891548"></script>
   
 
   

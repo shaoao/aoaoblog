@@ -11,12 +11,12 @@
 <script>LA.init({id:"3HQkdjDrH5f6vdfQ",ck:"3HQkdjDrH5f6vdfQ"})</script>
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<meta name="description" content="MySQL作为一个常用的关系型数据库，其语法也是比较简单，但是知识点较多，所以为了巩固记忆，写此文章，方便复习。本文直接上干货，历史之类的就不过多介绍。  数据库的类型· MySQL数据库存储数据时，不同的数据类型决定了 MySQL存储数据方式的不同。为此，MySQL数据库提供了多种数据类型，其中包括整数类型、浮点数类型、定点 数类型、日期和时间类型、字符串类型、二进制…等等数据类型。  1.整">
+<meta name="description" content="MySQL作为一个常用的关系型数据库，其语法也是比较简单，但是知识点较多，所以为了巩固记忆，写此文章，方便复习。本文直接上干货，历史之类的就不过多介绍。  数据库的类型MySQL数据库存储数据时，不同的数据类型决定了 MySQL存储数据方式的不同。为此，MySQL数据库提供了多种数据类型，其中包括整数类型、浮点数类型、定点 数类型、日期和时间类型、字符串类型、二进制…等等数据类型。  1.整数类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL基础语法">
 <meta property="og:url" content="https://sawr.gitee.io/2023/09/04/mysql/teach/index.html">
 <meta property="og:site_name" content="奥奥の探索日记">
-<meta property="og:description" content="MySQL作为一个常用的关系型数据库，其语法也是比较简单，但是知识点较多，所以为了巩固记忆，写此文章，方便复习。本文直接上干货，历史之类的就不过多介绍。  数据库的类型· MySQL数据库存储数据时，不同的数据类型决定了 MySQL存储数据方式的不同。为此，MySQL数据库提供了多种数据类型，其中包括整数类型、浮点数类型、定点 数类型、日期和时间类型、字符串类型、二进制…等等数据类型。  1.整">
+<meta property="og:description" content="MySQL作为一个常用的关系型数据库，其语法也是比较简单，但是知识点较多，所以为了巩固记忆，写此文章，方便复习。本文直接上干货，历史之类的就不过多介绍。  数据库的类型MySQL数据库存储数据时，不同的数据类型决定了 MySQL存储数据方式的不同。为此，MySQL数据库提供了多种数据类型，其中包括整数类型、浮点数类型、定点 数类型、日期和时间类型、字符串类型、二进制…等等数据类型。  1.整数类">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-03T16:00:00.000Z">
 <meta property="article:modified_time" content="2024-04-10T09:00:26.358Z">
@@ -28,17 +28,17 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714719124750">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1714721891671">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4474869_y3x62ji5c4.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1714719124750">
+<link rel="stylesheet" href="/css/style.css?v=1714721891671">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1714719124750">
+        <link rel="stylesheet" href="/custom.css?v=1714721891671">
     
 
 
@@ -48,7 +48,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1714719124750"></script>
+<script async src="/js/app.js?v=1714721891671"></script>
 
  
 
@@ -134,7 +134,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1714719124750"></script>
+	<script async src="/js/search.js?v=1714721891671"></script>
 
 
 
@@ -371,11 +371,9 @@
     <blockquote>
 <p><strong>MySQL</strong>作为一个常用的关系型数据库，其语法也是比较简单，但是知识点较多，所以为了巩固记忆，写此文章，方便复习。本文直接上干货，历史之类的就不过多介绍。</p>
 </blockquote>
-<h2 id="数据库的类型">数据库的类型<a class="anchor" href="#数据库的类型">·</a></h2>
-<p>MySQL数据库存储数据时，不同的数据类型决定了 MySQL存储数据方式的不同。为此，MySQL数据库提供了多种数据类型，其中包括整数类型、浮点数类型、定点 数类型、日期和时间类型、字符串类型、二进制…等等数据类型。</p>
+<h2 id="数据库的类型"><a href="#数据库的类型" class="headerlink" title="数据库的类型"></a>数据库的类型</h2><p>MySQL数据库存储数据时，不同的数据类型决定了 MySQL存储数据方式的不同。为此，MySQL数据库提供了多种数据类型，其中包括整数类型、浮点数类型、定点 数类型、日期和时间类型、字符串类型、二进制…等等数据类型。</p>
 <hr>
-<h3 id="1-整数类型">1.整数类型<a class="anchor" href="#1-整数类型">·</a></h3>
-<table>
+<h3 id="1-整数类型"><a href="#1-整数类型" class="headerlink" title="1.整数类型"></a>1.整数类型</h3><table>
 <thead>
 <tr>
 <th>数据类型</th>
@@ -384,8 +382,7 @@
 <th>有符号数的取值范围</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><strong>TINYINT</strong></td>
 <td>1</td>
 <td>0~255</td>
@@ -415,75 +412,69 @@
 <td>0~18446744073709551615</td>
 <td>-9223372036854775808~9223372036854775808</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <hr>
-<h3 id="2-浮点数类型和定点数类型">2.浮点数类型和定点数类型<a class="anchor" href="#2-浮点数类型和定点数类型">·</a></h3>
-<p>在MySQL数据库中使用浮点数和定点数来存储小数。</p>
+<h3 id="2-浮点数类型和定点数类型"><a href="#2-浮点数类型和定点数类型" class="headerlink" title="2.浮点数类型和定点数类型"></a>2.浮点数类型和定点数类型</h3><p>在MySQL数据库中使用浮点数和定点数来存储小数。</p>
 <p>浮点数的类型有两种：</p>
-<p>单精度浮点数类型：<code>FLOAT</code></p>
+<p>单精度浮点数类型：<code>FLOAT</code> </p>
 <p>双精度浮点数类型：<code>DOUBLE</code></p>
 <p>定点数类型：<code>DECIMAL（M,D）</code></p>
 <ul>
 <li>DECIMAL类型的有效取值范围是由M和D决定的。其中，M表示的是数据的长 度，D表示的是小数点后的长度。比如，将数据类型为DECIMAL(10,2)的数据10.54321 插人数据库后显示的结果为10.54.</li>
 </ul>
 <hr>
-<h3 id="3-字符串类型">3.字符串类型<a class="anchor" href="#3-字符串类型">·</a></h3>
-<p>表示字符串的类型有两种：</p>
+<h3 id="3-字符串类型"><a href="#3-字符串类型" class="headerlink" title="3.字符串类型"></a>3.字符串类型</h3><p>表示字符串的类型有两种：</p>
 <p><code>CHAR</code>：<strong>当数据为CHAR(M)类型时，不管插入值的长度是实际是多少它所占用的存储空间都是M个字节。</strong></p>
 <p><code>VARCHAR</code>：<strong>VARCHAR(M)所对应的数据为所占用的字节数为实际长度加1</strong></p>
 <p>例如：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">插入值</th>
-<th style="text-align:center">CHAR(3)</th>
-<th style="text-align:center">存储需求</th>
-<th style="text-align:center">VARCHAR(3)</th>
-<th style="text-align:center">存储需求</th>
+<th align="center">插入值</th>
+<th align="center">CHAR(3)</th>
+<th align="center">存储需求</th>
+<th align="center">VARCHAR(3)</th>
+<th align="center">存储需求</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">‘’</td>
-<td style="text-align:center">‘’</td>
-<td style="text-align:center">3个字节</td>
-<td style="text-align:center">‘’</td>
-<td style="text-align:center">1个字节</td>
+<tbody><tr>
+<td align="center">‘’</td>
+<td align="center">‘’</td>
+<td align="center">3个字节</td>
+<td align="center">‘’</td>
+<td align="center">1个字节</td>
 </tr>
 <tr>
-<td style="text-align:center">‘a’</td>
-<td style="text-align:center">‘a’</td>
-<td style="text-align:center">3个字节</td>
-<td style="text-align:center">‘a’</td>
-<td style="text-align:center">2个字节</td>
+<td align="center">‘a’</td>
+<td align="center">‘a’</td>
+<td align="center">3个字节</td>
+<td align="center">‘a’</td>
+<td align="center">2个字节</td>
 </tr>
 <tr>
-<td style="text-align:center">‘ab’</td>
-<td style="text-align:center">‘ab’</td>
-<td style="text-align:center">3个字节</td>
-<td style="text-align:center">‘ab’</td>
-<td style="text-align:center">3个字节</td>
+<td align="center">‘ab’</td>
+<td align="center">‘ab’</td>
+<td align="center">3个字节</td>
+<td align="center">‘ab’</td>
+<td align="center">3个字节</td>
 </tr>
 <tr>
-<td style="text-align:center">‘abc’</td>
-<td style="text-align:center">‘ab’</td>
-<td style="text-align:center">3个字节</td>
-<td style="text-align:center">‘abc’</td>
-<td style="text-align:center">4个字节</td>
+<td align="center">‘abc’</td>
+<td align="center">‘ab’</td>
+<td align="center">3个字节</td>
+<td align="center">‘abc’</td>
+<td align="center">4个字节</td>
 </tr>
 <tr>
-<td style="text-align:center">‘abcd’</td>
-<td style="text-align:center">‘ab’</td>
-<td style="text-align:center">3个字节</td>
-<td style="text-align:center">‘abc’</td>
-<td style="text-align:center">4字节</td>
+<td align="center">‘abcd’</td>
+<td align="center">‘ab’</td>
+<td align="center">3个字节</td>
+<td align="center">‘abc’</td>
+<td align="center">4字节</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <hr>
-<h3 id="4-文本类型">4.文本类型<a class="anchor" href="#4-文本类型">·</a></h3>
-<p>文本类型用于表示大文本数据，例如，文章内容、评论、详情等，它的类型分为如下4种：</p>
+<h3 id="4-文本类型"><a href="#4-文本类型" class="headerlink" title="4.文本类型"></a>4.文本类型</h3><p>文本类型用于表示大文本数据，例如，文章内容、评论、详情等，它的类型分为如下4种：</p>
 <table>
 <thead>
 <tr>
@@ -491,8 +482,7 @@
 <th>储存范围</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>TINYTEXT</td>
 <td>0~255字节</td>
 </tr>
@@ -508,24 +498,21 @@
 <td>LONGTEXT</td>
 <td>0~4294967295字节</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <hr>
-<h3 id="5-日期与时间类型">5.日期与时间类型<a class="anchor" href="#5-日期与时间类型">·</a></h3>
-<p>MySQL提供的表示日期和时间的数据类型分别是：</p>
+<h3 id="5-日期与时间类型"><a href="#5-日期与时间类型" class="headerlink" title="5.日期与时间类型"></a>5.日期与时间类型</h3><p>MySQL提供的表示日期和时间的数据类型分别是：</p>
 <p><code>YEAR</code>：表示年份，日期格式：<code>YYYY</code>，取值范围是<code>1901~2155</code></p>
 <p><code>DATE</code>：表示日期和时间，显示形式为：<code>YYYY-MM-DD</code>，取值范围：<code>1000-01-01~9999-12-31</code></p>
 <p><code>TIME</code>：表示日期和时间，显示形式为：<code>HH:MM:SS</code>,HH表示小时，MM表示分钟，SS表示秒，使用CURRENT_TIME或NOW()输人当前系统时间。</p>
 <p><code>DATETIME</code>：表示日期和时间，它的显示形式为<code>YYYY-MM-DD HH: MM:SS</code>，使用NOW来输人当前系统的日期和时间。</p>
 <p><code>TIMESTAMP</code>：表示日期和时间，它的显示形式与DATETIME相同但取值范围比DATETIME小。</p>
 <ul>
-<li>使用CURRENT_TIMESTAMP输人系统当前日期和时间。</li>
-<li>输人NULL时系统会输人系统当前日期和时间。</li>
+<li>使用CURRENT_TIMESTAMP输人系统当前日期和时间。  </li>
+<li>输人NULL时系统会输人系统当前日期和时间。  </li>
 <li>无任何输人时系统会输入系统当前日期和时间。</li>
 </ul>
 <hr>
-<h3 id="6-二进制类型">6.二进制类型<a class="anchor" href="#6-二进制类型">·</a></h3>
-<p>在MySQL中常用BLOB存储二进制类型的数据，例如：图片、PDF文档等。BLOB类型分为如下四种：</p>
+<h3 id="6-二进制类型"><a href="#6-二进制类型" class="headerlink" title="6.二进制类型"></a>6.二进制类型</h3><p>在MySQL中常用BLOB存储二进制类型的数据，例如：图片、PDF文档等。BLOB类型分为如下四种：</p>
 <table>
 <thead>
 <tr>
@@ -533,8 +520,7 @@
 <th>储存范围</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>TINYBLOB</td>
 <td>0~255字节</td>
 </tr>
@@ -550,24 +536,25 @@
 <td>LONGBLOB</td>
 <td>0~4294967295字节</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <hr>
-<h2 id="数据库、表的基本操作">数据库、表的基本操作<a class="anchor" href="#数据库、表的基本操作">·</a></h2>
-<h3 id="1、数据库">1、数据库<a class="anchor" href="#1、数据库">·</a></h3>
-<p>创建数据库：</p>
+<h2 id="数据库、表的基本操作"><a href="#数据库、表的基本操作" class="headerlink" title="数据库、表的基本操作"></a>数据库、表的基本操作</h2><h3 id="1、数据库"><a href="#1、数据库" class="headerlink" title="1、数据库"></a>1、数据库</h3><p>创建数据库：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">create</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">database</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">数据库名称</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <p>查看数据库基本信息：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">show </span><span style="color: #F97583">create</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">database</span><span style="color: #E1E4E8"> 数据库名称;</span></span></code></pre></div></div></figure>
+
 <p>删除数据库：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">drop</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">database</span><span style="color: #E1E4E8"> 数据库名称;</span></span></code></pre></div></div></figure>
+
 <p>修改数据库字符集：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">alter</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">database</span><span style="color: #E1E4E8"> db1 </span><span style="color: #F97583">character</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">set</span><span style="color: #E1E4E8"> gbk;</span></span></code></pre></div></div></figure>
+
 <p>使用数据库 or 切换数据库</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">use</span><span style="color: #E1E4E8"> db1;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="2-数据表的基本操作">2.数据表的基本操作<a class="anchor" href="#2-数据表的基本操作">·</a></h3>
-<p>创建完数据库后一般来说就是要开始创建表来存储数据了。</p>
+<h3 id="2-数据表的基本操作"><a href="#2-数据表的基本操作" class="headerlink" title="2.数据表的基本操作"></a>2.数据表的基本操作</h3><p>创建完数据库后一般来说就是要开始创建表来存储数据了。</p>
 <p>PS：如果你使用的是命令行来操作MySQL的话，在创建表前请使用<code>USE 数据库名;</code> 来指定是在哪个数据库中进行操作，否则会抛出错误。</p>
 <p><strong>创建表：</strong></p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">create</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">表名</span><span style="color: #E1E4E8">(</span></span>
@@ -576,6 +563,7 @@
 <span class="line"><span style="color: #E1E4E8">	… </span></span>
 <span class="line"><span style="color: #E1E4E8">	字段n 字段类型</span></span>
 <span class="line"><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <p>例如：创建一个学生表</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">create</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">student</span><span style="color: #E1E4E8">( </span></span>
 <span class="line"><span style="color: #E1E4E8">	id </span><span style="color: #F97583">int</span><span style="color: #E1E4E8">, </span></span>
@@ -583,61 +571,66 @@
 <span class="line"><span style="color: #E1E4E8">	gender </span><span style="color: #F97583">varchar</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">10</span><span style="color: #E1E4E8">), </span></span>
 <span class="line"><span style="color: #E1E4E8">	birthday </span><span style="color: #F97583">date</span><span style="color: #E1E4E8"> </span></span>
 <span class="line"><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <p><strong>查看表基本信息（查看建表SQL语句）：</strong></p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">show </span><span style="color: #F97583">create</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <p>查看表的字段信息：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">desc</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
-<h3 id="3-修改数据表">3.修改数据表<a class="anchor" href="#3-修改数据表">·</a></h3>
-<p>修改表名：</p>
+
+<h3 id="3-修改数据表"><a href="#3-修改数据表" class="headerlink" title="3.修改数据表"></a>3.修改数据表</h3><p>修改表名：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">alter</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> student rename </span><span style="color: #F97583">to</span><span style="color: #E1E4E8"> stu;</span></span></code></pre></div></div></figure>
+
 <p>修改字段名 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">alter</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> stu </span><span style="color: #F97583">modify</span><span style="color: #E1E4E8"> sname </span><span style="color: #F97583">int</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <p>增加字段 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">alter</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> stu </span><span style="color: #F97583">add</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">address</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">varchar</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">50</span><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <p>删除字段 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">alter</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> stu </span><span style="color: #F97583">drop</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">address</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <p>删除数据表:</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">drop</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> 表名;</span></span></code></pre></div></div></figure>
+
 <hr>
 <p><strong>2023.9.4 20:46</strong> 写到这里，听会歌喝口水休息一会儿。</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id=545947135&auto=0&height=66"> </iframe>
+
 <hr>
-<h2 id="数据库的约束">数据库的约束<a class="anchor" href="#数据库的约束">·</a></h2>
-<p>约束条件其实就是限制一些不是表需要的数据插入到表中去，保护数据库中的数据是唯一的，可以理解为限制条件，下面列举了常用的约束条件。</p>
+<h2 id="数据库的约束"><a href="#数据库的约束" class="headerlink" title="数据库的约束"></a>数据库的约束</h2><p>约束条件其实就是限制一些不是表需要的数据插入到表中去，保护数据库中的数据是唯一的，可以理解为限制条件，下面列举了常用的约束条件。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">约束条件</th>
-<th style="text-align:center">说明</th>
+<th align="center">约束条件</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">PRIMARY KEY</td>
-<td style="text-align:center">主键约束用于唯一标识对应的记录</td>
+<tbody><tr>
+<td align="center">PRIMARY KEY</td>
+<td align="center">主键约束用于唯一标识对应的记录</td>
 </tr>
 <tr>
-<td style="text-align:center">FOREIGN KEY</td>
-<td style="text-align:center">外键约束</td>
+<td align="center">FOREIGN KEY</td>
+<td align="center">外键约束</td>
 </tr>
 <tr>
-<td style="text-align:center">NOT NULL</td>
-<td style="text-align:center">非空约束</td>
+<td align="center">NOT NULL</td>
+<td align="center">非空约束</td>
 </tr>
 <tr>
-<td style="text-align:center">UNIQUE</td>
-<td style="text-align:center">唯一性约束</td>
+<td align="center">UNIQUE</td>
+<td align="center">唯一性约束</td>
 </tr>
 <tr>
-<td style="text-align:center">DEFAULT</td>
-<td style="text-align:center">默认值约束，用于设置字段的默认值</td>
+<td align="center">DEFAULT</td>
+<td align="center">默认值约束，用于设置字段的默认值</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <hr>
-<h3 id="1-主键约束">1.主键约束<a class="anchor" href="#1-主键约束">·</a></h3>
-<p>主键约束即<code>primary key</code>用于唯一的标识表中的每一行。被标识为主键的数据在表中是唯一的且其值不能为空。这点类似于我们每个人都有一个身份证号，并且这个身份证号是唯一的。主键约束基本语法：</p>
+<h3 id="1-主键约束"><a href="#1-主键约束" class="headerlink" title="1.主键约束"></a>1.主键约束</h3><p>主键约束即<code>primary key</code>用于唯一的标识表中的每一行。被标识为主键的数据在表中是唯一的且其值不能为空。这点类似于我们每个人都有一个身份证号，并且这个身份证号是唯一的。<br>主键约束基本语法：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">字段名 数据类型 </span><span style="color: #F97583">primary key</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <p>创建表的时候添加主键：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">create</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">student</span><span style="color: #E1E4E8">(</span></span>
 <span class="line"><span style="color: #E1E4E8">id </span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">primary key</span><span style="color: #E1E4E8">,</span></span>
@@ -649,30 +642,33 @@
 <span class="line"><span style="color: #E1E4E8">	</span><span style="color: #F97583">name</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">varchar</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">20</span><span style="color: #E1E4E8">), </span></span>
 <span class="line"><span style="color: #E1E4E8">	</span><span style="color: #F97583">primary key</span><span style="color: #E1E4E8">(id) </span></span>
 <span class="line"><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="2-非空约束">2.非空约束<a class="anchor" href="#2-非空约束">·</a></h3>
-<p>所谓非空约束，就是让字段的值不能是空的。</p>
+<h3 id="2-非空约束"><a href="#2-非空约束" class="headerlink" title="2.非空约束"></a>2.非空约束</h3><p>所谓非空约束，就是让字段的值不能是空的。</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">字段名 数据类型 </span><span style="color: #F97583">NOT NULL</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <p>example：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">create</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">student02</span><span style="color: #E1E4E8">( </span></span>
 <span class="line"><span style="color: #E1E4E8">	id </span><span style="color: #F97583">int</span><span style="color: #E1E4E8">,</span></span>
 <span class="line"><span style="color: #E1E4E8">	</span><span style="color: #F97583">name</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">varchar</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">20</span><span style="color: #E1E4E8">) </span><span style="color: #F97583">not null</span><span style="color: #E1E4E8">,</span></span>
 <span class="line"><span style="color: #E1E4E8">	sex </span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">not null</span></span>
 <span class="line"><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="3-默认值约束">3.默认值约束<a class="anchor" href="#3-默认值约束">·</a></h3>
-<p>默认值约束就是给字段添加一个默认值。</p>
+<h3 id="3-默认值约束"><a href="#3-默认值约束" class="headerlink" title="3.默认值约束"></a>3.默认值约束</h3><p>默认值约束就是给字段添加一个默认值。</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">字段名 数据类型 </span><span style="color: #F97583">DEFAULT</span><span style="color: #E1E4E8"> 默认值；</span></span></code></pre></div></div></figure>
-<h3 id="4-唯一性约束">4.唯一性约束<a class="anchor" href="#4-唯一性约束">·</a></h3>
-<p>唯一性约束是用<code>UNIQUE</code>，用于保证数据表中字段的唯一性，表中字段的值不能重复出现。</p>
+
+
+<h3 id="4-唯一性约束"><a href="#4-唯一性约束" class="headerlink" title="4.唯一性约束"></a>4.唯一性约束</h3><p>唯一性约束是用<code>UNIQUE</code>，用于保证数据表中字段的唯一性，表中字段的值不能重复出现。</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #E1E4E8">字段名 数据类型 </span><span style="color: #F97583">UNIQUE</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="5-外键约束-Badge-text-重点">5.外键约束 <Badge text="重点" /><a class="anchor" href="#5-外键约束-Badge-text-重点">·</a></h3>
-<p>外键约束即<code>FOREIGN KEY</code>常用于多张表之间的约束。</p>
+<h3 id="5-外键约束"><a href="#5-外键约束" class="headerlink" title="5.外键约束 "></a>5.外键约束 <Badge text="重点" /></h3><p>外键约束即<code>FOREIGN KEY</code>常用于多张表之间的约束。</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">-- 在创建数据表时语法如下：</span></span>
 <span class="line"><span style="color: #F97583">CONSTRAINT</span><span style="color: #E1E4E8"> 外键名 </span><span style="color: #F97583">FOREIGN KEY</span><span style="color: #E1E4E8"> (从表外键字段) </span><span style="color: #F97583">REFERENCES</span><span style="color: #E1E4E8"> 主表 (主键字段)</span></span>
 <span class="line"><span style="color: #6A737D">-- 将创建数据表创号后语法如下：</span></span>
 <span class="line"><span style="color: #F97583">ALTER</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">TABLE</span><span style="color: #E1E4E8"> 从表名 </span><span style="color: #F97583">ADD</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">CONSTRAINT</span><span style="color: #E1E4E8"> 外键名 </span><span style="color: #F97583">FOREIGN KEY</span><span style="color: #E1E4E8"> (从表外键字段) </span><span style="color: #F97583">REFERENCES</span><span style="color: #E1E4E8"> 主表 (主键字段);</span></span></code></pre></div></div></figure>
+
 <p><strong>exmaple:</strong></p>
 <ol>
 <li>创建一个学生表 MySQL命令：</li>
@@ -681,6 +677,7 @@
 <span class="line"><span style="color: #E1E4E8">	id </span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">primary key</span><span style="color: #E1E4E8">,</span></span>
 <span class="line"><span style="color: #E1E4E8">	</span><span style="color: #F97583">name</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">varchar</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">20</span><span style="color: #E1E4E8">)</span></span>
 <span class="line"><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <ol start="2">
 <li>创建一个班级表 MySQL命令：</li>
 </ol>
@@ -688,133 +685,140 @@
 <span class="line"><span style="color: #E1E4E8">	classid </span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">primary key</span><span style="color: #E1E4E8">,</span></span>
 <span class="line"><span style="color: #E1E4E8">	studentid </span><span style="color: #F97583">int</span></span>
 <span class="line"><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <ol start="3">
 <li>学生表作为主表，班级表作为副表设置外键， MySQL命令：</li>
 </ol>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">alter</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> class </span><span style="color: #F97583">add</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">constraint</span><span style="color: #E1E4E8"> fk_class_studentid </span><span style="color: #F97583">foreign key</span><span style="color: #E1E4E8">(studentid) </span><span style="color: #F97583">references</span><span style="color: #E1E4E8"> student05(id);</span></span></code></pre></div></div></figure>
+
 <hr>
 <p><strong>删除外键</strong></p>
 <p>语法如下：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">alter</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> 从表名 </span><span style="color: #F97583">drop</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">foreign key</span><span style="color: #E1E4E8"> 外键名；</span></span></code></pre></div></div></figure>
+
 <p>示例：删除外键 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">alter</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">table</span><span style="color: #E1E4E8"> class </span><span style="color: #F97583">drop</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">foreign key</span><span style="color: #E1E4E8"> fk_class_studentid;</span></span></code></pre></div></div></figure>
+
 <hr>
 <p><strong>外键约束需要注意的细节：</strong></p>
-<p>1、从表里的外键通常为主表的主键<br>
-2、从表里外键的数据类型必须与主表中主键的数据类型一致<br>
-3、主表发生变化时应注意主表与从表的数据一致性问题</p>
+<p>1、从表里的外键通常为主表的主键<br>2、从表里外键的数据类型必须与主表中主键的数据类型一致<br>3、主表发生变化时应注意主表与从表的数据一致性问题</p>
 <hr>
-<h2 id="增删改查">增删改查<a class="anchor" href="#增删改查">·</a></h2>
-<p>数据库的增删改查是指对数据库中的记录进行增加、删除、修改和查询的操作。其中，增加操作包括INSERT语句，删除操作包括DELETE语句，修改操作包括UPDATE语句，查询操作包括SELECT语句。</p>
-<h3 id="INSERT-插入">INSERT 插入<a class="anchor" href="#INSERT-插入">·</a></h3>
-<p>MySQL中的插入语句用于向数据库表中添加新记录。INSERT INTO语句的语法如下：</p>
+<h2 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h2><p>数据库的增删改查是指对数据库中的记录进行增加、删除、修改和查询的操作。其中，增加操作包括INSERT语句，删除操作包括DELETE语句，修改操作包括UPDATE语句，查询操作包括SELECT语句。</p>
+<h3 id="INSERT-插入"><a href="#INSERT-插入" class="headerlink" title="INSERT 插入"></a>INSERT 插入</h3><p>MySQL中的插入语句用于向数据库表中添加新记录。INSERT INTO语句的语法如下：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">INSERT INTO</span><span style="color: #E1E4E8"> table_name (column1, column2, column3, ...) </span></span>
 <span class="line"><span style="color: #F97583">VALUES</span><span style="color: #E1E4E8"> (value1, value2, value3, ...);</span></span></code></pre></div></div></figure>
+
 <p>其中，table_name是要插入数据的表名，column1、column2、column3等是表中的列名，value1、value2、value3等是要插入的数据值。</p>
 <p>假设我们有一个名为students的表，其中包含id、name和age三个列，我们要向其中插入一条新记录，可以使用以下语句：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">INSERT INTO</span><span style="color: #E1E4E8"> students (id, </span><span style="color: #F97583">name</span><span style="color: #E1E4E8">, age) </span><span style="color: #F97583">VALUES</span><span style="color: #E1E4E8"> (</span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">&#39;张三&#39;</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">18</span><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <hr>
 <p><strong>同时插入多条数据：</strong></p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">INSERT INTO</span><span style="color: #E1E4E8"> table_name (column1, column2, column3, ...) </span></span>
 <span class="line"><span style="color: #F97583">VALUES</span><span style="color: #E1E4E8"> (value1, value2, value3, ...), </span></span>
 <span class="line"><span style="color: #E1E4E8">(value4, value5, value6, ...), </span></span>
 <span class="line"><span style="color: #E1E4E8">(value7, value8, value9, ...);</span></span></code></pre></div></div></figure>
-<h3 id="DELETE-删除">DELETE 删除<a class="anchor" href="#DELETE-删除">·</a></h3>
-<p>MySQL中的删除语句用于从数据表中删除记录。可以使用以下语法：</p>
+
+<h3 id="DELETE-删除"><a href="#DELETE-删除" class="headerlink" title="DELETE 删除"></a>DELETE 删除</h3><p>MySQL中的删除语句用于从数据表中删除记录。可以使用以下语法：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">DELETE</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">FROM</span><span style="color: #E1E4E8"> 表名 [WHERE 条件表达式];</span></span></code></pre></div></div></figure>
+
+
 <p><strong>example:</strong></p>
 <p>删除所有age等于14的数据：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">delete</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> age</span><span style="color: #F97583">=</span><span style="color: #79B8FF">14</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <hr>
 <p>删除全部数据：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">DELETE</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">FROM</span><span style="color: #E1E4E8"> 表名;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #6A737D">-- 例如：删除学生表</span></span>
 <span class="line"><span style="color: #F97583">DELETE</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">FROM</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
+
 <p><strong>TRUNCATE和DELETE都是MySQL中删除数据的语句，但是它们之间有一些区别。</strong></p>
 <ul>
 <li>TRUNCATE是删除表中的所有数据，但不删除表结构，速度比DELETE快。DELETE可以带WHERE子句，条件删除；而TRUNCATE只能删除整个表。</li>
 <li>DELETE是可以恢复删除的数据，而TRUNCATE和DROP不能恢复删除的数据。</li>
 <li>执行速度方面，DROP &gt; TRUNCATE &gt;&gt; DELETE。</li>
 </ul>
-<h3 id="UPDATE-更新">UPDATE 更新<a class="anchor" href="#UPDATE-更新">·</a></h3>
-<p>用于更新字段中的内容。</p>
+<h3 id="UPDATE-更新"><a href="#UPDATE-更新" class="headerlink" title="UPDATE 更新"></a>UPDATE 更新</h3><p>用于更新字段中的内容。</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">UPDATE</span><span style="color: #E1E4E8"> 表名 </span><span style="color: #F97583">SET</span><span style="color: #E1E4E8"> 字段名1 </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> 值1[,字段名2 =值2,…] [WHERE 条件表达式];</span></span></code></pre></div></div></figure>
+
 <p>字段名1、字段名2…用于指定要更新的字段名称；值1、值 2…用于表示字段的新数据；WHERE 条件表达式 是可选的，它用于指定更新数据需要满足的条件。</p>
 <p><strong>example：</strong></p>
 <p>将name为tom的记录的age设置为20并将其gender设置为female</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">update</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">set</span><span style="color: #E1E4E8"> age</span><span style="color: #F97583">=</span><span style="color: #79B8FF">20</span><span style="color: #E1E4E8">,gender</span><span style="color: #F97583">=</span><span style="color: #9ECBFF">&#39;female&#39;</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">name=</span><span style="color: #9ECBFF">&#39;tom&#39;</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <hr>
 <p>将所有记录的age设置为18</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">update</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">set</span><span style="color: #E1E4E8"> age</span><span style="color: #F97583">=</span><span style="color: #79B8FF">18</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
+
 <hr>
 <p><strong>2023.9.4 21:27</strong> 今天先不写了，去背会儿单词。</p>
-<h2 id="数据表查询-Badge-text-重点">数据表查询 <Badge text="重点"/><a class="anchor" href="#数据表查询-Badge-text-重点">·</a></h2>
-<h3 id="1-简单查询">1.简单查询<a class="anchor" href="#1-简单查询">·</a></h3>
-<p>我们新建立了一个数据表</p>
+<h2 id="数据表查询"><a href="#数据表查询" class="headerlink" title="数据表查询 "></a>数据表查询 <Badge text="重点"/></h2><h3 id="1-简单查询"><a href="#1-简单查询" class="headerlink" title="1.简单查询"></a>1.简单查询</h3><p>我们新建立了一个数据表</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">CREATE</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">TABLE</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">student</span><span style="color: #E1E4E8"> ( </span></span>
 <span class="line"><span style="color: #E1E4E8">	</span><span style="color: #F97583">sid</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">CHAR</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">6</span><span style="color: #E1E4E8">), </span></span>
 <span class="line"><span style="color: #E1E4E8">	sname </span><span style="color: #F97583">VARCHAR</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">50</span><span style="color: #E1E4E8">),</span></span>
 <span class="line"><span style="color: #E1E4E8">	age </span><span style="color: #F97583">INT</span><span style="color: #E1E4E8">, </span></span>
 <span class="line"><span style="color: #E1E4E8">	gender </span><span style="color: #F97583">VARCHAR</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">50</span><span style="color: #E1E4E8">) </span><span style="color: #F97583">DEFAULT</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;male&#39;</span><span style="color: #E1E4E8"> </span></span>
 <span class="line"><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
-<h4 id="查询表中所有字段：">查询表中所有字段：<a class="anchor" href="#查询表中所有字段：">·</a></h4>
-<figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
+<h4 id="查询表中所有字段："><a href="#查询表中所有字段：" class="headerlink" title="查询表中所有字段："></a>查询表中所有字段：</h4><figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h4 id="查询指定字段（sid，sname）">查询指定字段（sid，sname）<a class="anchor" href="#查询指定字段（sid，sname）">·</a></h4>
-<figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">sid</span><span style="color: #E1E4E8">,sname </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+<h4 id="查询指定字段（sid，sname）"><a href="#查询指定字段（sid，sname）" class="headerlink" title="查询指定字段（sid，sname）"></a>查询指定字段（sid，sname）</h4><figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">sid</span><span style="color: #E1E4E8">,sname </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h4 id="常数查询：">常数查询：<a class="anchor" href="#常数查询：">·</a></h4>
-<p>example：在后面加上查询日期</p>
+<h4 id="常数查询："><a href="#常数查询：" class="headerlink" title="常数查询："></a>常数查询：</h4><p>example：在后面加上查询日期</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">sid</span><span style="color: #E1E4E8">,sname,</span><span style="color: #9ECBFF">&#39;2023-09-05&#39;</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <blockquote>
 <p>结果会在最后一列每一行都增加日期。</p>
 </blockquote>
 <hr>
-<h4 id="从查询结果中过滤重复数据">从查询结果中过滤重复数据<a class="anchor" href="#从查询结果中过滤重复数据">·</a></h4>
-<figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select distinct</span><span style="color: #E1E4E8"> gender </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+<h4 id="从查询结果中过滤重复数据"><a href="#从查询结果中过滤重复数据" class="headerlink" title="从查询结果中过滤重复数据"></a>从查询结果中过滤重复数据</h4><figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select distinct</span><span style="color: #E1E4E8"> gender </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <blockquote>
 <p>查询前加上 <code>distinct</code> 即可。</p>
 </blockquote>
 <hr>
-<h4 id="算术运算符">算术运算符<a class="anchor" href="#算术运算符">·</a></h4>
-<p>在SELECT查询语句中可以使用加减乘除运算符。</p>
+<h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><p>在SELECT查询语句中可以使用加减乘除运算符。</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> sname,age</span><span style="color: #F97583">+</span><span style="color: #79B8FF">10</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="2-聚合函数">2.聚合函数<a class="anchor" href="#2-聚合函数">·</a></h3>
-<p>有些公司会有这种需求：统计某个字段的最大值、最小值、 平均值等等。</p>
+<h3 id="2-聚合函数"><a href="#2-聚合函数" class="headerlink" title="2.聚合函数"></a>2.聚合函数</h3><p>有些公司会有这种需求：统计某个字段的最大值、最小值、 平均值等等。</p>
 <p>为了简化操作，MySQL为我们提供了聚合函数来实现这些操作。</p>
 <blockquote>
 <p>聚合函数意思为把多行的数据变为一行。</p>
 </blockquote>
 <hr>
-<h4 id="count">count()<a class="anchor" href="#count">·</a></h4>
-<p>统计表中数据的行数或者统计指定列其值不为NULL的数据个数</p>
+<h4 id="count"><a href="#count" class="headerlink" title="count()"></a>count()</h4><p>统计表中数据的行数或者统计指定列其值不为NULL的数据个数</p>
 <p>查询学生总数：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">count</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">*</span><span style="color: #E1E4E8">) </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h4 id="max">max()<a class="anchor" href="#max">·</a></h4>
-<p>计算指定列的最大值，如果指定列是字符串类型则使用字符串排序运算</p>
+<h4 id="max"><a href="#max" class="headerlink" title="max()"></a>max()</h4><p>计算指定列的最大值，如果指定列是字符串类型则使用字符串排序运算</p>
 <p>查询年龄最大学生：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> sname,</span><span style="color: #79B8FF">max</span><span style="color: #E1E4E8">(age) </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h4 id="min">min()<a class="anchor" href="#min">·</a></h4>
-<p>计算指定列的最小值，如果指定列是字符串类型则使用字符串排序运算</p>
+<h4 id="min"><a href="#min" class="headerlink" title="min()"></a>min()</h4><p>计算指定列的最小值，如果指定列是字符串类型则使用字符串排序运算</p>
 <p>查询年龄最小学生：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> sname,</span><span style="color: #79B8FF">min</span><span style="color: #E1E4E8">(age) </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h4 id="sum">sum()<a class="anchor" href="#sum">·</a></h4>
-<p>计算指定列的数值和，如果指定列类型不是数值类型则计算结果为0</p>
+<h4 id="sum"><a href="#sum" class="headerlink" title="sum()"></a>sum()</h4><p>计算指定列的数值和，如果指定列类型不是数值类型则计算结果为0</p>
 <p>查询表中所有学生年龄总和：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">sum</span><span style="color: #E1E4E8">(age) </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h4 id="avg（）">avg（）<a class="anchor" href="#avg（）">·</a></h4>
-<p>计算指定列的平均值，如果指定列类型不是数值类型则计算结果为0</p>
+<h4 id="avg（）"><a href="#avg（）" class="headerlink" title="avg（）"></a>avg（）</h4><p>计算指定列的平均值，如果指定列类型不是数值类型则计算结果为0</p>
 <p>查询学生平均年龄：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">avg</span><span style="color: #E1E4E8">(age) </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="3-时间函数">3.时间函数<a class="anchor" href="#3-时间函数">·</a></h3>
-<p>可自行测试：</p>
+<h3 id="3-时间函数"><a href="#3-时间函数" class="headerlink" title="3.时间函数"></a>3.时间函数</h3><p>可自行测试：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">NOW</span><span style="color: #E1E4E8">();</span></span>
 <span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">DAY</span><span style="color: #E1E4E8"> (</span><span style="color: #F97583">NOW</span><span style="color: #E1E4E8">());</span></span>
 <span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">DATE</span><span style="color: #E1E4E8"> (</span><span style="color: #F97583">NOW</span><span style="color: #E1E4E8">());</span></span>
@@ -830,9 +834,9 @@
 <span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> DATE_SUB(</span><span style="color: #F97583">NOW</span><span style="color: #E1E4E8">(),INTERVAL </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">DAY</span><span style="color: #E1E4E8">);</span></span>
 <span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> DATE_SUB(</span><span style="color: #F97583">NOW</span><span style="color: #E1E4E8">(),INTERVAL </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">MONTH</span><span style="color: #E1E4E8">);</span></span>
 <span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">DATEDIFF</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&#39;2019-07-22&#39;</span><span style="color: #E1E4E8">,</span><span style="color: #9ECBFF">&#39;2019-05-05&#39;</span><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <hr>
-<h4 id="4-字符串函数">4.字符串函数<a class="anchor" href="#4-字符串函数">·</a></h4>
-<figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">--连接函数 </span></span>
+<h4 id="4-字符串函数"><a href="#4-字符串函数" class="headerlink" title="4.字符串函数"></a>4.字符串函数</h4><figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">--连接函数 </span></span>
 <span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">CONCAT</span><span style="color: #E1E4E8"> () </span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #6A737D">--查看字符串第一次出现位置</span></span>
@@ -840,143 +844,151 @@
 <span class="line"></span>
 <span class="line"><span style="color: #6A737D">--统计长度 </span></span>
 <span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">LENGTH</span><span style="color: #E1E4E8">();</span></span></code></pre></div></div></figure>
+
 <p><strong>CONCAT()函数</strong>：这个函数用于连接两个或更多的字符串。</p>
 <p>其基本语法是 CONCAT(string1, string2, …, string_n)，其中string1、string2等为要连接的字符串。</p>
-<p>例如：<code>SELECT CONCAT('Hello', ' ', 'World');</code> 将返回 “Hello World”。</p>
+<p>例如：<code>SELECT CONCAT(&#39;Hello&#39;, &#39; &#39;, &#39;World&#39;);</code> 将返回 “Hello World”。</p>
 <hr>
 <p><strong>INSTR()函数</strong>：这个函数用于返回子字符串在字符串中第一次出现的位置。</p>
 <p>如果子字符串不存在于字符串中，则返回0。其基本语法是 INSTR(string, substring)，其中string是要搜索的字符串，substring是要查找的子字符串。</p>
-<p>例如：<code>SELECT INSTR('Hello World!', 'World');</code> 将返回 7，因为 “World” 在 “Hello World!” 中第一次出现的位置是 7。</p>
+<p>例如：<code>SELECT INSTR(&#39;Hello World!&#39;, &#39;World&#39;);</code> 将返回 7，因为 “World” 在 “Hello World!” 中第一次出现的位置是 7。</p>
 <hr>
 <p><strong>LENGTH()函数</strong>：这个函数用于返回字符串的长度（字符数）。</p>
 <p>其基本语法是 LENGTH(string)，其中string是要计算长度的字符串。</p>
-<p>例如：<code>SELECT LENGTH('Hello World!');</code> 将返回 12，因为 “Hello World!” 包含 12 个字符。</p>
-<h3 id="5-数学函数">5.数学函数<a class="anchor" href="#5-数学函数">·</a></h3>
-<figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">-- 绝对值 </span></span>
+<p>例如：<code>SELECT LENGTH(&#39;Hello World!&#39;);</code> 将返回 12，因为 “Hello World!” 包含 12 个字符。</p>
+<h3 id="5-数学函数"><a href="#5-数学函数" class="headerlink" title="5.数学函数"></a>5.数学函数</h3><figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #6A737D">-- 绝对值 </span></span>
 <span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">ABS</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">-</span><span style="color: #79B8FF">136</span><span style="color: #E1E4E8">); </span></span>
 <span class="line"><span style="color: #6A737D">-- 向下取整 </span></span>
 <span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">FLOOR</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">3</span><span style="color: #E1E4E8">.</span><span style="color: #79B8FF">14</span><span style="color: #E1E4E8">); </span></span>
 <span class="line"><span style="color: #6A737D">-- 向上取整 </span></span>
 <span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">CEILING</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">3</span><span style="color: #E1E4E8">.</span><span style="color: #79B8FF">14</span><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <hr>
-<h2 id="条件查询-Badge-text-重点">条件查询<Badge text="重点"/><a class="anchor" href="#条件查询-Badge-text-重点">·</a></h2>
-<p>数据库中存有大量数据，我们可根据需求获取指定的数据。此时，我们可在查询语句中通过WHERE子句指定查询条件对查询结果进行过滤。</p>
-<h3 id="关系运算符">关系运算符<a class="anchor" href="#关系运算符">·</a></h3>
-<p>在WHERE中可使用关系运算符进行条件查询</p>
+<h2 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询<Badge text="重点"/></h2><p>数据库中存有大量数据，我们可根据需求获取指定的数据。此时，我们可在查询语句中通过WHERE子句指定查询条件对查询结果进行过滤。</p>
+<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><p>在WHERE中可使用关系运算符进行条件查询</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">关系运算符</th>
-<th style="text-align:center">说明</th>
+<th align="center">关系运算符</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">=</td>
-<td style="text-align:center">等于</td>
+<tbody><tr>
+<td align="center">&#x3D;</td>
+<td align="center">等于</td>
 </tr>
 <tr>
-<td style="text-align:center">&lt;&gt;</td>
-<td style="text-align:center">不等于</td>
+<td align="center">&lt;&gt;</td>
+<td align="center">不等于</td>
 </tr>
 <tr>
-<td style="text-align:center">!=</td>
-<td style="text-align:center">不等于</td>
+<td align="center">!&#x3D;</td>
+<td align="center">不等于</td>
 </tr>
 <tr>
-<td style="text-align:center">&lt;</td>
-<td style="text-align:center">小于</td>
+<td align="center">&lt;</td>
+<td align="center">小于</td>
 </tr>
 <tr>
-<td style="text-align:center">&lt;=</td>
-<td style="text-align:center">小于等于</td>
+<td align="center">&lt;&#x3D;</td>
+<td align="center">小于等于</td>
 </tr>
 <tr>
-<td style="text-align:center">&gt;</td>
-<td style="text-align:center">大于</td>
+<td align="center">&gt;</td>
+<td align="center">大于</td>
 </tr>
 <tr>
-<td style="text-align:center">&gt;=</td>
-<td style="text-align:center">大于等于</td>
+<td align="center">&gt;&#x3D;</td>
+<td align="center">大于等于</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>查询年龄等于或大于17的学生的信息 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> age</span><span style="color: #F97583">&gt;=</span><span style="color: #79B8FF">17</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="IN关键字查询">IN关键字查询<a class="anchor" href="#IN关键字查询">·</a></h3>
-<p>IN关键字用于判断某个字段的值是否在指定集合中。如果字段的值恰好在指定的集合中，则将字段所在的记录将査询出来。</p>
+<h3 id="IN关键字查询"><a href="#IN关键字查询" class="headerlink" title="IN关键字查询"></a>IN关键字查询</h3><p>IN关键字用于判断某个字段的值是否在指定集合中。如果字段的值恰好在指定的集合中，则将字段所在的记录将査询出来。</p>
 <p>查询sid为S_1002和S_1003的学生信息 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">sid</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">in</span><span style="color: #E1E4E8"> (</span><span style="color: #9ECBFF">&#39;S_1002&#39;</span><span style="color: #E1E4E8">,</span><span style="color: #9ECBFF">&#39;S_1003&#39;</span><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
+
 <p>查询sid为S_1001以外的学生的信息 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">sid</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">not</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">in</span><span style="color: #E1E4E8"> (</span><span style="color: #9ECBFF">&#39;S_1001&#39;</span><span style="color: #E1E4E8">);</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="BETWEEN-AND关键字查询">BETWEEN AND关键字查询<a class="anchor" href="#BETWEEN-AND关键字查询">·</a></h3>
-<p>BETWEEN AND用于判断某个字段的值是否在指定的范围之内。如果字段的值在指定范围内，则将所在的记录将查询出来</p>
+<h3 id="BETWEEN-AND关键字查询"><a href="#BETWEEN-AND关键字查询" class="headerlink" title="BETWEEN AND关键字查询"></a>BETWEEN AND关键字查询</h3><p>BETWEEN AND用于判断某个字段的值是否在指定的范围之内。如果字段的值在指定范围内，则将所在的记录将查询出来</p>
 <p>查询15到18岁的学生信息 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> age </span><span style="color: #F97583">between</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">15</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">and</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">18</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <p>查询不是15到18岁的学生信息 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> age </span><span style="color: #F97583">not</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">between</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">15</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">and</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">18</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="使用空值查询">使用空值查询<a class="anchor" href="#使用空值查询">·</a></h3>
-<p>在MySQL中，使用 IS NULL关键字判断字段的值是否为空值。请注意：空值NULL不同于0，也不同于空字符串</p>
+<h3 id="使用空值查询"><a href="#使用空值查询" class="headerlink" title="使用空值查询"></a>使用空值查询</h3><p>在MySQL中，使用 IS NULL关键字判断字段的值是否为空值。请注意：空值NULL不同于0，也不同于空字符串</p>
 <p>查询sname不为空值的学生信息 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> sname </span><span style="color: #F97583">is not null</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="使用AND关键字查询">使用AND关键字查询<a class="anchor" href="#使用AND关键字查询">·</a></h3>
-<p>在MySQL中可使用AND关键字可以连接两个或者多个查询条件。</p>
+<h3 id="使用AND关键字查询"><a href="#使用AND关键字查询" class="headerlink" title="使用AND关键字查询"></a>使用AND关键字查询</h3><p>在MySQL中可使用AND关键字可以连接两个或者多个查询条件。  </p>
 <p>查询年纪大于15且性别为male的学生信息 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> age</span><span style="color: #F97583">&gt;</span><span style="color: #79B8FF">15</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">and</span><span style="color: #E1E4E8"> gender</span><span style="color: #F97583">=</span><span style="color: #9ECBFF">&#39;male&#39;</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="使用OR关键字查询">使用OR关键字查询<a class="anchor" href="#使用OR关键字查询">·</a></h3>
-<p>在使用SELECT语句查询数据时可使用OR关键字连接多个査询条件。在使用OR关键字时，只要记录满足其中任意一个条件就会被查询出来</p>
+<h3 id="使用OR关键字查询"><a href="#使用OR关键字查询" class="headerlink" title="使用OR关键字查询"></a>使用OR关键字查询</h3><p>在使用SELECT语句查询数据时可使用OR关键字连接多个査询条件。在使用OR关键字时，只要记录满足其中任意一个条件就会被查询出来</p>
 <p>查询年纪大于15或者性别为male的学生信息 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> age</span><span style="color: #F97583">&gt;</span><span style="color: #79B8FF">15</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">or</span><span style="color: #E1E4E8"> gender</span><span style="color: #F97583">=</span><span style="color: #9ECBFF">&#39;male&#39;</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="使用LIKE关键字查询">使用LIKE关键字查询<a class="anchor" href="#使用LIKE关键字查询">·</a></h3>
-<p><code>LIKE</code>通常与<code>%</code>（表示任意多个字符）和<code>_</code>（表示一个字符）通配符一起使用,可以判断两个字符串是否相匹配。</p>
-<p>查询所有以&quot;张&quot;开头的姓名：</p>
+<h3 id="使用LIKE关键字查询"><a href="#使用LIKE关键字查询" class="headerlink" title="使用LIKE关键字查询"></a>使用LIKE关键字查询</h3><p><code>LIKE</code>通常与<code>%</code>（表示任意多个字符）和<code>_</code>（表示一个字符）通配符一起使用,可以判断两个字符串是否相匹配。</p>
+<p>查询所有以”张”开头的姓名：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">sql</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">FROM</span><span style="color: #E1E4E8"> users </span><span style="color: #F97583">WHERE</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">name</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">LIKE</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;张%&#39;</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
-<p>查询名字中包含&quot;小&quot;的所有用户：</p>
+
+<p>查询名字中包含”小”的所有用户：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">FROM</span><span style="color: #E1E4E8"> users </span><span style="color: #F97583">WHERE</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">name</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">LIKE</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;%小%&#39;</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <p>查询名字长度为3个字符的所有用户：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">FROM</span><span style="color: #E1E4E8"> users </span><span style="color: #F97583">WHERE</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">name</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">LIKE</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;___&#39;</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
-<p>查询电话号码以&quot;138&quot;开头的所有用户：</p>
+
+<p>查询电话号码以”138”开头的所有用户：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">FROM</span><span style="color: #E1E4E8"> users </span><span style="color: #F97583">WHERE</span><span style="color: #E1E4E8"> phone </span><span style="color: #F97583">LIKE</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;138%&#39;</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
+
 <p>请注意，<code>LIKE</code>操作符对大小写敏感。如果需要进行不区分大小写的搜索，可以使用<code>LOWER()</code>或<code>UPPER()</code>函数将列值和搜索模式转换为相同的大小写，例如：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">FROM</span><span style="color: #E1E4E8"> users </span><span style="color: #F97583">WHERE</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">LOWER</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">name</span><span style="color: #E1E4E8">) </span><span style="color: #F97583">LIKE</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;%张%&#39;</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="使用LIMIT限制查询结果的数量">使用LIMIT限制查询结果的数量<a class="anchor" href="#使用LIMIT限制查询结果的数量">·</a></h3>
-<p>当执行查询数据时可能会返回很多条记录，而用户需要的数据可能只是其中的一条或者几条</p>
+<h3 id="使用LIMIT限制查询结果的数量"><a href="#使用LIMIT限制查询结果的数量" class="headerlink" title="使用LIMIT限制查询结果的数量"></a>使用LIMIT限制查询结果的数量</h3><p>当执行查询数据时可能会返回很多条记录，而用户需要的数据可能只是其中的一条或者几条</p>
 <p>查询学生表中年纪最小的3位同学 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">order by</span><span style="color: #E1E4E8"> age </span><span style="color: #F97583">asc</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">limit</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">3</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
-<h3 id="使用GROUP-BY进行分组查询">使用GROUP BY进行分组查询<a class="anchor" href="#使用GROUP-BY进行分组查询">·</a></h3>
-<p>将表中的数据进行分组，再进行查询等操作。可以理解为通过GROUP BY将原来的表拆分成了几张小表。</p>
+
+<h3 id="使用GROUP-BY进行分组查询"><a href="#使用GROUP-BY进行分组查询" class="headerlink" title="使用GROUP BY进行分组查询"></a>使用GROUP BY进行分组查询</h3><p>将表中的数据进行分组，再进行查询等操作。可以理解为通过GROUP BY将原来的表拆分成了几张小表。</p>
 <hr>
-<h4 id="GROUP-BY和聚合函数一起使用">GROUP BY和聚合函数一起使用<a class="anchor" href="#GROUP-BY和聚合函数一起使用">·</a></h4>
-<p>统计各部门员工个数 MySQL命令：</p>
+<h4 id="GROUP-BY和聚合函数一起使用"><a href="#GROUP-BY和聚合函数一起使用" class="headerlink" title="GROUP BY和聚合函数一起使用"></a>GROUP BY和聚合函数一起使用</h4><p>统计各部门员工个数 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">count</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">*</span><span style="color: #E1E4E8">), departmentnumber </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> employee </span><span style="color: #F97583">group by</span><span style="color: #E1E4E8"> departmentnumber;</span></span></code></pre></div></div></figure>
+
 <p>统计部门编号大于1001的各部门员工个数 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">count</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">*</span><span style="color: #E1E4E8">), departmentnumber </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> employee </span><span style="color: #F97583">where</span><span style="color: #E1E4E8"> departmentnumber</span><span style="color: #F97583">&gt;</span><span style="color: #79B8FF">1001</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">group by</span><span style="color: #E1E4E8"> departmentnumber;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h4 id="GROUP-BY和聚合函数以及HAVING一起使用">GROUP BY和聚合函数以及HAVING一起使用<a class="anchor" href="#GROUP-BY和聚合函数以及HAVING一起使用">·</a></h4>
-<p>统计工资总和大于8000的部门 MySQL命令：</p>
+<h4 id="GROUP-BY和聚合函数以及HAVING一起使用"><a href="#GROUP-BY和聚合函数以及HAVING一起使用" class="headerlink" title="GROUP BY和聚合函数以及HAVING一起使用"></a>GROUP BY和聚合函数以及HAVING一起使用</h4><p>统计工资总和大于8000的部门 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">sum</span><span style="color: #E1E4E8">(salary),departmentnumber </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> employee </span><span style="color: #F97583">group by</span><span style="color: #E1E4E8"> departmentnumber </span><span style="color: #F97583">having</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">sum</span><span style="color: #E1E4E8">(salary)</span><span style="color: #F97583">&gt;</span><span style="color: #79B8FF">8000</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
-<h3 id="使用ORDER-BY对查询结果排序">使用ORDER BY对查询结果排序<a class="anchor" href="#使用ORDER-BY对查询结果排序">·</a></h3>
-<p>从表中査询出来的数据可能是无序的或者其排列顺序不是我们期望的。为此，我们可以使用ORDER BY对查询结果进行排序</p>
+
+<h3 id="使用ORDER-BY对查询结果排序"><a href="#使用ORDER-BY对查询结果排序" class="headerlink" title="使用ORDER BY对查询结果排序"></a>使用ORDER BY对查询结果排序</h3><p>从表中査询出来的数据可能是无序的或者其排列顺序不是我们期望的。为此，我们可以使用ORDER BY对查询结果进行排序</p>
 <p>其语法格式如下所示：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">SELECT</span><span style="color: #E1E4E8"> 字段名1,字段名2,…</span></span>
 <span class="line"><span style="color: #F97583">FROM</span><span style="color: #E1E4E8"> 表名</span></span>
 <span class="line"><span style="color: #F97583">ORDER BY</span><span style="color: #E1E4E8"> 字段名1 [ASC 丨 DESC],字段名2 [ASC | DESC];</span></span></code></pre></div></div></figure>
+
 <p>在该语法中：字段名1、字段名2是查询结果排序的依据；参数 ASC表示按照升序排序，DESC表示按照降序排序；默认情况下，按照ASC方式排序。通常情况下，ORDER BY子句位于整个SELECT语句的末尾。</p>
 <p>查询所有学生并按照年纪大小升序排列 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">order by</span><span style="color: #E1E4E8"> age </span><span style="color: #F97583">asc</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <p>查询所有学生并按照年纪大小降序排列 MySQL命令：</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">*</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student </span><span style="color: #F97583">order by</span><span style="color: #E1E4E8"> age </span><span style="color: #F97583">desc</span><span style="color: #E1E4E8">;</span></span></code></pre></div></div></figure>
+
 <hr>
-<h3 id="表别名">表别名<a class="anchor" href="#表别名">·</a></h3>
-<p>在字段名后加一个<code>as</code>即可更名，或者不加也可以直接加一个空格。</p>
+<h3 id="表别名"><a href="#表别名" class="headerlink" title="表别名"></a>表别名</h3><p>在字段名后加一个<code>as</code>即可更名，或者不加也可以直接加一个空格。</p>
 <figure class="shiki sql"><div class='codeblock'><div class="gutter"><pre><span class="line">1</span><br></pre></div><div class="code"><pre class="shiki github-dark"><code><span class="line"><span style="color: #F97583">select</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">name</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">as</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&#39;姓名&#39;</span><span style="color: #E1E4E8">,id </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> student;</span></span></code></pre></div></div></figure>
+
 <hr>
 <p>2023.9.5 11:23 记录此刻。</p>
 
@@ -1009,7 +1021,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1714719124647"></script>
+    <script async src="/js/copy-codeblock.js?v=1714721891553"></script>
   
 
   
@@ -1038,7 +1050,7 @@
             <button class="mdui-fab catalog" style="overflow:unset;">
                 <i class="nexmoefont icon-i-catalog"></i>
                 <div class="nexmoe-toc">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">数据库的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1.整数类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%AE%9A%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">2.浮点数类型和定点数类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">3.字符串类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%96%87%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.</span> <span class="toc-text">4.文本类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%97%A5%E6%9C%9F%E4%B8%8E%E6%97%B6%E9%97%B4%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.5.</span> <span class="toc-text">5.日期与时间类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.</span> <span class="toc-text">6.二进制类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">数据库、表的基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.</span> <span class="toc-text">1、数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.2.</span> <span class="toc-text">2.数据表的基本操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-number">2.3.</span> <span class="toc-text">3.修改数据表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.</span> <span class="toc-text">数据库的约束</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.1.</span> <span class="toc-text">1.主键约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9D%9E%E7%A9%BA%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.2.</span> <span class="toc-text">2.非空约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%BB%98%E8%AE%A4%E5%80%BC%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.3.</span> <span class="toc-text">3.默认值约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%94%AF%E4%B8%80%E6%80%A7%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.4.</span> <span class="toc-text">4.唯一性约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F-Badge-text-%E9%87%8D%E7%82%B9"><span class="toc-number">3.5.</span> <span class="toc-text">5.外键约束 ·</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5"><span class="toc-number">4.</span> <span class="toc-text">增删改查</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#INSERT-%E6%8F%92%E5%85%A5"><span class="toc-number">4.1.</span> <span class="toc-text">INSERT 插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DELETE-%E5%88%A0%E9%99%A4"><span class="toc-number">4.2.</span> <span class="toc-text">DELETE 删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UPDATE-%E6%9B%B4%E6%96%B0"><span class="toc-number">4.3.</span> <span class="toc-text">UPDATE 更新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%9F%A5%E8%AF%A2-Badge-text-%E9%87%8D%E7%82%B9"><span class="toc-number">5.</span> <span class="toc-text">数据表查询 ·</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AE%80%E5%8D%95%E6%9F%A5%E8%AF%A2"><span class="toc-number">5.1.</span> <span class="toc-text">1.简单查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8%E4%B8%AD%E6%89%80%E6%9C%89%E5%AD%97%E6%AE%B5%EF%BC%9A"><span class="toc-number">5.1.1.</span> <span class="toc-text">查询表中所有字段：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5%EF%BC%88sid%EF%BC%8Csname%EF%BC%89"><span class="toc-number">5.1.2.</span> <span class="toc-text">查询指定字段（sid，sname）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E6%95%B0%E6%9F%A5%E8%AF%A2%EF%BC%9A"><span class="toc-number">5.1.3.</span> <span class="toc-text">常数查询：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E4%B8%AD%E8%BF%87%E6%BB%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE"><span class="toc-number">5.1.4.</span> <span class="toc-text">从查询结果中过滤重复数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">5.1.5.</span> <span class="toc-text">算术运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-number">5.2.</span> <span class="toc-text">2.聚合函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#count"><span class="toc-number">5.2.1.</span> <span class="toc-text">count()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#max"><span class="toc-number">5.2.2.</span> <span class="toc-text">max()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#min"><span class="toc-number">5.2.3.</span> <span class="toc-text">min()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sum"><span class="toc-number">5.2.4.</span> <span class="toc-text">sum()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#avg%EF%BC%88%EF%BC%89"><span class="toc-number">5.2.5.</span> <span class="toc-text">avg（）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0"><span class="toc-number">5.3.</span> <span class="toc-text">3.时间函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0"><span class="toc-number">5.3.1.</span> <span class="toc-text">4.字符串函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0"><span class="toc-number">5.4.</span> <span class="toc-text">5.数学函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2-Badge-text-%E9%87%8D%E7%82%B9"><span class="toc-number">6.</span> <span class="toc-text">条件查询·</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">6.1.</span> <span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IN%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.2.</span> <span class="toc-text">IN关键字查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BETWEEN-AND%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.3.</span> <span class="toc-text">BETWEEN AND关键字查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%A9%BA%E5%80%BC%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.4.</span> <span class="toc-text">使用空值查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8AND%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.5.</span> <span class="toc-text">使用AND关键字查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8OR%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.6.</span> <span class="toc-text">使用OR关键字查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8LIKE%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.7.</span> <span class="toc-text">使用LIKE关键字查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8LIMIT%E9%99%90%E5%88%B6%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E7%9A%84%E6%95%B0%E9%87%8F"><span class="toc-number">6.8.</span> <span class="toc-text">使用LIMIT限制查询结果的数量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8GROUP-BY%E8%BF%9B%E8%A1%8C%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.9.</span> <span class="toc-text">使用GROUP BY进行分组查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GROUP-BY%E5%92%8C%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">6.9.1.</span> <span class="toc-text">GROUP BY和聚合函数一起使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GROUP-BY%E5%92%8C%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8AHAVING%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">6.9.2.</span> <span class="toc-text">GROUP BY和聚合函数以及HAVING一起使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8ORDER-BY%E5%AF%B9%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E6%8E%92%E5%BA%8F"><span class="toc-number">6.10.</span> <span class="toc-text">使用ORDER BY对查询结果排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%88%AB%E5%90%8D"><span class="toc-number">6.11.</span> <span class="toc-text">表别名</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">数据库的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1.整数类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%AE%9A%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">2.浮点数类型和定点数类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">3.字符串类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%96%87%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.</span> <span class="toc-text">4.文本类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%97%A5%E6%9C%9F%E4%B8%8E%E6%97%B6%E9%97%B4%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.5.</span> <span class="toc-text">5.日期与时间类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.</span> <span class="toc-text">6.二进制类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">数据库、表的基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">2.1.</span> <span class="toc-text">1、数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.2.</span> <span class="toc-text">2.数据表的基本操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-number">2.3.</span> <span class="toc-text">3.修改数据表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.</span> <span class="toc-text">数据库的约束</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.1.</span> <span class="toc-text">1.主键约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9D%9E%E7%A9%BA%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.2.</span> <span class="toc-text">2.非空约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%BB%98%E8%AE%A4%E5%80%BC%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.3.</span> <span class="toc-text">3.默认值约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%94%AF%E4%B8%80%E6%80%A7%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.4.</span> <span class="toc-text">4.唯一性约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.5.</span> <span class="toc-text">5.外键约束 </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5"><span class="toc-number">4.</span> <span class="toc-text">增删改查</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#INSERT-%E6%8F%92%E5%85%A5"><span class="toc-number">4.1.</span> <span class="toc-text">INSERT 插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DELETE-%E5%88%A0%E9%99%A4"><span class="toc-number">4.2.</span> <span class="toc-text">DELETE 删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UPDATE-%E6%9B%B4%E6%96%B0"><span class="toc-number">4.3.</span> <span class="toc-text">UPDATE 更新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">5.</span> <span class="toc-text">数据表查询 </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AE%80%E5%8D%95%E6%9F%A5%E8%AF%A2"><span class="toc-number">5.1.</span> <span class="toc-text">1.简单查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8%E4%B8%AD%E6%89%80%E6%9C%89%E5%AD%97%E6%AE%B5%EF%BC%9A"><span class="toc-number">5.1.1.</span> <span class="toc-text">查询表中所有字段：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5%EF%BC%88sid%EF%BC%8Csname%EF%BC%89"><span class="toc-number">5.1.2.</span> <span class="toc-text">查询指定字段（sid，sname）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E6%95%B0%E6%9F%A5%E8%AF%A2%EF%BC%9A"><span class="toc-number">5.1.3.</span> <span class="toc-text">常数查询：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E4%B8%AD%E8%BF%87%E6%BB%A4%E9%87%8D%E5%A4%8D%E6%95%B0%E6%8D%AE"><span class="toc-number">5.1.4.</span> <span class="toc-text">从查询结果中过滤重复数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">5.1.5.</span> <span class="toc-text">算术运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-number">5.2.</span> <span class="toc-text">2.聚合函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#count"><span class="toc-number">5.2.1.</span> <span class="toc-text">count()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#max"><span class="toc-number">5.2.2.</span> <span class="toc-text">max()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#min"><span class="toc-number">5.2.3.</span> <span class="toc-text">min()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sum"><span class="toc-number">5.2.4.</span> <span class="toc-text">sum()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#avg%EF%BC%88%EF%BC%89"><span class="toc-number">5.2.5.</span> <span class="toc-text">avg（）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0"><span class="toc-number">5.3.</span> <span class="toc-text">3.时间函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0"><span class="toc-number">5.3.1.</span> <span class="toc-text">4.字符串函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0"><span class="toc-number">5.4.</span> <span class="toc-text">5.数学函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.</span> <span class="toc-text">条件查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">6.1.</span> <span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IN%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.2.</span> <span class="toc-text">IN关键字查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BETWEEN-AND%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.3.</span> <span class="toc-text">BETWEEN AND关键字查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%A9%BA%E5%80%BC%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.4.</span> <span class="toc-text">使用空值查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8AND%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.5.</span> <span class="toc-text">使用AND关键字查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8OR%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.6.</span> <span class="toc-text">使用OR关键字查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8LIKE%E5%85%B3%E9%94%AE%E5%AD%97%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.7.</span> <span class="toc-text">使用LIKE关键字查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8LIMIT%E9%99%90%E5%88%B6%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E7%9A%84%E6%95%B0%E9%87%8F"><span class="toc-number">6.8.</span> <span class="toc-text">使用LIMIT限制查询结果的数量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8GROUP-BY%E8%BF%9B%E8%A1%8C%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="toc-number">6.9.</span> <span class="toc-text">使用GROUP BY进行分组查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GROUP-BY%E5%92%8C%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">6.9.1.</span> <span class="toc-text">GROUP BY和聚合函数一起使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GROUP-BY%E5%92%8C%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8AHAVING%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">6.9.2.</span> <span class="toc-text">GROUP BY和聚合函数以及HAVING一起使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8ORDER-BY%E5%AF%B9%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E6%8E%92%E5%BA%8F"><span class="toc-number">6.10.</span> <span class="toc-text">使用ORDER BY对查询结果排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%88%AB%E5%90%8D"><span class="toc-number">6.11.</span> <span class="toc-text">表别名</span></a></li></ol></li></ol>
                 </div>
             </button>
             
